@@ -1,0 +1,1883 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Montreal Real Estate Insights | Delaram Farzin</title>
+<meta name="description" content="Expert Montreal real estate market analysis, neighbourhood guides, buyer and seller strategies from broker Delaram Farzin at Sutton Group Centre-Ouest.">
+<meta name="keywords" content="Montreal real estate, Montreal housing market, buy home Montreal, sell home Montreal, Plateau-Mont-Royal, NDG, Outremont, Montreal broker">
+<meta property="og:title" content="Montreal Real Estate Insights | Delaram Farzin">
+<meta property="og:description" content="Expert analysis, neighbourhood guides, and real estate strategy for Montreal buyers and sellers.">
+<meta property="og:type" content="website">
+<link rel="canonical" href="https://delaramfarzin.com/blog.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #080807;
+  --surface: #111110;
+  --surface2: #1a1a18;
+  --gold: #C8A882;
+  --gold-light: #dfc4a0;
+  --text: #e8e4dc;
+  --text-muted: #8a8578;
+  --border: rgba(200,168,130,0.15);
+  --radius: 2px;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:'Jost',sans-serif;font-weight:300;line-height:1.7;min-height:100vh}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:0 5%;background:rgba(8,8,7,0.95);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;height:64px}
+.nav-logo{font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-weight:500;color:var(--gold);letter-spacing:0.05em;text-decoration:none}
+.nav-links{display:flex;gap:2rem;list-style:none}
+.nav-links a{color:var(--text-muted);text-decoration:none;font-size:0.8rem;letter-spacing:0.12em;text-transform:uppercase;transition:color 0.2s}
+.nav-links a:hover,.nav-links a.active{color:var(--gold)}
+
+/* HERO BANNER */
+.blog-hero{padding:140px 5% 80px;border-bottom:1px solid var(--border)}
+.blog-hero-inner{max-width:900px}
+.hero-tag{font-size:0.72rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:1.5rem}
+.blog-hero h1{font-family:'Cormorant Garamond',serif;font-size:clamp(2.8rem,6vw,4.5rem);font-weight:300;line-height:1.1;color:var(--text);margin-bottom:1.5rem}
+.blog-hero p{font-size:1rem;color:var(--text-muted);max-width:600px;line-height:1.8}
+
+/* FILTER BAR */
+.filter-section{padding:2rem 5%;border-bottom:1px solid var(--border);display:flex;gap:0.5rem;flex-wrap:wrap;align-items:center}
+.filter-label{font-size:0.72rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--text-muted);margin-right:0.5rem}
+.filter-btn{background:none;border:1px solid var(--border);color:var(--text-muted);padding:0.4rem 1rem;font-family:'Jost',sans-serif;font-size:0.75rem;letter-spacing:0.1em;text-transform:uppercase;cursor:pointer;transition:all 0.2s;border-radius:var(--radius)}
+.filter-btn:hover,.filter-btn.active{border-color:var(--gold);color:var(--gold);background:rgba(200,168,130,0.06)}
+
+/* GRID */
+.blog-grid-section{padding:4rem 5%}
+.blog-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:2px;max-width:1400px;margin:0 auto}
+
+/* CARD */
+.blog-card{background:var(--surface);border:1px solid var(--border);padding:2.5rem;cursor:pointer;transition:all 0.25s;position:relative;overflow:hidden;display:flex;flex-direction:column}
+.blog-card::before{content:'';position:absolute;bottom:0;left:0;right:0;height:1px;background:var(--gold);transform:scaleX(0);transform-origin:left;transition:transform 0.3s}
+.blog-card:hover{background:var(--surface2);transform:translateY(-2px)}
+.blog-card:hover::before{transform:scaleX(1)}
+.card-category{font-size:0.68rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem}
+.card-title{font-family:'Cormorant Garamond',serif;font-size:1.45rem;font-weight:400;line-height:1.25;color:var(--text);margin-bottom:1rem}
+.card-excerpt{font-size:0.85rem;color:var(--text-muted);line-height:1.7;flex:1;margin-bottom:1.5rem}
+.card-meta{display:flex;align-items:center;justify-content:space-between;font-size:0.72rem;color:var(--text-muted);letter-spacing:0.05em;border-top:1px solid var(--border);padding-top:1rem;margin-top:auto}
+.card-read-more{font-size:0.72rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);display:flex;align-items:center;gap:0.4rem}
+.card-read-more svg{transition:transform 0.2s}
+.blog-card:hover .card-read-more svg{transform:translateX(4px)}
+.featured-badge{display:inline-block;background:var(--gold);color:var(--bg);font-size:0.62rem;letter-spacing:0.15em;text-transform:uppercase;padding:0.2rem 0.6rem;margin-bottom:1rem;font-weight:500}
+
+/* ARTICLE VIEW */
+.article-view{display:none;max-width:800px;margin:0 auto;padding:120px 5% 80px}
+.article-view.active{display:block}
+.back-btn{display:inline-flex;align-items:center;gap:0.5rem;color:var(--gold);font-size:0.78rem;letter-spacing:0.12em;text-transform:uppercase;cursor:pointer;margin-bottom:3rem;background:none;border:none;padding:0;transition:gap 0.2s}
+.back-btn:hover{gap:0.8rem}
+.article-category{font-size:0.72rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:1.5rem}
+.article-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,5vw,3.5rem);font-weight:300;line-height:1.15;color:var(--text);margin-bottom:2rem}
+.article-meta{display:flex;gap:2rem;font-size:0.78rem;color:var(--text-muted);margin-bottom:3rem;padding-bottom:2rem;border-bottom:1px solid var(--border)}
+.article-body{font-size:1rem;line-height:1.9;color:var(--text)}
+.article-body h2{font-family:'Cormorant Garamond',serif;font-size:1.8rem;font-weight:400;color:var(--gold-light);margin:3rem 0 1.2rem}
+.article-body h3{font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-weight:400;color:var(--text);margin:2rem 0 0.8rem}
+.article-body p{margin-bottom:1.5rem;color:rgba(232,228,220,0.85)}
+.article-body ul,.article-body ol{margin:1.5rem 0 1.5rem 1.5rem}
+.article-body li{margin-bottom:0.6rem;color:rgba(232,228,220,0.85)}
+.article-body strong{color:var(--text);font-weight:500}
+.article-body blockquote{border-left:2px solid var(--gold);padding:1.5rem 0 1.5rem 2rem;margin:2.5rem 0;font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-style:italic;color:var(--gold-light)}
+.article-cta{background:var(--surface2);border:1px solid var(--border);padding:3rem;text-align:center;margin-top:4rem}
+.article-cta h3{font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:400;color:var(--text);margin-bottom:1rem}
+.article-cta p{color:var(--text-muted);margin-bottom:2rem}
+.cta-btn{display:inline-block;background:var(--gold);color:var(--bg);padding:0.85rem 2.5rem;font-size:0.78rem;letter-spacing:0.15em;text-transform:uppercase;text-decoration:none;font-weight:500;transition:background 0.2s}
+.cta-btn:hover{background:var(--gold-light)}
+.author-card{display:flex;align-items:center;gap:1.5rem;background:var(--surface);border:1px solid var(--border);padding:2rem;margin-top:3rem}
+.author-avatar{width:64px;height:64px;border-radius:50%;border:1px solid var(--gold);object-fit:cover;background:var(--surface2);display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-size:1.5rem;color:var(--gold);flex-shrink:0}
+.author-info h4{font-family:'Cormorant Garamond',serif;font-size:1.1rem;color:var(--text);margin-bottom:0.3rem}
+.author-info p{font-size:0.82rem;color:var(--text-muted);line-height:1.6}
+
+/* FOOTER */
+footer{background:var(--surface);border-top:1px solid var(--border);padding:3rem 5%;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1.5rem}
+.footer-brand{font-family:'Cormorant Garamond',serif;color:var(--gold);font-size:1.1rem}
+.footer-links{display:flex;gap:2rem}
+.footer-links a{color:var(--text-muted);font-size:0.78rem;text-decoration:none;letter-spacing:0.08em;transition:color 0.2s}
+.footer-links a:hover{color:var(--gold)}
+.footer-copy{color:var(--text-muted);font-size:0.72rem}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+  .blog-grid{grid-template-columns:1fr}
+  .nav-links{display:none}
+  footer{flex-direction:column;text-align:center}
+  .article-meta{flex-direction:column;gap:0.5rem}
+  .author-card{flex-direction:column;text-align:center}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">Delaram Farzin</a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="index.html#listings">Listings</a></li>
+    <li><a href="blog.html" class="active">Blog</a></li>
+    <li><a href="index.html#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- BLOG LIST VIEW -->
+<div id="blog-list">
+  <div class="blog-hero">
+    <div class="blog-hero-inner">
+      <p class="hero-tag">Montreal Real Estate</p>
+      <h1>Insights & Market Analysis</h1>
+      <p>Data-driven perspectives on the Montreal housing market, neighbourhood trends, and strategic advice for buyers and sellers navigating one of Canada's most dynamic cities.</p>
+    </div>
+  </div>
+
+  <div class="filter-section">
+    <span class="filter-label">Filter:</span>
+    <button class="filter-btn active" data-cat="all">All</button>
+    <button class="filter-btn" data-cat="market">Market Reports</button>
+    <button class="filter-btn" data-cat="buyers">Buyers</button>
+    <button class="filter-btn" data-cat="sellers">Sellers</button>
+    <button class="filter-btn" data-cat="neighbourhoods">Neighbourhoods</button>
+    <button class="filter-btn" data-cat="investing">Investing</button>
+  </div>
+
+  <div class="blog-grid-section">
+    <div class="blog-grid" id="blog-grid"></div>
+  </div>
+</div>
+
+<!-- ARTICLE VIEW -->
+<div id="article-view" class="article-view">
+  <button class="back-btn" onclick="showList()">
+    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M10 3L5 8L10 13" stroke="currentColor" stroke-width="1.5"/></svg>
+    Back to All Articles
+  </button>
+  <div id="article-content"></div>
+</div>
+
+<footer>
+  <div class="footer-brand">Delaram Farzin | Sutton Group Centre-Ouest</div>
+  <div class="footer-links">
+    <a href="index.html">Home</a>
+    <a href="index.html#contact">Contact</a>
+    <a href="tel:5148033472">514-803-3472</a>
+    <a href="mailto:info@farzin.realtor">info@farzin.realtor</a>
+  </div>
+  <div class="footer-copy">245 Av. Victoria, Westmount, QC &nbsp;&bull;&nbsp; &copy; 2026 Delaram Farzin</div>
+</footer>
+
+<script>
+const articles = [
+  {
+    id: 1,
+    title: "Montreal Real Estate Q1 2026: What the Numbers Actually Mean",
+    category: "market",
+    categoryLabel: "Market Report",
+    date: "April 2, 2026",
+    readTime: "8 min read",
+    featured: true,
+    excerpt: "A data-focused breakdown of Q1 2026 Centris statistics across Montreal's key neighbourhoods. Median prices, days on market, and the trends that will define the rest of the year.",
+    body: `
+      <p>The first quarter of 2026 delivered a clear signal: Montreal's real estate market has shifted from the frenzied conditions of 2021-2022 into something more nuanced, and more interesting, for serious buyers and sellers alike. Here is what the data shows, and more importantly, what it means for you.</p>
+
+      <h2>The Headline Numbers</h2>
+      <p>Across the island, median single-family home prices settled at approximately $805,000 in Q1 2026, representing a 4.2% increase year-over-year. Condominiums tracked more modestly at $430,000 median, up 2.8% from Q1 2025. Average days on market across all property types came in at 47 days, a marked improvement from the 68-day average seen through most of 2025.</p>
+      <p>These numbers tell a story of a market finding its equilibrium. The buyers who rushed the exits in 2022-2023 have largely been replaced by qualified, motivated purchasers who have absorbed higher financing costs and made their peace with today's rate environment.</p>
+
+      <h2>Where the Action Is: Neighbourhood Breakdown</h2>
+      <p>Not all neighbourhoods are performing equally. The data reveals clear divergences that any serious participant in the Montreal market needs to understand.</p>
+      <h3>Plateau-Mont-Royal</h3>
+      <p>Median SFH: $1,050,000 | Median Condo: $520,000 | Avg DOM: 31 | Total Sales: 87</p>
+      <p>The Plateau continues to outperform the island average on virtually every metric. Properties priced correctly are generating multiple offers within two weeks. The inventory problem here is acute: there are simply not enough well-maintained homes to satisfy demand, which structurally supports prices regardless of broader rate conditions.</p>
+      <h3>Ville-Marie</h3>
+      <p>Median SFH: $980,000 | Median Condo: $485,000 | Avg DOM: 41 | Total Sales: 203</p>
+      <p>Downtown condo inventory remains elevated relative to 2021 highs, but absorption rates are improving. Buyers are returning to the urban core as remote-work mandates soften. The sweet spot remains 2-bedroom units in buildings with strong financials and below-average condo fees.</p>
+      <h3>Outremont</h3>
+      <p>Median SFH: $1,420,000 | Median Condo: $670,000 | Avg DOM: 28 | Total Sales: 34</p>
+      <p>Outremont's liquidity remains low by design. The neighbourhood's tight housing stock and established buyer profile mean that well-presented properties move quickly when correctly priced. This is not a neighbourhood where you test the market with an aspirational number.</p>
+
+      <h2>Interest Rates: The Elephant in Every Room</h2>
+      <p>The Bank of Canada's rate trajectory has dominated every real estate conversation for three years. The practical reality in Q1 2026 is that buyers have adapted. Variable-rate mortgages have become more attractive as the BoC has moved rates lower from their 2023-2024 peaks, and fixed 5-year terms are now accessible in the 4.5-5.2% range depending on lender and profile.</p>
+      <blockquote>The buyers who are sitting on the sidelines waiting for rates to return to 2.5% are making a costly calculation error. Prices have already adjusted; waiting for the perfect rate environment means competing against an entirely different cohort of buyers in a potentially tighter inventory environment.</blockquote>
+
+      <h2>What Q2 2026 Will Likely Look Like</h2>
+      <p>Based on Q1 trajectory and seasonal patterns, expect Q2 to bring increased inventory (spring listings always spike), sustained buyer demand, and continued compression of days on market in supply-constrained neighbourhoods. Sellers who list in April and May historically capture better outcomes than those who wait until summer.</p>
+      <p>The macro environment supports moderate price appreciation through year-end. The wild cards are any material shift in BoC policy and any federal policy changes affecting foreign buyers or mortgage qualification. Neither looks imminent based on current signals.</p>
+
+      <h2>The Practical Takeaway</h2>
+      <p>For buyers: pre-approve now, focus on neighbourhoods where you understand the long-term demand drivers, and be prepared to move decisively on well-priced properties. For sellers: Q2 is historically your best window. Price at market from day one and let competition do the work.</p>
+    `
+  },
+  {
+    id: 2,
+    title: "Five Things Every First-Time Buyer in Montreal Must Know Before Making an Offer",
+    category: "buyers",
+    categoryLabel: "Buyers",
+    date: "March 18, 2026",
+    readTime: "7 min read",
+    featured: false,
+    excerpt: "Most first-time buyers in Montreal make the same five mistakes. Understanding these realities before you start your search will save you money, stress, and regret.",
+    body: `
+      <p>The Montreal market is not forgiving of amateur mistakes. After working with dozens of first-time buyers across the city, the same friction points appear with remarkable consistency. Here is the unfiltered version of what you need to know before making one of the largest financial decisions of your life.</p>
+
+      <h2>1. Your Pre-Approval Is Not Your Budget</h2>
+      <p>A mortgage lender will qualify you for the maximum amount you technically qualify for, which is not the same as the amount you should spend. In Montreal, where carrying costs on a $900,000 property include mortgage, municipal taxes, school taxes, and insurance, many buyers find themselves stretched uncomfortably thin after closing.</p>
+      <p>The discipline is to calculate your actual monthly outflow at your purchase price, add a 15-20% buffer for maintenance and unexpected expenses, and determine whether that number is genuinely comfortable against your income and lifestyle. Lenders do not model your retirement contributions, your desire to travel, or your restaurant budget. You need to.</p>
+
+      <h2>2. The Inspection Is Not Optional</h2>
+      <p>In competitive markets, some buyers waive inspections to strengthen offers. This is a serious miscalculation in Montreal's housing stock, which includes a significant proportion of properties built before 1970. Heritage properties and multi-unit buildings carry specific risks: clay drain pipes, knob-and-tube wiring, asbestos insulation in older properties, and foundation issues that are expensive to diagnose and more expensive to remediate.</p>
+      <p>A thorough inspection by a certified inspector costs between $600-$900 in Montreal. The cost of discovering a $40,000 foundation problem after closing is materially worse. A competent broker can structure your offer to include an inspection condition while still being competitive.</p>
+
+      <h2>3. Closing Costs Are Larger Than You Think</h2>
+      <p>Most first-time buyers budget for the down payment and forget about the rest. In Quebec, closing costs for a first-time buyer typically include:</p>
+      <ul>
+        <li>Welcome Tax (Droits de mutation): a sliding-scale transfer tax. On a $700,000 property, expect approximately $9,000.</li>
+        <li>Notary fees: $1,500-$2,500 for a standard transaction</li>
+        <li>Property tax adjustment: you reimburse the seller for taxes paid past the closing date</li>
+        <li>Moving costs, immediate repairs, and appliances if not included</li>
+      </ul>
+      <p>Budget 2-3% of purchase price in closing costs beyond your down payment. This is not optional; it is unavoidable.</p>
+
+      <h2>4. The Notary Represents the Transaction, Not You</h2>
+      <p>In Quebec, real estate transactions are completed through a notary. The notary's role is to ensure the legal validity of the transfer. They do not advocate for your interests specifically. Understanding what you are signing, having your broker review every document, and asking questions at every stage is your responsibility.</p>
+
+      <h2>5. Neighbourhood Research Is 40% of the Decision</h2>
+      <p>Too many buyers fall in love with a property and perform superficial neighbourhood research. The fundamentals that drive long-term value in Montreal are: proximity to metro stations, neighbourhood trajectory (improving vs. declining), school district quality, access to parks and services, and the quality of adjacent buildings on the street.</p>
+      <p>Visit your target neighbourhood at three different times: a weekday morning, a Friday evening, and a Sunday afternoon. The character and feel of an area shifts dramatically. What looks like a quiet street on a Tuesday afternoon may be quite different at 11pm on a Friday.</p>
+      <blockquote>The property you can always renovate. The neighbourhood you cannot change. The single biggest driver of appreciation over a 10-year hold in Montreal has been neighbourhood selection, not property-specific improvements.</blockquote>
+    `
+  },
+  {
+    id: 3,
+    title: "Plateau-Mont-Royal: Why Prices Keep Climbing Despite Everything",
+    category: "neighbourhoods",
+    categoryLabel: "Neighbourhoods",
+    date: "March 5, 2026",
+    readTime: "6 min read",
+    featured: false,
+    excerpt: "The Plateau has defied broader market corrections for a decade. Understanding the structural reasons behind this performance is essential for anyone considering buying or selling in this neighbourhood.",
+    body: `
+      <p>The Plateau-Mont-Royal has become Montreal's most analyzed, most debated, and most consistently outperforming residential neighbourhood. It has weathered interest rate shocks, pandemic-era disruptions, and supply concerns with a resilience that demands an explanation beyond vague references to its desirability.</p>
+
+      <h2>The Supply Constraint Is Structural</h2>
+      <p>The Plateau is a built-out, heritage-dense neighbourhood. The vast majority of its housing stock was constructed between 1880 and 1940, comprising attached two and three-storey flat-roofed rowhouses, duplexes, triplexes, and the occasional freestanding Victorian. New construction is exceptionally rare. The city's heritage protection framework and neighbourhood density restrictions mean the supply of detached and semi-detached properties is essentially fixed.</p>
+      <p>When you have fixed supply and consistently growing demand, the price equation is relatively simple. The interesting question is why demand remains so robust.</p>
+
+      <h2>The Demographic Drivers</h2>
+      <p>The Plateau attracts a specific and highly durable demographic: educated, culture-oriented professionals and families who prioritize walkability, neighbourhood character, and proximity to the city's arts and restaurant scene. This cohort has above-average purchasing power and below-average price sensitivity relative to the broader market. They are also sticky. Once established in the neighbourhood, Plateau residents tend to trade up within it rather than leaving.</p>
+      <p>The second demographic driver is the university proximity. With McGill to the west and UQAM to the south, the Plateau benefits from a constant supply of graduates who establish themselves in the neighbourhood as students and aspire to return as buyers once they have built sufficient equity and income.</p>
+
+      <h2>The Investment Case</h2>
+      <p>For investors, the Plateau's plex market (duplexes, triplexes, quadruplexes) represents a compelling long-term proposition. Rental vacancy in the neighbourhood is chronically low, and rental prices have increased materially over the past five years. An owner-occupant in a triplex can offset substantial carrying costs through rental income while building equity in a supply-constrained market.</p>
+      <p>The risk is price at acquisition. Given that the Plateau consistently trades at a premium to the island average, entry-level properties have moved beyond reach for many first-time buyers. The sweet spot today tends to be smaller condominiums in the $450,000-$580,000 range for owner-occupants, or larger plexes in the $1.1-$1.8 million range for investors with sufficient capital.</p>
+
+      <h2>What to Look For, and What to Avoid</h2>
+      <p>Not all Plateau properties are created equal. The streets immediately adjacent to Mont-Royal Avenue and Laurier command premiums that are well-supported. Properties further east toward Papineau carry more variability. The strongest value retention historically correlates with proximity to the park itself and access to metro stations on the orange line.</p>
+      <p>Watch for buildings with deferred maintenance, particularly roof structures, exterior brick repointing, and the ever-present concern of inadequate drainage systems. The Plateau's housing stock ages gracefully when maintained and deteriorates quickly when neglected.</p>
+      <blockquote>The Plateau is not where you find a deal. It is where you make a sound long-term investment in a neighbourhood that has demonstrated an exceptional ability to retain and grow value through multiple market cycles.</blockquote>
+    `
+  },
+  {
+    id: 4,
+    title: "Pricing Strategy in a Shifting Market: What Montreal Sellers Need to Know in 2026",
+    category: "sellers",
+    categoryLabel: "Sellers",
+    date: "February 20, 2026",
+    readTime: "7 min read",
+    featured: false,
+    excerpt: "The era of pricing high and waiting for an offer is over. Today's Montreal sellers need a precise, data-backed pricing strategy that accounts for neighbourhood dynamics, buyer psychology, and the current rate environment.",
+    body: `
+      <p>There is a persistent myth in residential real estate that pricing high gives you room to negotiate. In 2026, with buyers who are more informed than at any point in history, this strategy backfires in ways that cost sellers thousands of dollars and weeks of unnecessary market time.</p>
+
+      <h2>Why Overpricing Is More Dangerous Than It Looks</h2>
+      <p>When a property sits on Centris without accepted offers, the market takes notice. Buyers' brokers track days on market as a primary signal of pricing accuracy. A listing that reaches 30 days becomes a conversation: what is wrong with it? At 45 days, buyers begin expecting a significant price reduction. At 60 days, the narrative has shifted from "desirable property at a questionable price" to "property with problems."</p>
+      <p>The data is consistent: properties that are correctly priced from day one sell faster and for more money than those that start high and reduce. This is not intuitive to most sellers, but it reflects the psychology of how buyers perceive value.</p>
+
+      <h2>The Components of an Accurate Comparative Market Analysis</h2>
+      <p>A serious CMA is not a list of recent sales with a rough average. It is a granular analysis that controls for the variables that materially affect price:</p>
+      <ul>
+        <li><strong>Condition and finishes:</strong> A renovated kitchen adds measurable value in every neighbourhood. The question is how much in your specific context.</li>
+        <li><strong>Exterior and lot quality:</strong> In Montreal's plex market, lot depth and parking availability are significant factors that raw price-per-square-foot analysis misses.</li>
+        <li><strong>Building systems and age:</strong> Properties with updated electrical, plumbing, and roofing command real premiums because buyers understand what deferred maintenance costs.</li>
+        <li><strong>View and positioning:</strong> Floor-level in a condo building, backyard orientation, and street presence all affect buyer perception and final price.</li>
+      </ul>
+
+      <h2>The Negotiation Architecture of a Well-Priced Listing</h2>
+      <p>There is an art to pricing that generates competition without leaving value on the table. In supply-constrained neighbourhoods like the Plateau, Outremont, and NDG, strategic pricing slightly below comparable sales can generate multiple offer situations that push the final price above what a higher list price would achieve.</p>
+      <p>This requires careful market analysis and the right timing. Spring listings on competitively priced properties in desirable neighbourhoods routinely receive multiple offers within 10-14 days. The mechanism only works, however, when the property is in excellent presentational condition and priced with precision.</p>
+      <blockquote>The sellers who net the most money are rarely those who ask the most. They are the ones who execute the best strategy: right price, right presentation, right timing.</blockquote>
+
+      <h2>Timing in the Montreal Market</h2>
+      <p>Seasonality in Montreal is more pronounced than in many Canadian cities. The spring market (March through May) consistently delivers the highest buyer activity and strongest prices. Summer sees a meaningful reduction in activity as buyers pause through July and August. Fall provides a secondary window from mid-September through November before the holiday slowdown.</p>
+      <p>If your timeline is flexible, listing in late March or early April captures peak buyer motivation. The worst timing is late June or late November, when buyer pools thin and competitive pressure on offers is reduced.</p>
+    `
+  },
+  {
+    id: 5,
+    title: "The Montreal Plex Opportunity: Why Multi-Unit Properties Deserve Serious Attention",
+    category: "investing",
+    categoryLabel: "Investing",
+    date: "February 8, 2026",
+    readTime: "9 min read",
+    featured: false,
+    excerpt: "Montreal's duplex, triplex, and quadruplex market offers an investment structure that is genuinely difficult to replicate in other Canadian cities. Here is the honest assessment of the opportunity and the risks.",
+    body: `
+      <p>Montreal's plex market is one of the most distinctive features of its real estate landscape. The city has a higher proportion of multi-unit small residential buildings than virtually any other major Canadian city, a legacy of the province's unique housing development history and its rent control framework. For investors and owner-occupants willing to navigate the complexity, the opportunity is real.</p>
+
+      <h2>The Structure of the Opportunity</h2>
+      <p>A well-purchased triplex in Montreal offers an owner-occupant the ability to live in one unit while the rental income from the other two units offsets a substantial portion of carrying costs. In current market conditions, a $1.1 million triplex in a neighbourhood like Rosemont or NDG can generate $3,800-$4,800 per month in gross rental income from the two tenant-occupied units, meaningfully reducing the effective monthly cost of ownership.</p>
+      <p>Over time, as the building is held and rental rates increase, the owner's net carrying cost decreases further while the asset appreciates. This leveraged return structure is difficult to replicate in other asset classes at this price point.</p>
+
+      <h2>The Quebec Rental Framework: What You Need to Understand</h2>
+      <p>Quebec operates under the Tribunal administratif du logement (TAL), which regulates residential rental increases through an annual permitted increase formula. New owners of investment buildings cannot simply reset rents to market rates upon purchase. Understanding the current rents, the lease structure, and the occupancy status of all units is fundamental due diligence that must precede any offer on a plex.</p>
+      <p>The critical concept is the distinction between occupied and vacant units. A vacant unit at time of purchase can be set at market rent. An occupied unit is subject to the existing lease and TAL-regulated increases. In buildings where long-term tenants are paying significantly below-market rents, the path to market-rate income is long and regulated.</p>
+
+      <h2>Evaluating a Plex: The Five Numbers That Matter</h2>
+      <ul>
+        <li><strong>Gross rental income:</strong> Total current rents across all units. Compare to market rents for equivalent units in the neighbourhood.</li>
+        <li><strong>Capitalization rate:</strong> Net operating income divided by purchase price. Montreal plexes typically trade at 3.5-5% cap rates, depending on neighbourhood and building condition.</li>
+        <li><strong>Rent-to-price ratio:</strong> Monthly gross rent divided by purchase price. Aim for at least 0.4% to ensure reasonable cash flow coverage.</li>
+        <li><strong>Deferred maintenance:</strong> A professional inspection should include all building systems: roof, foundation, windows, electrical, plumbing, and heating. Estimate repair costs before finalizing any offer.</li>
+        <li><strong>Below-market rent discount:</strong> If units are occupied at below-market rates, calculate the discount to market value and factor it into your offer.</li>
+      </ul>
+
+      <h2>The Neighbourhoods to Focus On</h2>
+      <p>Rosemont-La Petite-Patrie offers the strongest combination of rental demand, neighbourhood trajectory, and relative affordability within the inner city. Villeray-Saint-Michel has emerged as a compelling secondary option for investors who missed the Rosemont wave. NDG and Cote-des-Neiges offer strong fundamentals driven by university proximity and transit access.</p>
+      <blockquote>The plex is not a passive investment. It is a business that requires active management, understanding of your legal obligations as a landlord in Quebec, and a long time horizon. Buyers who approach it with this mindset consistently outperform those who expect a hands-off experience.</blockquote>
+
+      <h2>The Tax Considerations</h2>
+      <p>The tax treatment of a plex depends significantly on whether you occupy one of the units. Owner-occupants benefit from the principal residence exemption on their portion of the building at sale. Non-owner-occupied investment properties are fully subject to capital gains tax on appreciation. The proper structuring of this from the outset, in consultation with a Quebec tax accountant, can materially affect your after-tax return. This is not optional due diligence.</p>
+    `
+  },
+  {
+    id: 6,
+    title: "Outremont in 2026: The Market That Refuses to Soften",
+    category: "neighbourhoods",
+    categoryLabel: "Neighbourhoods",
+    date: "January 25, 2026",
+    readTime: "5 min read",
+    featured: false,
+    excerpt: "Outremont's real estate market operates by different rules. Low inventory, high-net-worth buyers, and limited new construction have created conditions that largely decouple the neighbourhood from broader market cycles.",
+    body: `
+      <p>Outremont is Montreal's clearest example of a premium residential market that operates on its own logic. While neighbouring areas see activity fluctuate with interest rates and buyer sentiment, Outremont's property values have demonstrated a consistency that makes it one of the most reliable long-term holds in the city.</p>
+
+      <h2>Understanding the Supply Dynamics</h2>
+      <p>Outremont's residential streets are characterized by large Victorian and Edwardian homes on generous lots, interspersed with elegant duplexes and period apartment buildings. The neighbourhood is landlocked, surrounded by institutional uses (Universite de Montreal occupies a significant portion of the bordering area), parks, and established commercial corridors. There is effectively no space for new residential development of any scale.</p>
+      <p>In Q1 2026, the total number of residential sales in Outremont was 34. This is a micro-market by definition, and it requires a different analytical framework than higher-volume neighbourhoods. Single data points, including your own potential sale, carry meaningful weight in a market this size.</p>
+
+      <h2>Who Buys in Outremont</h2>
+      <p>The Outremont buyer profile is distinctive. You are largely dealing with senior professionals, successful entrepreneurs, and established families who are making long-term lifestyle decisions rather than near-term investment optimizations. Price sensitivity is lower than the broader market average. These buyers have typically sold a previous property with substantial equity and are not highly leveraged.</p>
+      <p>This buyer profile creates resilience through market cycles. When broader markets contract because of financing cost pressure, Outremont's buyers are disproportionately cash-heavy or modestly leveraged. The pain that triggers forced selling elsewhere is largely absent here.</p>
+
+      <h2>The Valuation Challenge</h2>
+      <p>Because sales volume is so low, conducting a conventional CMA in Outremont requires looking at a broader time window and making more subjective adjustments than in higher-volume markets. Properties in this neighbourhood genuinely do vary more significantly: lot size, architectural significance, renovation quality, and the specific block all affect value in ways that square-footage analysis alone cannot capture.</p>
+      <p>This is one market where the broker's direct knowledge of individual properties and recent off-market transactions matters more than it does elsewhere. Many Outremont transactions occur before properties reach Centris, through a network of active buyers and their representatives.</p>
+
+      <h2>The Investment Thesis for Outremont</h2>
+      <p>For buyers with sufficient capital, Outremont offers an asymmetric risk-reward profile. The downside is limited by the structural characteristics described above. The upside is participation in a neighbourhood that has appreciated consistently over 20 years and shows no structural reason for that trend to reverse. The trade-off is that entry prices are high, liquidity is limited, and the holding period required to generate strong returns is longer than in more liquid markets.</p>
+    `
+  },
+  {
+    id: 7,
+    title: "Getting Pre-Approved in Quebec: The Complete Guide",
+    category: "buyers",
+    categoryLabel: "Buyers",
+    date: "January 12, 2026",
+    readTime: "6 min read",
+    featured: false,
+    excerpt: "Quebec's mortgage landscape has specific requirements and nuances that differ from other provinces. This guide walks you through the pre-approval process from documentation to strategy.",
+    body: `
+      <p>The mortgage pre-approval is the single most important thing you can do before beginning an active property search in Montreal. It is not a formality. It is the document that tells sellers you are a credible buyer and tells you exactly what you are working with. Here is how to approach it properly.</p>
+
+      <h2>What Pre-Approval Actually Means</h2>
+      <p>A mortgage pre-approval is a lender's conditional commitment to provide financing up to a specified amount, based on your financial profile at a point in time. The conditions are important: the pre-approval is subject to the specific property appraising for the purchase price and your financial situation remaining materially unchanged. It is not a guarantee of financing, but it is a strong signal of your ability to close.</p>
+      <p>A pre-approval is distinct from a pre-qualification, which is an informal estimate based on self-reported information. In a competitive Montreal market, a pre-qualification is worth very little. Sellers and their brokers want to see a properly documented pre-approval from a recognized lender.</p>
+
+      <h2>Documents You Will Need</h2>
+      <p>Gather these before approaching any lender to accelerate the process:</p>
+      <ul>
+        <li>Two most recent T4 slips and Notices of Assessment from the CRA</li>
+        <li>Two most recent pay stubs if employed</li>
+        <li>Three months of bank statements for all accounts</li>
+        <li>Three months of investment account statements</li>
+        <li>Proof of down payment source (gift letters if applicable)</li>
+        <li>Two years of corporate tax returns and financial statements if self-employed</li>
+        <li>Current mortgage statement if refinancing or if you own other property</li>
+        <li>Lease agreement if currently renting</li>
+      </ul>
+
+      <h2>Choosing Between a Bank and a Mortgage Broker</h2>
+      <p>This decision is more consequential than most buyers realize. A direct bank pre-approval gives you access to one product at one institution. A mortgage broker has relationships with multiple lenders, including Schedule A banks, credit unions, and monoline lenders (institutions that only do mortgages and typically offer better rates than the major banks).</p>
+      <p>In most cases, a qualified mortgage broker will source a better rate and more flexible terms than a direct bank approach. The broker is compensated by the lender and does not cost you anything as a borrower. The exception may be if you have a complex financial profile or an existing relationship with a banker who has discretion to offer relationship pricing.</p>
+
+      <h2>The Stress Test in the Current Environment</h2>
+      <p>The federal mortgage stress test requires qualifying at the greater of your contracted rate plus 2%, or 5.25%. With 5-year fixed rates currently in the 4.5-5.2% range, you are qualifying at 6.5-7.2%. This stress test meaningfully reduces the purchase price you can qualify for relative to what your actual rate would suggest.</p>
+      <p>If you are at the margin, there are strategies to improve your qualifying amount: extending amortization to 30 years (available with 20% down), using a co-borrower, or reducing other debt before applying. A mortgage broker can model these scenarios for your specific situation.</p>
+
+      <h2>Rate Holds and Their Strategic Value</h2>
+      <p>Most lenders offer a rate hold of 90-120 days at the time of pre-approval. This protects you if rates rise between pre-approval and closing. In a rising rate environment, this is free insurance. Request the longest rate hold available and understand the conditions under which it locks in.</p>
+    `
+  },
+  {
+    id: 8,
+    title: "NDG Real Estate: The Undervalued Neighbourhood That Serious Buyers Are Watching",
+    category: "neighbourhoods",
+    categoryLabel: "Neighbourhoods",
+    date: "January 5, 2026",
+    readTime: "6 min read",
+    featured: false,
+    excerpt: "Notre-Dame-de-Grace has been overshadowed by trendier neighbourhoods for years. The buyers paying attention to its fundamentals are making a smart long-term call.",
+    body: `
+      <p>Notre-Dame-de-Grace sits in an interesting position in Montreal's residential hierarchy. It lacks the cultural cachet of the Plateau, the prestige of Outremont, or the urban intensity of Ville-Marie. What it has instead is something more durable: solid housing stock, genuine neighbourhood diversity, excellent park and recreational infrastructure, and pricing that still represents value relative to its fundamentals.</p>
+
+      <h2>The Physical Character of NDG</h2>
+      <p>NDG's residential streets are dominated by well-constructed brick duplexes and triplexes built primarily between 1910 and 1950, interspersed with larger single-family homes on more substantial lots. The neighbourhood benefits from Parc NDG, Parc Trenholme, and easy access to the eastern portion of Parc Angrignon. Monkland Avenue provides a commercial spine with genuine walkability.</p>
+      <p>The housing stock varies considerably by sub-area. The streets north of Sherbrooke and east of Cavendish contain the neighbourhood's most premium properties, including substantial single-family homes that would command significant premiums if located a few kilometres north in Westmount or Cote-Saint-Luc. This sub-area reprices steadily as buyers recognize the quality.</p>
+
+      <h2>The Demographic Transition</h2>
+      <p>NDG is experiencing a generational transition that has meaningful implications for property values. Long-term homeowners who purchased in the 1980s and 1990s are moving toward downsizing, which is bringing well-maintained properties to market. The incoming buyer demographic skews toward young families who have priced out of Plateau and Rosemont but want maintained neighbourhood character and good schools.</p>
+      <p>This demographic transition is a value driver. The incoming buyers are making quality improvements, and the neighbourhood's overall residential quality is rising as a result.</p>
+
+      <h2>Transit and Accessibility</h2>
+      <p>NDG is served by multiple bus routes and has reasonable access to the orange line metro at Villa-Maria and Vendome stations. The neighbourhood's central location on the island means commute times to downtown are manageable by multiple transportation modes. The Cavendish connector project, while long-delayed, would meaningfully improve east-west transit connections through the neighbourhood when completed.</p>
+
+      <h2>The Investment Case</h2>
+      <p>NDG currently trades at a measurable discount to Plateau and Rosemont on a price-per-square-foot basis. The discount reflects the lower cultural profile of the neighbourhood rather than any fundamental deficiency in quality or location. As Plateau and Rosemont prices continue to climb and price out family buyers, NDG is the logical beneficiary. The neighbourhoods with strong fundamentals and relative value consistently outperform over 10-year holding periods.</p>
+    `
+  },
+  {
+    id: 9,
+    title: "The Montreal Condo Market in 2026: Oversupply, Opportunity, and What to Watch",
+    category: "market",
+    categoryLabel: "Market Report",
+    date: "December 15, 2025",
+    readTime: "7 min read",
+    featured: false,
+    excerpt: "Montreal's condo market tells a more complex story than headline numbers suggest. Understanding the divergence between new construction and resale, and between downtown and suburban locations, is essential for any condo buyer or seller.",
+    body: `
+      <p>The Montreal condominium market in 2026 is a tale of two realities. Downtown and inner-city resale condos in quality buildings with strong condo corporation finances are performing respectably. Meanwhile, some segments of the new construction market are working through an inventory overhang that is compressing prices and extending delivery timelines.</p>
+
+      <h2>The New Construction Inventory Situation</h2>
+      <p>The wave of new construction that began delivering units in 2023 and 2024 created a supply surplus in several downtown micro-markets. Buildings in Le Sud-Ouest, certain blocks of Griffintown, and parts of the Village are carrying elevated inventory that has pressured pricing on new units.</p>
+      <p>For buyers, this has created genuine opportunity in the new construction segment. Developers who are motivated to move inventory are negotiating on price, offering upgraded finishing packages, and providing carry costs during construction completion delays. A buyer who does their research on developer financial health and building completion risk can acquire new construction product at prices that would have been unavailable in 2021-2022.</p>
+
+      <h2>The Resale Condo Advantage</h2>
+      <p>Resale condos in established buildings with healthy reserve funds and low monthly fees have held value better than new construction alternatives. Buyers in this segment are purchasing known quantities: buildings with a track record of maintenance, condo corporation governance that can be evaluated through meeting minutes and financial statements, and actual (not projected) operating costs.</p>
+      <p>The due diligence process on resale condos in Quebec requires requesting the Declaration of Co-ownership, the three most recent years of financial statements, the reserve fund study, and all meeting minutes from the past two years. Significant special assessments, deferred maintenance, and dysfunctional governance are discoverable in these documents. Buyers who skip this review occasionally find themselves facing five-figure special assessments within years of purchase.</p>
+
+      <h2>Location Premiums That Hold Value</h2>
+      <p>Within the condo market, the strongest performers have consistent characteristics: metro access within 10 minutes on foot, below-average condo fees for the building's age, buildings with 50+ units (smaller buildings carry higher per-unit maintenance costs), and locations with strong rental demand as a backstop to owner-occupant demand.</p>
+      <p>Ville-Marie condos with direct metro proximity in buildings constructed after 2005 with well-funded reserves represent the segment with the most durable value. Plateau and Mile-End condos in boutique buildings carry a lifestyle premium that resists downward pressure. The weaker performers tend to be suburban high-rises with high fees, aging infrastructure, and limited transit access.</p>
+    `
+  },
+  {
+    id: 10,
+    title: "How to Win a Multiple Offer Situation in Montreal Without Overpaying",
+    category: "buyers",
+    categoryLabel: "Buyers",
+    date: "December 2, 2025",
+    readTime: "7 min read",
+    featured: false,
+    excerpt: "Multiple offer situations in Montreal's competitive neighbourhoods are common for well-priced properties. The buyers who win are not always those who offer the most. Strategy, presentation, and terms matter as much as price.",
+    body: `
+      <p>In Montreal's most competitive neighbourhoods, receiving multiple offers on a well-priced property is the norm rather than the exception. For buyers, the psychology of competition can lead to two equally costly mistakes: being emotionally overwhelmed into overpaying, or being strategically underprepared and losing properties you should have won.</p>
+
+      <h2>Understanding What Sellers Actually Want</h2>
+      <p>The popular assumption is that the highest price wins every time. In practice, sellers evaluate offers on a combination of factors, and a lower price with stronger terms often beats a higher price with conditions that create uncertainty.</p>
+      <p>Sellers' primary concerns are typically: certainty of closing, speed of closing if they have already purchased, price, and protection from the deal collapsing after acceptance. An offer that addresses these concerns directly, with clean conditions and a pre-approved buyer, is materially more attractive than a marginally higher offer with a long conditional period and an uncertain buyer profile.</p>
+
+      <h2>The Pre-Offer Intelligence Phase</h2>
+      <p>Before making any offer in a competitive situation, gather as much intelligence as possible through your broker:</p>
+      <ul>
+        <li>How many offers has the seller's broker indicated they are expecting?</li>
+        <li>What is the seller's preferred closing date? Match it precisely if possible.</li>
+        <li>Are there any specific conditions the seller has indicated are important?</li>
+        <li>What is the property's actual market value based on true comparables, not the list price?</li>
+      </ul>
+      <p>Your broker should be communicating directly with the listing broker to gather this information. The intelligence advantage in offer situations is often the difference between winning and losing.</p>
+
+      <h2>Structuring the Winning Offer</h2>
+      <p>The components of a competitive offer in today's Montreal market:</p>
+      <ul>
+        <li><strong>Price:</strong> Based on your CMA, determine the true market value. In competitive situations, the clearing price is typically 2-8% above list in supply-constrained neighbourhoods. Have your ceiling defined before you are in the emotional heat of the moment.</li>
+        <li><strong>Deposit:</strong> A larger deposit demonstrates serious intent. $30,000-$50,000 on properties in the $700,000-$1,000,000 range is appropriate and signals commitment.</li>
+        <li><strong>Inspection condition:</strong> Rather than waiving inspection entirely, consider a short 5-7 day inspection period with a pre-arranged inspector available to move quickly. This gives you protection while minimizing uncertainty for the seller.</li>
+        <li><strong>Financing condition:</strong> A clean pre-approval from a strong lender shortens the necessary financing condition period. 10-12 days is defensible with solid pre-approval documentation.</li>
+      </ul>
+      <blockquote>The buyer who wins multiple offer situations consistently is the one who knows their number before they walk in, has strong financing documentation ready, and executes cleanly without second-guessing. Preparation is the competitive advantage.</blockquote>
+    `
+  },
+  {
+    id: 11,
+    title: "Rosemont-La Petite-Patrie: The Neighbourhood That Became Unaffordable (And What It Means)",
+    category: "neighbourhoods",
+    categoryLabel: "Neighbourhoods",
+    date: "November 20, 2025",
+    readTime: "6 min read",
+    featured: false,
+    excerpt: "A decade ago, Rosemont was the affordable alternative to the Plateau. Today, its prices tell a different story. Understanding this trajectory helps predict which neighbourhood is next.",
+    body: `
+      <p>Rosemont-La Petite-Patrie's price appreciation over the past decade is one of the most instructive case studies in Montreal residential real estate. The neighbourhood that was positioned as the budget-conscious alternative to the Plateau has now itself priced out a significant portion of the buyers who made it desirable in the first place.</p>
+
+      <h2>The Trajectory That Created Today's Market</h2>
+      <p>In 2015, Rosemont's median triplex was trading in the $650,000-$750,000 range. By 2022, those same properties were trading above $1.2 million. The 2023-2025 normalization moderated prices, but the structural shift has been maintained. Today's entry point for a Rosemont triplex in move-in condition is approximately $950,000-$1,100,000.</p>
+      <p>This trajectory was driven by a predictable sequence: cultural desirability built by the incoming professional demographic, commercial corridor improvement along Masson and Beaubien streets, perceived value relative to the Plateau creating a wave of buyers who drove prices up, followed by a reinforcing cycle as the neighbourhood's enhanced reputation attracted increasingly affluent buyers.</p>
+
+      <h2>The Current Market Dynamics</h2>
+      <p>Rosemont today is a mid-market neighbourhood by Montreal standards. It no longer offers entry-level pricing, but it also does not carry Plateau or Outremont premium. The sweet spot properties are well-maintained duplexes and triplexes with updated systems in the eastern portions of the neighbourhood, which still offer measurable value relative to the western sections closer to the Plateau boundary.</p>
+
+      <h2>What Rosemont Predicts About the Next Wave</h2>
+      <p>The Rosemont trajectory has a clear parallel in today's market: Villeray-Saint-Michel, Verdun, and portions of Saint-Henri are exhibiting the early-stage characteristics that Rosemont showed in 2012-2015. Improving commercial corridors, incoming creative-professional buyers, and pricing that still reflects a discount to established desirable neighbourhoods.</p>
+      <p>Buyers with a 10-year time horizon and tolerance for the imperfections of an improving neighbourhood consistently find better returns in early-stage neighbourhoods than in fully priced established ones. The risk is that the trajectory does not materialize on your assumed timeline.</p>
+    `
+  },
+  {
+    id: 12,
+    title: "The Home Seller's Pre-Listing Checklist: What Montreal Brokers Actually Look For",
+    category: "sellers",
+    categoryLabel: "Sellers",
+    date: "November 8, 2025",
+    readTime: "8 min read",
+    featured: false,
+    excerpt: "Before your property goes on Centris, there is a preparation process that separates properties that generate maximum interest from those that underperform. This checklist covers every element.",
+    body: `
+      <p>The preparation that happens in the 30-60 days before a Montreal property goes to market is often the determinant of whether it sells at, above, or below its potential. The buyers your property will attract are scrolling through hundreds of listings and making elimination decisions within 15 seconds of viewing the first photo. Preparation is not optional; it is the foundation of your pricing strategy.</p>
+
+      <h2>The Pre-Listing Assessment</h2>
+      <p>Start with a full walkthrough of your property with someone who will give you honest feedback. This is ideally your broker, but it should also include a trusted friend who will tell you what they actually observe rather than what they think you want to hear. Look for:</p>
+      <ul>
+        <li>Deferred maintenance items that buyers and inspectors will identify</li>
+        <li>Cosmetic deficiencies that reduce perceived value without structural significance</li>
+        <li>Furniture and personal items that crowd spaces and impede the visual experience</li>
+        <li>Odors that occupants cannot detect but visitors consistently notice</li>
+        <li>Outdoor and curb appeal factors that affect first impression</li>
+      </ul>
+
+      <h2>Investments With the Highest Returns</h2>
+      <p>Not every pre-listing improvement is worth making. The following investments have the highest documented return in the Montreal market:</p>
+      <ul>
+        <li><strong>Professional cleaning:</strong> Deep clean including windows, grout, baseboards, and appliances. Every dollar spent is recovered multiples in buyer perception.</li>
+        <li><strong>Neutral paint throughout:</strong> Fresh paint in a warm neutral palette eliminates objections and makes spaces photograph better. Cost $3,000-$8,000. Return: 2-3x.</li>
+        <li><strong>Kitchen hardware and lighting updates:</strong> New cabinet hardware, updated light fixtures, and a refreshed backsplash can transform a dated kitchen for $2,000-$5,000 without a full renovation.</li>
+        <li><strong>Flooring refinishing:</strong> Original hardwood in good structural condition, refinished properly, is consistently among the highest-value pre-listing investments in Montreal's older housing stock.</li>
+        <li><strong>Decluttering and staging:</strong> Removing 30-40% of furniture and personal items makes spaces read larger in photographs and in person. Professional staging consultation ($300-$600) pays for itself consistently.</li>
+      </ul>
+
+      <h2>What Professional Photography Actually Accomplishes</h2>
+      <p>In 2026, virtually all property searches begin online. The quality of your listing photographs determines whether buyers put your property on their showings list or scroll past it. Professional real estate photography in Montreal costs $300-$600 for a standard property and $600-$1,200 for luxury properties with drone footage.</p>
+      <p>The calculation is simple: if professional photography generates one additional serious buyer, the incremental competitive pressure in an offer situation more than covers the cost. Agents who use smartphone photography for listings in competitive price ranges are leaving money on the table for their clients.</p>
+
+      <h2>The Disclosure Framework in Quebec</h2>
+      <p>Quebec sellers are required to complete a Vendor's Declaration (Declaration du vendeur) that discloses known defects and relevant property history. Complete this document with your notary or broker with full transparency. The consequences of non-disclosure, if a buyer discovers an issue post-closing that was known to the seller, can include legal action and financial liability that dwarf the transaction value. Transparency protects you.</p>
+    `
+  },
+  {
+    id: 13,
+    title: "Pierrefonds-Roxboro and Pointe-Claire: The West Island Value Case",
+    category: "neighbourhoods",
+    categoryLabel: "Neighbourhoods",
+    date: "October 25, 2025",
+    readTime: "5 min read",
+    featured: false,
+    excerpt: "As inner-city Montreal prices have climbed, the West Island has attracted a new generation of buyers seeking space and value. Here is what the market looks like and who it makes sense for.",
+    body: `
+      <p>The West Island's real estate market operates on fundamentally different parameters than the inner city. Lower density, larger lots, stronger school infrastructure, and materially lower prices per square foot make it the logical destination for buyers whose priorities include space, greenery, and good schools over urban walkability and cultural amenity.</p>
+
+      <h2>Pierrefonds-Roxboro: The Value Proposition</h2>
+      <p>Pierrefonds-Roxboro offers single-family homes at prices that are increasingly difficult to find anywhere east of the Décarie. A well-maintained 3-bedroom bungalow in Pierrefonds can be found in the $520,000-$680,000 range, compared to equivalent square footage in NDG or Rosemont that would price at $800,000-$1,000,000+.</p>
+      <p>The trade-off is distance from the city core and limited transit options. The West Island is a car-dependent environment by Montreal standards. For buyers who work remotely or have flexible commute requirements, this trade-off has become increasingly acceptable.</p>
+
+      <h2>Pointe-Claire: The Premium West Island Option</h2>
+      <p>Pointe-Claire represents the top of the West Island residential market. The Pointe-Claire Village area, with its lakefront access and heritage commercial strip, commands premiums that are well-supported by the quality of the housing stock and the affluent buyer profile the area attracts.</p>
+      <p>Pointe-Claire's proximity to major employers on the West Island, including several large corporate headquarters and the Fairview Pointe-Claire commercial hub, creates a self-contained employment ecosystem that reduces the downtown commute calculus for many buyers.</p>
+
+      <h2>Who the West Island Works For</h2>
+      <p>The profile of a buyer who benefits most from the West Island is fairly consistent: families with school-age children who prioritize school district quality and outdoor space, buyers whose employment is in the West Island employment corridor, remote workers who have optimized for space over location, and buyers who are making a deliberate choice to prioritize ownership of a detached home over all other considerations.</p>
+      <p>The buyers who tend to regret the West Island purchase are those who underestimate how much the reduced walkability and car dependency affect their quality of life, particularly if they are accustomed to Montreal's dense inner neighbourhoods.</p>
+    `
+  },
+  {
+    id: 14,
+    title: "Montreal-Ouest: The Quiet Neighbourhood That Serious Buyers Keep Overlooking",
+    category: "neighbourhoods",
+    categoryLabel: "Neighbourhoods",
+    date: "October 12, 2025",
+    readTime: "5 min read",
+    featured: false,
+    excerpt: "Montreal-Ouest is one of the most consistently pleasant residential environments on the island and one of the most underappreciated. Here is why it deserves more attention.",
+    body: `
+      <p>Montreal-Ouest is the kind of neighbourhood that does not generate Instagram posts or real estate trend articles. What it generates instead is consistent value appreciation, exceptionally low turnover among its residents, and a residential environment that many of its inhabitants describe as one of the best-kept secrets on the island.</p>
+
+      <h2>What Makes Montreal-Ouest Distinctive</h2>
+      <p>The borough covers a small geographic area of primarily single-family homes on generous lots, constructed largely between 1920 and 1960. The housing stock is solidly built, well-maintained by a homeowner demographic that tends toward long tenure, and set on streets with mature tree canopy that creates the kind of streetscape character that cannot be manufactured in new developments.</p>
+      <p>The neighbourhood's commercial infrastructure is modest but sufficient, and its proximity to the Vendome metro station and access to downtown via Highway 20 creates reasonable commute options for those who work in the city core.</p>
+
+      <h2>The Price Story</h2>
+      <p>Montreal-Ouest trades at a measurable discount to Westmount and NDG despite sharing meaningful physical characteristics with both. This discount reflects lower name recognition and lower cultural profile rather than any deficiency in residential quality. The neighbourhood's trajectory over the past decade has been consistently positive, driven by buyers who discover it through adjacency to better-known areas.</p>
+
+      <h2>The Ideal Buyer Profile</h2>
+      <p>Montreal-Ouest works best for buyers who prioritize the physical quality of their residential environment over neighbourhood branding, who have done the research to understand what they are getting, and who have a time horizon of at least seven years. The neighbourhood's low turnover means that market opportunities arise infrequently, and buyers who wait for the perfect property in perfect condition may wait a long time.</p>
+    `
+  },
+  {
+    id: 15,
+    title: "The Quebec Real Estate Transaction: A Step-by-Step Guide from Offer to Keys",
+    category: "buyers",
+    categoryLabel: "Buyers",
+    date: "September 28, 2025",
+    readTime: "8 min read",
+    featured: false,
+    excerpt: "Quebec's real estate transaction process is unique in Canada. Understanding each stage, the legal requirements, and the key decision points before you are in the middle of a transaction is essential.",
+    body: `
+      <p>Quebec's real estate transaction process differs from other Canadian provinces in important ways. The involvement of a notary rather than a lawyer, specific mandatory documentation requirements, and the province's unique real estate brokerage framework create a transaction environment that rewards preparation and punishes improvisation.</p>
+
+      <h2>Stage 1: The Offer (Promise to Purchase)</h2>
+      <p>In Quebec, the primary transactional document is the Promise to Purchase (Promesse d'achat), a standardized form that constitutes a legally binding offer when accepted by the seller. Unlike in some other provinces where offers have limited legal weight before formal contracts are signed, a signed and accepted Promise to Purchase in Quebec creates binding obligations for both parties.</p>
+      <p>The Promise to Purchase includes: purchase price, deposit amount, closing date, list of inclusions and exclusions, and any conditions. The most common conditions are financing and inspection. Understanding the legal weight of what you are signing before signing it is fundamental.</p>
+
+      <h2>Stage 2: The Conditions Period</h2>
+      <p>If your Promise to Purchase includes conditions, you have the specified period to satisfy or waive them. The financing condition is satisfied when your lender provides a formal mortgage commitment on the specific property. The inspection condition is satisfied when you review the inspection report and decide whether to proceed, renegotiate, or withdraw.</p>
+      <p>If you wish to withdraw during the conditions period, you must do so in writing within the specified period. Failing to withdraw in writing before the condition expiry is legally equivalent to waiving the condition.</p>
+
+      <h2>Stage 3: Firm Agreement and Pre-Notarial Period</h2>
+      <p>Once conditions are waived, the agreement is firm. Both parties are committed to completing the transaction. During this period, you will: finalize your mortgage with your lender, arrange for home insurance commencing on the closing date (required by your lender), instruct a notary, and transfer your down payment and closing costs to the notary's trust account.</p>
+
+      <h2>Stage 4: The Notarial Act</h2>
+      <p>In Quebec, the real estate transaction is finalized through the signature of a notarial act (acte de vente) before a notary. The notary verifies title, prepares the mortgage deed, registers the transaction in the Quebec land register, and distributes funds to the seller and existing creditors. Both buyer and seller must appear before the notary, either in person or by power of attorney.</p>
+
+      <h2>Stage 5: Possession</h2>
+      <p>Possession of the property typically occurs on the same day as notarial signing, though the parties can agree to different arrangements. The property should be delivered in the condition agreed upon in the Promise to Purchase, vacant if the seller was the occupant, and with all agreed inclusions present. A final walkthrough the day before closing is standard practice and allows any last-minute deficiencies to be addressed before funds transfer.</p>
+    `
+  },
+  {
+    id: 16,
+    title: "Montreal's Luxury Real Estate Segment: How the Top of the Market Is Actually Performing",
+    category: "market",
+    categoryLabel: "Market Report",
+    date: "September 15, 2025",
+    readTime: "6 min read",
+    featured: false,
+    excerpt: "Properties above $2 million in Montreal operate in a different market with different dynamics. The data tells a more nuanced story than the overall market indicators suggest.",
+    body: `
+      <p>Montreal's luxury residential market, defined as properties transacting above $2 million, has demonstrated a resilience through the 2023-2025 rate cycle that the broader market has not uniformly shared. Understanding why requires looking at who buys luxury real estate in Montreal and what motivates them.</p>
+
+      <h2>The Buyer Profile at the Top</h2>
+      <p>Montreal's $2 million-plus buyer is typically not a highly leveraged purchaser. The segment is dominated by successful business owners, senior professionals in finance, law, and medicine, and buyers relocating from international markets where Montreal's luxury pricing looks exceptional relative to comparable cities. These buyers are modestly leveraged at best, and in a significant proportion of cases, purchasing entirely with equity from previous transactions or business proceeds.</p>
+      <p>This profile creates insulation from interest rate pressure. When financing costs rise, the buyers who disappear from the market first are those who are highly leveraged and whose qualification deteriorates with rate increases. The cash-heavy or modestly leveraged luxury buyer does not face this constraint in the same way.</p>
+
+      <h2>The Outremont and Westmount Performance Divergence</h2>
+      <p>Within the luxury segment, Westmount and Outremont have continued to demonstrate the strongest pricing support. Westmount in particular, with its established school infrastructure, English-language institutional character, and the physical quality of its housing stock, attracts an affluent anglophone and allophone buyer who has limited alternatives within the city that satisfy the same criteria.</p>
+      <p>Properties in the $2-4 million range in Westmount that are in move-in condition are experiencing days-on-market in the 45-75 day range, which is reasonable for a segment with inherently limited buyer pools. Properties requiring significant work are experiencing more extended market times as buyers at this price point have increasingly high expectations for presentation quality.</p>
+
+      <h2>The International Buyer Factor</h2>
+      <p>Montreal's luxury market receives a meaningful but not dominant contribution from international buyers, particularly from France, Lebanon, and other French-speaking countries. These buyers are attracted by Montreal's cultural character, its relative affordability compared to Paris or London at similar quality levels, and the access to Canadian permanent residency pathways that property ownership supports.</p>
+      <p>Federal changes to foreign buyer restrictions have complicated this dynamic, and working with a broker who understands the current regulatory framework for non-resident buyers is essential in the luxury segment.</p>
+    `
+  },
+  {
+    id: 17,
+    title: "Understanding Condo Corporation Health: What to Check Before You Buy",
+    category: "buyers",
+    categoryLabel: "Buyers",
+    date: "August 30, 2025",
+    readTime: "7 min read",
+    featured: false,
+    excerpt: "In Quebec, buying a condo means buying into a co-ownership. The financial health of the co-ownership is often the most important factor in whether your investment holds value. Here is what to review.",
+    body: `
+      <p>The Quebec Loi sur la copropriete divise (the condominium act) creates a specific legal and financial structure for co-owned properties. When you purchase a condo in Quebec, you are acquiring both your private unit and a fractional interest in the common areas and the co-ownership corporation. The financial health of that corporation is not a peripheral detail. It is a material component of your investment.</p>
+
+      <h2>The Reserve Fund: The Most Important Number</h2>
+      <p>Quebec law requires condo corporations to maintain a reserve fund for major repair and replacement of common elements. The required level of funding is determined by a reserve fund study conducted by a qualified engineer. Under-funded reserve funds are extremely common in older Montreal buildings, and they represent a specific financial risk for buyers.</p>
+      <p>When reviewing a condo purchase, ask for the most recent reserve fund study and the current reserve fund balance. If the current balance is significantly below the study's target, the gap will eventually be covered by a special assessment on all unit owners. This is not hypothetical; it is a matter of when, not if.</p>
+
+      <h2>What the Meeting Minutes Tell You</h2>
+      <p>The condo corporation's meeting minutes are among the most revealing documents in any condo transaction. They record ongoing issues, decisions, disputes, and the general management quality of the corporation. Requesting three years of minutes is standard. Look for:</p>
+      <ul>
+        <li>Recurring maintenance issues that have not been resolved</li>
+        <li>Disputes between unit owners that have escalated to legal proceedings</li>
+        <li>Deferred major maintenance items and the reasoning for deferral</li>
+        <li>The management style and engagement of the board (active, professional boards are strongly preferable)</li>
+        <li>Any disclosure of financial distress or unusual expenses</li>
+      </ul>
+
+      <h2>Monthly Fees: Understanding What You Are Paying For</h2>
+      <p>Condo fees in Montreal vary widely, from $150/month for small boutique buildings to $900+/month for large buildings with extensive amenities. The fee itself is less important than what it covers and whether it is adequate for the building's actual operating costs and reserve fund requirements.</p>
+      <p>Suspiciously low condo fees are a warning sign rather than an advantage. Buildings with fees well below the market average for their age and size are often deferring maintenance costs and under-funding reserves, both of which result in special assessments or deferred deterioration that affects resale value.</p>
+
+      <h2>The Syndie Manager</h2>
+      <p>Larger condo corporations in Quebec are typically managed by a professional syndie manager. The quality of this management is a significant factor in building governance quality. Ask your broker and the condo corporation which management company is employed and whether there are any known issues with their performance.</p>
+    `
+  },
+  {
+    id: 18,
+    title: "Verdun and LaSalle: Montreal's Emerging Value Corridor",
+    category: "neighbourhoods",
+    categoryLabel: "Neighbourhoods",
+    date: "August 15, 2025",
+    readTime: "5 min read",
+    featured: false,
+    excerpt: "The stretch from Verdun along the St. Lawrence waterfront has undergone a genuine transformation over the past decade. Understanding where it stands today and where it is headed matters for buyers and investors alike.",
+    body: `
+      <p>Verdun's transformation from working-class neighbourhood to desirable residential destination has been one of Montreal's more compelling urban real estate stories of the past decade. The combination of waterfront access, improving commercial infrastructure along Wellington Street, and meaningful price discount to NDG and Le Sud-Ouest has created a neighbourhood that rewards buyers who do not need a well-established address.</p>
+
+      <h2>The Physical Transformation</h2>
+      <p>Verdun's waterfront infrastructure improvement, including the extension and improvement of the riverside promenade and parks, has created a recreational amenity that is genuinely exceptional for a Montreal urban neighbourhood. The ability to walk or cycle along the St. Lawrence from the neighbourhood's doorstep is the kind of quality-of-life attribute that housing markets consistently price over time.</p>
+      <p>Wellington Street has seen consistent commercial improvement, with restaurants, coffee shops, and specialty retail replacing the legacy commercial uses that characterized the street in the early 2000s. This commercial axis is not yet fully mature, but the trajectory is clearly positive.</p>
+
+      <h2>The Current Market</h2>
+      <p>Verdun properties are currently trading at a measurable discount to Le Sud-Ouest and the Plateau, which they border to the north. A triplex in Verdun that would trade at $900,000 in Le Sud-Ouest typically prices in the $700,000-$800,000 range. This spread has been narrowing consistently and reflects continued revaluation as buyers discover the neighbourhood's quality.</p>
+
+      <h2>LaSalle: The Adjacent Opportunity</h2>
+      <p>LaSalle occupies an interesting position adjacent to Verdun. Less culturally differentiated but offering larger lot sizes and more single-family detached properties, LaSalle attracts buyers who want the proximity to the Verdun corridor without the triplex-dominant housing stock. Pricing is generally lower than Verdun and significantly lower than comparable property in other island boroughs.</p>
+    `
+  },
+  {
+    id: 19,
+    title: "Renovation ROI in Montreal: Which Improvements Actually Pay Off at Resale",
+    category: "sellers",
+    categoryLabel: "Sellers",
+    date: "July 28, 2025",
+    readTime: "7 min read",
+    featured: false,
+    excerpt: "Not every renovation adds more value than it costs. Understanding which improvements deliver measurable return in Montreal's specific market context will help you invest your pre-sale budget where it matters.",
+    body: `
+      <p>The renovation ROI question is one of the most frequently misunderstood aspects of residential real estate. Homeowners routinely over-invest in improvements that buyers will not pay a premium for and under-invest in the basic quality signals that actually move buyers to purchase. This guide focuses on what the data from Montreal transactions actually shows.</p>
+
+      <h2>High-Return Improvements (150%+ Return)</h2>
+      <h3>Hardwood Floor Refinishing</h3>
+      <p>Montreal's housing stock is overwhelmingly hardwood-floored in the city's inner neighbourhoods, and the condition of those floors is among the first things buyers notice. A professional sand-and-finish on original hardwood floors costs $3-$5 per square foot. The return, measured by the reduction in buyer objections and the elimination of floor-replacement credits in negotiations, consistently exceeds the cost by a multiple.</p>
+      <h3>Fresh Paint in Neutral Palette</h3>
+      <p>Fresh paint throughout a property, using a warm but neutral palette (avoid pure white; warm greiges and off-whites photograph better and feel more livable), is the highest-return cosmetic investment in residential real estate. The investment signals that the property has been cared for, eliminates objections about dated color choices, and makes photography dramatically better.</p>
+      <h3>Kitchen and Bath Fixture Updates</h3>
+      <p>New cabinet hardware, updated faucets, and replacement of obviously dated light fixtures can transform the perceived quality of a kitchen or bathroom for a fraction of the cost of a full renovation. Budget $2,000-$4,000 for a meaningful cosmetic update to both spaces.</p>
+
+      <h2>Moderate-Return Improvements (80-120% Return)</h2>
+      <h3>Bathroom Tile and Fixture Replacement</h3>
+      <p>A dated bathroom with original 1980s fixtures and tile is a consistent negotiating point for buyers. A full bathroom refresh, including new tile, toilet, vanity, and faucet, runs $12,000-$22,000 in Montreal. The return is in the 80-100% range for most properties, meaning you recover most but not all of the cost.</p>
+      <h3>Exterior Paint and Curb Appeal</h3>
+      <p>For properties with painted brick or siding, exterior paint in an appropriate period color can meaningfully improve first impression. Budget $3,000-$8,000 for a standard townhouse or duplex exterior.</p>
+
+      <h2>Low-Return Improvements (Below 70% Return)</h2>
+      <h3>Full Kitchen Renovation</h3>
+      <p>A full kitchen renovation costing $40,000-$80,000 rarely generates equivalent value at resale. Buyers will pay a premium for an updated kitchen, but rarely the full renovation cost. The exception is when the kitchen is so functionally deficient (inadequate workspace, damaged cabinets, non-functional layout) that it is actively deterring buyers.</p>
+      <h3>Luxury Finishes in Average-Price Neighbourhoods</h3>
+      <p>Installing Sub-Zero appliances and Calacatta marble countertops in a neighbourhood where buyers are purchasing at $500,000-$700,000 does not generate commensurate value. Buyers in those price ranges have a ceiling on what they can pay regardless of finish quality. Match your renovation level to the price range of your market.</p>
+    `
+  },
+  {
+    id: 20,
+    title: "The Montreal Market in 2027: Scenarios, Indicators, and What to Watch",
+    category: "market",
+    categoryLabel: "Market Report",
+    date: "July 10, 2025",
+    readTime: "6 min read",
+    featured: false,
+    excerpt: "Forward-looking analysis of the factors that will shape Montreal's real estate market over the next 18 months. Data-based scenario planning for buyers, sellers, and investors.",
+    body: `
+      <p>Forecasting real estate markets is an exercise in humility. The factors that determine residential property prices are numerous, interrelated, and subject to exogenous shocks that render point predictions unreliable. What is more useful is scenario analysis: understanding the key variables, the range of plausible outcomes, and what each scenario means for your decision-making.</p>
+
+      <h2>The Three Scenarios</h2>
+      <h3>Scenario A: Moderate Expansion (Base Case, 55% Probability)</h3>
+      <p>The Bank of Canada continues gradual rate reduction through 2026-2027, bringing 5-year fixed rates to approximately 4.0-4.5%. Buyer demand, which has been suppressed by affordability constraints, reactivates gradually. Inventory remains tight in desirable inner-city neighbourhoods. Prices appreciate 3-6% year-over-year across the island, with outperformance in supply-constrained areas.</p>
+      <p>For buyers in this scenario: acting before the full buyer reactivation provides better selection and less competition. For sellers: spring 2026 and spring 2027 are strong windows.</p>
+      <h3>Scenario B: Flat to Modest Decline (Adverse, 25% Probability)</h3>
+      <p>Rate reductions disappoint expectations, employment weakens meaningfully, and buyer confidence remains suppressed. Price appreciation stalls or reverses modestly, particularly in higher-density condo segments and suburban markets. Inner-city supply-constrained markets prove more resilient but are not immune.</p>
+      <p>For buyers: accelerated opportunity in motivated-seller situations. For sellers: the importance of correct pricing from day one is amplified; overpriced properties in this scenario see extended market times and significant price reductions.</p>
+      <h3>Scenario C: Accelerated Growth (Optimistic, 20% Probability)</h3>
+      <p>Rate reductions are faster or larger than expected, combined with renewed immigration activity and institutional investment interest. Buyer demand accelerates meaningfully and inventory, already thin, creates competitive conditions that push prices 8-12% higher. This scenario is most likely in a context of significant BoC policy pivot.</p>
+
+      <h2>The Key Indicators to Monitor</h2>
+      <p>The variables with the greatest predictive power for Montreal's 2027 market:</p>
+      <ul>
+        <li><strong>BoC overnight rate trajectory:</strong> Each 25 basis point reduction adds approximately 2-3% to qualification amounts and reactivates a cohort of buyers.</li>
+        <li><strong>Active listings-to-sales ratio:</strong> When this ratio drops below 3 months, seller's market conditions emerge. Currently at approximately 4.5 months island-wide.</li>
+        <li><strong>Montreal employment and population growth:</strong> Net population inflow creates housing demand. Montreal's population trajectory through the immigration framework is the single most important structural demand variable.</li>
+        <li><strong>Federal housing policy:</strong> Any meaningful changes to mortgage qualification rules, foreign buyer restrictions, or housing supply incentives will have direct market impacts.</li>
+      </ul>
+      <blockquote>The most reliable prediction about Montreal's real estate market over the next decade is that supply-constrained inner-city neighbourhoods will continue to outperform. The timing of the next cycle matters less than the quality of the asset you acquire and the neighbourhood you choose to be in.</blockquote>
+    `
+  },
+
+  {
+    id: 21,
+    title: "Why Do Homeowners Struggle to Sell a House for Top Dollar?",
+    category: "sellers",
+    categoryLabel: "Sellers",
+    date: "May 1, 2026",
+    readTime: "7 min read",
+    featured: false,
+    excerpt: "Most sellers leave money on the table — not because of the market, but because of avoidable mistakes in pricing, presentation, and timing. Here is what actually holds sellers back.",
+    body: `
+      <p>Selling a home for its maximum value is not simply a matter of putting it on Centris and waiting. Most homeowners who walk away disappointed made one or more predictable mistakes. Understanding them in advance is the difference between a satisfying sale and a prolonged, frustrating process.</p>
+
+      <h2>Emotional Pricing</h2>
+      <p>The most common reason sellers fail to achieve top dollar is pricing based on what they need, not what the market will bear. Whether the goal is to cover a renovation, fund a down payment on the next property, or simply validate years of ownership, emotionally driven pricing consistently backfires.</p>
+      <p>Buyers in today's Montreal market are data-literate. They have access to Centris history, comparable sales, and neighbourhood trends. An overpriced listing does not generate polite low offers — it generates no offers at all, followed by the stigma of days on market accumulating.</p>
+
+      <h2>Presenting the Property Before It Is Ready</h2>
+      <p>First impressions in real estate are made in under three seconds — often through a thumbnail photo on a smartphone. Sellers who list before completing basic repairs, deep cleaning, decluttering, and professional photography are competing at a structural disadvantage against properties that present well.</p>
+      <p>In Montreal's condo market specifically, where inventory has risen, a poorly presented unit is simply skipped. Buyers have alternatives. The cost of a professional staging consultation (often $300–$600) routinely returns ten times its value in sale price.</p>
+
+      <h2>Choosing the Wrong Agent — or Going Without One</h2>
+      <p>Not all brokers provide the same level of service. Sellers who choose an agent based on the highest suggested list price (a tactic called "buying the listing") often end up with a broker who lacks the marketing infrastructure to justify it. Similarly, sellers who attempt to sell privately to avoid commission often achieve lower net proceeds once negotiating disadvantages and marketing gaps are factored in.</p>
+
+      <h2>Poor Marketing Reach</h2>
+      <p>Listing on Centris is the floor, not the ceiling. Top-dollar sales in competitive Montreal neighbourhoods come from brokers who layer in professional photography, video walkthroughs, targeted social media campaigns, email distribution to active buyer pools, and network exposure to other agents with qualified clients.</p>
+      <p>A property seen by 200 qualified buyers produces better outcomes than the same property seen by 20. Marketing reach is not a luxury — it is a pricing strategy.</p>
+
+      <h2>Ignoring the Negotiation Phase</h2>
+      <p>Receiving an offer is not the finish line. How a seller responds to an initial offer — the counter-offer strategy, the management of multiple offer situations, the handling of conditions and timelines — significantly affects the final sale price. Sellers without experienced representation often concede unnecessarily or inadvertently kill deals that could have been restructured to their advantage.</p>
+
+      <h2>The Bottom Line</h2>
+      <p>Top dollar is achievable in most markets and most conditions. It requires accurate pricing, a well-prepared property, comprehensive marketing, and skilled negotiation. Each of these elements compounds the others. Getting one right and neglecting the rest still leaves money behind.</p>
+    `
+  },
+  {
+    id: 22,
+    title: "How Do Listing and Marketing Services Actually Help Home Sellers?",
+    category: "sellers",
+    categoryLabel: "Sellers",
+    date: "May 1, 2026",
+    readTime: "6 min read",
+    featured: false,
+    excerpt: "Beyond putting a sign on your lawn, here is what comprehensive listing and marketing services actually do — and why the difference shows up in your final sale price.",
+    body: `
+      <p>When sellers evaluate a real estate broker, the conversation often centres on commission rates. A more useful question is: what does this person's marketing actually do for my property? The answer varies enormously between brokers, and the gap between them shows up directly in sale price and days on market.</p>
+
+      <h2>Professional Photography and Visual Content</h2>
+      <p>Over 90% of buyers begin their property search online. The visual quality of your listing determines whether a buyer clicks through or scrolls past. Professional real estate photography — wide-angle, properly lit, edited — is the single highest-ROI marketing investment for most properties.</p>
+      <p>For properties above $600,000 in Montreal, video walkthroughs and drone footage have become increasingly expected by serious buyers. These assets extend the reach of the listing to out-of-province and international buyers who will not visit in person before making a decision.</p>
+
+      <h2>Centris Listing Optimization</h2>
+      <p>Centris is the primary real estate database in Quebec. How your property is described, categorized, and tagged directly affects its visibility in buyer searches. An experienced broker writes listing copy that highlights the property's genuine differentiators — not generic language, but specific details that resonate with the buyer profile most likely to pay a premium for the property.</p>
+
+      <h2>Targeted Digital Distribution</h2>
+      <p>Beyond Centris, effective listing services distribute your property through targeted digital channels: social media advertising to buyer demographics, email campaigns to active buyer lists, and placement on platforms like Realtor.ca, Zillow (for cross-border exposure), and the broker's own website.</p>
+      <p>In Montreal's competitive condo segment, reaching the right 50 buyers matters more than reaching 5,000 unqualified ones. Targeted marketing concentrates exposure where purchase intent is highest.</p>
+
+      <h2>Broker Network Activation</h2>
+      <p>A significant percentage of transactions — particularly in premium Montreal neighbourhoods — happen through broker-to-broker communication before a property ever reaches public listing. An agent with an active professional network can generate pre-market interest, test pricing with qualified buyers, and in some cases produce an offer before competitors even know the property is available.</p>
+
+      <h2>Showing Management and Buyer Qualification</h2>
+      <p>Managing showings is more complex than opening doors. Professional listing services pre-qualify visiting buyers (are they pre-approved? are they genuinely in the market?), coordinate scheduling to maximize attendance, and gather feedback after each showing to inform pricing and presentation adjustments.</p>
+
+      <h2>What This Means for Your Bottom Line</h2>
+      <p>The difference between a comprehensive listing service and a minimal one is not measured in marketing costs — it is measured in sale price. Properties with professional photography sell faster and for more. Properties with active broker network promotion attract competitive offer situations. The commission you pay for full-service representation is not a cost; it is an investment with a measurable return.</p>
+    `
+  },
+  {
+    id: 23,
+    title: "What Makes Pricing and Staging a Home for Sale Difficult?",
+    category: "sellers",
+    categoryLabel: "Sellers",
+    date: "May 2, 2026",
+    readTime: "6 min read",
+    featured: false,
+    excerpt: "Two of the most important levers in selling a home — price and presentation — are also the ones sellers most often get wrong. Here is why, and how to avoid it.",
+    body: `
+      <p>Pricing and staging are the two variables most directly within a seller's control. They are also the two that most frequently go wrong — not from lack of effort, but from lack of objective data and professional perspective. Understanding why these tasks are difficult is the first step to doing them well.</p>
+
+      <h2>Why Pricing Is Harder Than It Looks</h2>
+      <p>A property's market value is not what the owner paid for it, what they spent on renovations, or what they need to net. It is what a qualified buyer, given the current alternatives, will pay today. These figures often diverge significantly.</p>
+      <p>Accurate pricing requires analyzing truly comparable sales — same property type, similar size and condition, same neighbourhood — from the past 60 to 90 days. Not six months ago. Not the unit in a different building three streets away. The analysis is precise, and slight errors compound in either direction.</p>
+      <p>Price too high and the property sits. Buyers assume something is wrong. Subsequent price reductions rarely recover full value — the market has already passed judgment. Price too low and you leave money on the table, potentially significantly. The optimal price is the one that generates maximum buyer interest within the first two weeks on market.</p>
+
+      <h2>The Psychology of Pricing Your Own Home</h2>
+      <p>Sellers are human. The house where you raised your children, made your memories, and invested your weekend hours carries emotional weight that buyers do not share. Buyers see square footage, condition, location, and comparative value. Sellers see their history. Bridging that gap objectively is genuinely difficult without a professional acting as a neutral third party.</p>
+
+      <h2>Why Staging Is Misunderstood</h2>
+      <p>Staging is not interior decorating. It is not about making a home look like the seller's taste. It is about presenting a space in a way that allows the maximum number of buyers to envision themselves living there. That often means removing personal items, neutralizing bold colour choices, reconfiguring furniture to suggest space, and addressing deferred maintenance that buyers will mentally triple in estimated cost.</p>
+
+      <h2>The Cost of Not Staging</h2>
+      <p>In Montreal's condo market, where photography is the first filter for most buyers, an unstaged unit photographs smaller, darker, and less valuable than the same space properly prepared. Studies consistently show staged properties sell faster and for more — typically 5–10% above non-staged equivalents. On a $500,000 property, that is $25,000 to $50,000 in real dollars.</p>
+
+      <h2>Getting Both Right</h2>
+      <p>The solution to both challenges is professional guidance with real market data. An experienced broker can separate emotional value from market value with comparable analysis, and connect sellers with staging professionals who understand what Montreal buyers respond to. The combination of accurate pricing and strong presentation is the foundation of every top-dollar sale.</p>
+    `
+  },
+  {
+    id: 24,
+    title: "What Is the Best Listing Service for Selling a House in Canada?",
+    category: "sellers",
+    categoryLabel: "Sellers",
+    date: "May 2, 2026",
+    readTime: "7 min read",
+    featured: false,
+    excerpt: "From full-service brokers to discount models, here is how to evaluate listing services in Canada — and what actually drives your net sale price.",
+    body: `
+      <p>Canadian sellers today have more options for listing their homes than ever before. Discount brokers, flat-fee services, private sale platforms, and full-service real estate agencies all compete for your listing. The question is not which costs the least upfront — it is which puts the most money in your pocket at closing.</p>
+
+      <h2>The Listing Service Spectrum in Canada</h2>
+      <p>At one end are private sale platforms (FSBO — For Sale By Owner) where sellers pay a flat fee to list on platforms that may or may not include Centris in Quebec. At the other end are full-service brokers who handle pricing analysis, preparation guidance, professional marketing, showing management, negotiation, and transaction coordination. Between these are discount brokers who offer Centris access with limited services for a reduced commission.</p>
+
+      <h2>What Full-Service Actually Includes</h2>
+      <p>A genuine full-service listing in 2026 includes: a current comparative market analysis, professional photography, video content, Centris listing optimization, digital marketing distribution, broker network activation, showing management and buyer qualification, negotiation strategy and execution, and post-offer transaction support through to closing.</p>
+      <p>In Quebec specifically, the transaction requires a notary rather than a real estate lawyer, and a knowledgeable broker coordinates the paperwork timeline between the buyer's broker, both notaries, mortgage lenders, and inspectors.</p>
+
+      <h2>The Real Cost of Discount Services</h2>
+      <p>Discount listing models save sellers on commission but typically deliver less marketing reach, less negotiation support, and lower final sale prices. Multiple studies in Canadian markets show that FSBO properties and discount-listed properties sell for 5–10% less than full-service equivalents. On a $700,000 Montreal property, 5% is $35,000 — far exceeding any commission savings.</p>
+
+      <h2>What to Look for in a Listing Agent</h2>
+      <p>Regardless of which service model you consider, evaluate the following: recent comparable sales in your specific neighbourhood (not citywide stats), the quality of their photography and marketing materials, their online and social media presence, their buyer network and peer reputation among other brokers, and their communication style under pressure.</p>
+
+      <h2>The Best Service Is the Right Fit</h2>
+      <p>For most homeowners selling a primary residence in Montreal, a full-service broker who knows your neighbourhood delivers the best net outcome. The commission is not an expense — it is a performance investment with a documented return. The broker who charges slightly less but sells your property for $30,000 below market is not the better deal.</p>
+    `
+  },
+  {
+    id: 25,
+    title: "Which Listing Agent Services Help Homeowners Get Multiple Offers?",
+    category: "sellers",
+    categoryLabel: "Sellers",
+    date: "May 3, 2026",
+    readTime: "6 min read",
+    featured: false,
+    excerpt: "Multiple offers do not happen by accident. They are the result of a deliberate strategy combining pricing, timing, presentation, and targeted marketing. Here is how it works.",
+    body: `
+      <p>A multiple-offer situation is the best outcome for most sellers: competing buyers, upward price pressure, and leverage in negotiating conditions. In Montreal's active neighbourhoods, multiple offers are achievable on well-positioned properties. But they require a specific strategy — not luck.</p>
+
+      <h2>Strategic Pricing Creates Competition</h2>
+      <p>Counter-intuitively, pricing a property slightly below its assessed market value often generates more money than pricing at or above it. A property priced to attract broad interest — rather than to anchor at a specific number — draws more showings, more offers, and ultimately a sale price that exceeds where a single-offer negotiation would have landed.</p>
+      <p>This strategy requires a broker who understands local demand and has the confidence to recommend a price that may feel aggressive to the seller but creates the right buyer psychology.</p>
+
+      <h2>Controlled Showing Periods</h2>
+      <p>Listing agents who want to generate multiple offers typically compress showings into a defined window — often a weekend or four to five days after listing — and set an offer presentation date. This creates a sense of urgency and signals that the seller is organized and has market support.</p>
+      <p>An open-ended showing schedule with a "bring offers anytime" approach eliminates competitive dynamics. Buyers know they can take their time, and many will.</p>
+
+      <h2>Pre-Listing Preparation</h2>
+      <p>Properties that generate multiple offers are typically in move-in condition: professionally cleaned, repaired, staged, and photographed. Buyers in competitive situations are less tolerant of deferred maintenance because they know other buyers are watching. A well-prepared property signals that the seller has taken care of the asset — and that pre-purchase inspection findings are unlikely to derail the deal.</p>
+
+      <h2>Broker Network Pre-Marketing</h2>
+      <p>An experienced listing agent begins generating interest before the property hits Centris. Private showings for active buyer clients, announcements to peer brokers with qualified buyers, and social media teaser content can build a queue of interested parties before day one. This pre-market activity is impossible without an established professional network.</p>
+
+      <h2>Managing the Offer Process</h2>
+      <p>Once offers arrive, the listing broker's role is to manage the process fairly and strategically: communicating transparently with all bidding parties, advising the seller on the relative strength of each offer (price, conditions, deposit, timeline), and knowing when to accept, counter, or invite improved offers. This phase requires experience and judgment that cannot be replicated by a discount platform.</p>
+    `
+  },
+  {
+    id: 26,
+    title: "Top Home Listing Services for First-Time Sellers in Montreal",
+    category: "sellers",
+    categoryLabel: "Sellers",
+    date: "May 3, 2026",
+    readTime: "6 min read",
+    featured: false,
+    excerpt: "Selling for the first time is different from selling your fifth property. Here is what first-time sellers should look for in a listing service — and what to avoid.",
+    body: `
+      <p>Selling a home for the first time involves a learning curve that most people underestimate. Unlike experienced sellers, first-timers do not have a baseline for what the process feels like, what is normal, and when something is off. Choosing the right listing service is the most consequential decision you make before the process begins.</p>
+
+      <h2>What First-Time Sellers Need Most</h2>
+      <p>Beyond the standard marketing and negotiation services, first-time sellers benefit most from a broker who will explain the process clearly at each step. This includes: what to expect during the pre-listing preparation phase, how offers are typically structured in Quebec, what the conditions in a Promise to Purchase actually mean, how the notarial closing process works, and what happens if issues arise during inspection.</p>
+      <p>A broker who assumes you know the vocabulary, the timeline, and the norms of a Quebec transaction is not the right fit for a first sale.</p>
+
+      <h2>The Quebec-Specific Framework</h2>
+      <p>Selling property in Quebec operates under a distinct legal framework. The mandatory seller's declaration (Déclaration du vendeur) requires full disclosure of known defects. The Promesse d'achat is binding upon acceptance. The transaction closes through a notary, not a lawyer. These elements have no equivalent in other Canadian provinces, and a first-time seller needs a broker who navigates them as a matter of routine.</p>
+
+      <h2>Evaluating Listing Services as a First-Timer</h2>
+      <p>Ask prospective brokers the following: How many properties have you sold in my building or on my street in the past 12 months? Can I see examples of your listing photography and marketing materials? How will you communicate with me during the process, and how often? What is your strategy if we do not receive offers in the first two weeks?</p>
+      <p>The answers reveal not just competence, but communication style and local expertise — both of which matter more to first-time sellers than to veterans.</p>
+
+      <h2>Avoid the Temptation of the Lowest Commission</h2>
+      <p>First-time sellers often focus on minimizing commission costs. The better focus is maximizing net proceeds. A full-service broker who achieves 5% above a discount broker's sale price has more than offset any commission differential. Your first sale sets the financial foundation for whatever comes next — it deserves the best representation you can access.</p>
+    `
+  },
+  {
+    id: 27,
+    title: "Which Home Selling Services Include Staging Guidance and Pricing Advice?",
+    category: "sellers",
+    categoryLabel: "Sellers",
+    date: "May 4, 2026",
+    readTime: "5 min read",
+    featured: false,
+    excerpt: "Not all listing packages are equal. Here is what to look for if you want a broker who actively helps you prepare and price your home — not just list it.",
+    body: `
+      <p>The gap between listing a home and selling it for maximum value runs directly through two activities: pricing it accurately and presenting it compellingly. The question every seller should ask a prospective broker is not just "what is your commission?" but "what exactly do you do to prepare my property for market?"</p>
+
+      <h2>What Staging Guidance Actually Looks Like</h2>
+      <p>True staging guidance begins weeks before listing, not the day before photography. A broker who includes staging support in their service will walk through the property with you, identify specific changes that improve buyer perception, and either provide their own staging recommendations or connect you with a professional stager at a negotiated rate.</p>
+      <p>This is different from a broker who says "the place looks great, let's list it." Honest pre-listing feedback — even when it means asking sellers to repaint a room, remove furniture, or invest $1,000 in repairs — is a hallmark of a broker who is focused on your outcome rather than the path of least resistance.</p>
+
+      <h2>What Pricing Advice Actually Looks Like</h2>
+      <p>Pricing advice means presenting a current comparative market analysis with real sold data, explaining the reasoning behind the recommended price range, discussing the risk profile of different pricing strategies, and having a clear plan for price adjustment if market response warrants it.</p>
+      <p>It does not mean telling you what you want to hear. A broker who suggests a number $50,000 above comparable sales to win your listing is not providing pricing advice — they are making a promise they cannot keep.</p>
+
+      <h2>Full-Service vs. Listed-Only Packages</h2>
+      <p>Some discount and flat-fee services in Canada offer Centris access without preparation support. These models work for sellers with extensive real estate experience who do not need guidance. For most homeowners — and virtually all first-time sellers — a full-service package that explicitly includes preparation consultation, staging guidance, and a detailed pricing analysis is worth the additional cost many times over.</p>
+
+      <h2>Questions to Ask Before You Sign</h2>
+      <p>Ask your prospective broker: Do you provide a written comparative market analysis? Will you walk through the property before listing and give honest preparation feedback? Do you have access to staging professionals? How do you determine the list price, and how do you handle it if the market does not respond? The right answers to these questions are worth more than any commission discount.</p>
+    `
+  },
+  {
+    id: 28,
+    title: "Best Real Estate Services for Condo Owners Selling Their First Place",
+    category: "sellers",
+    categoryLabel: "Sellers",
+    date: "May 4, 2026",
+    readTime: "7 min read",
+    featured: false,
+    excerpt: "Selling a condo in Montreal involves a set of considerations that do not apply to single-family homes. Here is what first-time condo sellers need to know.",
+    body: `
+      <p>Montreal's condo market is active, competitive, and — for first-time sellers — more complex than it appears. Selling a condo successfully involves navigating the co-ownership legal framework, presenting a property type where photography is everything, and competing in an inventory environment that has expanded significantly through 2025 and 2026.</p>
+
+      <h2>Condo-Specific Due Diligence for Sellers</h2>
+      <p>Before listing, a condo seller should gather: the most recent co-ownership (condo) association financial statements, the reserve fund study, the last 12 months of meeting minutes, and the current condo fees and any special assessments in effect or anticipated. Buyers will request these, and having them organized accelerates the transaction and builds buyer confidence.</p>
+      <p>If the reserve fund is underfunded or a special assessment is pending, disclose it proactively. Buyers who discover these items through their own due diligence after an offer is in place often walk away or renegotiate aggressively. Proactive disclosure preserves your negotiating position.</p>
+
+      <h2>Photography Matters More for Condos</h2>
+      <p>In the condo segment, buyers often shortlist and sometimes decide based entirely on online photos before booking a showing. The difference between professional real estate photography and smartphone photos is not subtle — it is the difference between appearing on a buyer's shortlist and not. Wide-angle lenses, proper lighting, and post-production editing make even modest units look their best.</p>
+
+      <h2>Pricing in a Condo-Heavy Market</h2>
+      <p>Montreal's condo inventory rose meaningfully in 2025 and into 2026, giving buyers more choice and making accurate pricing more important than ever. Comparable units in your building and in adjacent buildings within the same neighbourhood are the most relevant benchmarks — not citywide condo median statistics.</p>
+      <p>A broker with specific experience in your building or neighbourhood will price with precision. A generalist will use broader data and potentially miss the nuances that justify a premium or flag a necessary adjustment.</p>
+
+      <h2>What to Look for in a Condo Listing Service</h2>
+      <p>Prioritize a broker who has sold units in your specific building or micro-neighbourhood, who invests in professional photography as a standard (not an add-on), who knows the buyer profile for your unit type, and who communicates clearly about the condo documentation requirements. In a market with rising inventory, execution quality separates properties that sell from properties that sit.</p>
+    `
+  },
+  {
+    id: 29,
+    title: "Full-Service Real Estate Packages: What Gets Managed for You",
+    category: "sellers",
+    categoryLabel: "Sellers",
+    date: "May 5, 2026",
+    readTime: "6 min read",
+    featured: false,
+    excerpt: "A true full-service listing handles far more than just getting your home on Centris. Here is a complete breakdown of what showings, negotiations, and transaction management actually involve.",
+    body: `
+      <p>The term "full-service" is used loosely in real estate. Understanding what it should mean — and verifying that your broker actually delivers it — is how you ensure your sale receives the attention it deserves from listing to closing.</p>
+
+      <h2>Pre-Listing Phase</h2>
+      <p>Full-service begins before the property goes live. It includes a thorough property walkthrough with honest preparation feedback, a current comparative market analysis with a pricing recommendation, coordination of professional photography (and video where appropriate), review and completion of the mandatory seller's declaration, and strategic decisions about timing the listing for maximum market impact.</p>
+
+      <h2>Active Listing Management</h2>
+      <p>Once live, a full-service broker manages all showing requests — scheduling, confirming, and coordinating access. In buildings with concierge or security requirements, this is a non-trivial logistical task. After each showing, a professional broker follows up with visiting agents for buyer feedback, which informs ongoing strategy adjustments.</p>
+      <p>Active listing management also means monitoring market changes: if a competing property lists at a lower price, or if days on market begin to accumulate, your broker should be proactive with analysis and recommendations rather than waiting to be asked.</p>
+
+      <h2>Offer Management and Negotiation</h2>
+      <p>When offers arrive, full-service means presenting each offer to you with a clear explanation of all terms — not just price. Deposit amount, conditions (financing, inspection, sale of existing property), closing date, and inclusion/exclusion of chattels all affect the real value of an offer. A broker who can navigate multiple offers, advise on counter-offer strategy, and protect your interests through the negotiation phase is delivering genuine value.</p>
+
+      <h2>Transaction Coordination Through Closing</h2>
+      <p>In Quebec, the period between accepted offer and notarial closing involves multiple parties: two brokers, two notaries, the buyer's mortgage lender, and a home inspector. A full-service listing agent coordinates with all of them — tracking conditions, ensuring deadlines are met, resolving issues that arise from the inspection, and confirming closing logistics. Sellers should not be managing this coordination themselves.</p>
+
+      <h2>After the Sale</h2>
+      <p>A good broker follows up after closing to ensure the transition was smooth and that no unexpected issues arose. They also maintain your contact for future needs, referrals, and market updates. A transaction is the beginning of a professional relationship, not the end of one.</p>
+    `
+  },
+  {
+    id: 30,
+    title: "What Is the Best Home Selling Service for Montreal Homeowners?",
+    category: "sellers",
+    categoryLabel: "Sellers",
+    date: "May 5, 2026",
+    readTime: "7 min read",
+    featured: false,
+    excerpt: "Montreal's real estate market has its own rules, its own legal framework, and its own buyer expectations. Here is what the best selling service looks like in this specific market.",
+    body: `
+      <p>Selling a home in Montreal is not the same as selling one in Toronto, Calgary, or Vancouver. Quebec operates under a distinct legal framework, Montreal's neighbourhoods have sharply different buyer profiles, and the transaction process runs through notaries rather than lawyers. The best home selling service for Montreal homeowners is one built specifically for this context.</p>
+
+      <h2>Quebec-Specific Legal Knowledge</h2>
+      <p>The mandatory seller's declaration (Déclaration du vendeur) is a legal document unique to Quebec that requires sellers to disclose known defects in the property. Errors or omissions in this document expose sellers to post-sale legal liability. A broker with deep Quebec transactional experience will guide you through this document accurately and protect you from future claims.</p>
+      <p>The Promesse d'achat framework, the notarial closing process, and Quebec's tenant protection laws (relevant for plex sellers) are all areas where province-specific expertise matters. This is not the place for generalist representation.</p>
+
+      <h2>Neighbourhood-Level Market Knowledge</h2>
+      <p>Montreal's market is hyper-local. A property in Outremont and a property in Côte-des-Neiges three streets apart can have fundamentally different buyer profiles, pricing dynamics, and days-on-market norms. The best listing service for your property is one delivered by a broker who has active transactional experience in your specific neighbourhood — not just the island broadly.</p>
+      <p>Ask any prospective broker: what have you sold within 500 metres of my address in the past 12 months? The answer tells you more than any credential.</p>
+
+      <h2>Bilingual Marketing Reach</h2>
+      <p>Montreal's buyer pool is genuinely bilingual, and many premium properties attract buyers from both linguistic communities. A broker who markets effectively in both English and French — listing copy, social media, buyer communications — reaches a larger qualified audience than one operating in a single language.</p>
+
+      <h2>The Right Agent Makes the Difference</h2>
+      <p>In a market as neighbourhood-specific and legally distinct as Montreal's, the right broker is not necessarily the most prominent nationally or the one with the most social media followers. It is the one with demonstrated results in your specific property type, in your specific neighbourhood, with the marketing infrastructure and negotiating experience to deliver a top-dollar outcome in today's market conditions.</p>
+    `
+  },
+  {
+    id: 31,
+    title: "How to Buy a Home for the First Time in Quebec: A Complete Guide",
+    category: "buyers",
+    categoryLabel: "Buyers",
+    date: "May 6, 2026",
+    readTime: "9 min read",
+    featured: true,
+    excerpt: "Quebec's homebuying process is unlike any other province. From the Promise to Purchase to the notarial closing, here is every step explained clearly for first-time buyers.",
+    body: `
+      <p>Buying your first home in Quebec is an exciting milestone and a genuinely complex process. Unlike other Canadian provinces, Quebec operates under civil law, and the transaction framework — from the initial offer to the notarial closing — has features that surprise even buyers who have purchased property elsewhere. This guide walks through every step.</p>
+
+      <h2>Step 1: Assess Your Finances</h2>
+      <p>Before visiting a single property, get a clear picture of your financial position. How much do you have saved for a down payment? What is your household income, and what monthly mortgage payment can you comfortably carry? Do you have access to RRSP funds through the Home Buyers' Plan (up to $35,000 per person) or the First Home Savings Account (FHSA)?</p>
+      <p>In Montreal, the minimum down payment is 5% for properties under $500,000 and scales above that threshold. But putting down 20% or more avoids CMHC mortgage insurance premiums, which add 2.8–4% to the insured loan amount.</p>
+
+      <h2>Step 2: Get Pre-Approved</h2>
+      <p>Pre-approval is not optional in today's Montreal market. It is the document that converts you from a browser into a credible buyer. Pre-approval involves submitting income documentation, bank statements, and consenting to a credit check. The lender issues a written commitment to lend up to a specific amount at a specific rate — typically locked for 90 to 120 days.</p>
+
+      <h2>Step 3: Work with a Buyer's Broker</h2>
+      <p>In Quebec, buyer's broker services are typically paid by the seller through the transaction. There is no direct cost to the buyer for professional representation, and yet it provides access to all listed properties, market analysis, negotiation expertise, and transactional support. There is no rational reason for a first-time buyer to navigate without one.</p>
+
+      <h2>Step 4: Search and Visit Properties</h2>
+      <p>Your broker will set up a Centris search matching your criteria and alert you to new listings in real time. Plan to visit properties with clear evaluation criteria: location, size, condition, and building quality (for condos). Take notes. The first ten properties you see help calibrate your sense of value in the market.</p>
+
+      <h2>Step 5: Make an Offer — The Promesse d'Achat</h2>
+      <p>In Quebec, an offer to purchase is called a Promesse d'achat. Unlike informal letters of intent used in some provinces, this is a legally binding document upon acceptance by both parties. It specifies the purchase price, deposit amount, conditions (typically financing and inspection), closing date, and inclusions/exclusions.</p>
+      <p>Standard conditions give you 5–10 business days to complete a home inspection and secure mortgage approval. If either condition is not satisfied, you can withdraw with your deposit returned. Once conditions are waived, the deal is firm.</p>
+
+      <h2>Step 6: Home Inspection</h2>
+      <p>Never waive the inspection condition on a first purchase. A qualified home inspector will spend 2–3 hours examining the property's structure, systems, and visible components, then provide a written report. Issues found give you the opportunity to renegotiate, request repairs, or — in rare cases — exit the deal.</p>
+
+      <h2>Step 7: Notarial Closing</h2>
+      <p>In Quebec, the property transfer is completed by a notary, not a real estate lawyer. You choose the notary (the cost is the buyer's responsibility, typically $1,200–$2,000). The notary conducts a title search, prepares the mortgage deed and transfer deed, and registers the transaction at the land registry. You sign the final documents at the notary's office, transfer the balance owing, and receive the keys.</p>
+
+      <h2>Additional Costs to Budget For</h2>
+      <p>Beyond the down payment: welcome tax (taxe de bienvenue) — approximately 1.5% of the purchase price; notary fees; home inspection; and moving costs. First-time buyers may also qualify for the First-Time Home Buyers' Tax Credit (federal) and various Quebec provincial programs.</p>
+    `
+  },
+  {
+    id: 32,
+    title: "What Is a Promise to Purchase in Quebec? Everything Buyers Need to Know",
+    category: "buyers",
+    categoryLabel: "Buyers",
+    date: "May 6, 2026",
+    readTime: "6 min read",
+    featured: false,
+    excerpt: "The Promesse d'achat is the legal foundation of every Quebec real estate transaction. Here is exactly what it is, what it contains, and why every detail matters.",
+    body: `
+      <p>If you are buying property in Quebec for the first time — or buying after experience in another province — the Promesse d'achat will likely be the most significant legal document you sign before the notarial deed. Understanding it fully before you sign is not optional. Here is what it contains and what each element means.</p>
+
+      <h2>What It Is</h2>
+      <p>The Promesse d'achat (Promise to Purchase) is a legally binding offer to buy a property at a specified price and on specified terms. When both buyer and seller sign it, both parties are contractually committed — subject only to any conditions included in the document. Unlike a letter of intent or a soft offer used in some other markets, there is no "getting out" once conditions are waived in Quebec.</p>
+
+      <h2>Key Elements of the Document</h2>
+      <p><strong>Purchase price:</strong> The amount you are offering. This is the number negotiated between buyer and seller.</p>
+      <p><strong>Deposit:</strong> Typically 3–5% of the purchase price, paid upon signing or within a defined period. The deposit is held in trust and credited against your purchase at closing.</p>
+      <p><strong>Conditions:</strong> The conditions under which you can exit the agreement with your deposit returned. Standard conditions are financing (mortgage approval) and inspection. Each condition has a defined deadline.</p>
+      <p><strong>Inclusions and exclusions:</strong> What stays with the property (appliances, light fixtures, storage units) and what the seller takes. Be specific and in writing — verbal agreements about inclusions are unenforceable.</p>
+      <p><strong>Closing date:</strong> The date on which the notarial signing will occur and keys will be exchanged.</p>
+
+      <h2>The Financing Condition</h2>
+      <p>This condition gives you a defined period (typically 5–10 business days) to obtain a written mortgage commitment from your lender. If you cannot secure financing, you can invoke the condition and receive your deposit back in full. Waiving the financing condition without a firm mortgage commitment is high-risk and not recommended for first-time buyers.</p>
+
+      <h2>The Inspection Condition</h2>
+      <p>This gives you the right to have the property professionally inspected and to exit the deal if the results are unsatisfactory — though "unsatisfactory" must be legitimate, not a pretext. In practice, if an inspection reveals significant issues, the more common path is to renegotiate the price or request remediation rather than exit entirely.</p>
+
+      <h2>After Conditions Are Waived</h2>
+      <p>Once all conditions are satisfied or waived in writing, the deal is firm. Both parties are committed to completing the transaction on the agreed terms. Attempting to exit a firm deal in Quebec exposes the backing-out party to legal action for damages. Treat the waiver of conditions as the point of no return.</p>
+    `
+  },
+  {
+    id: 33,
+    title: "How Much Down Payment Do You Need to Buy a House in Montreal?",
+    category: "buyers",
+    categoryLabel: "Buyers",
+    date: "May 7, 2026",
+    readTime: "6 min read",
+    featured: false,
+    excerpt: "Down payment requirements in Canada follow federal rules, but there are strategies — including the FHSA and RRSP Home Buyers' Plan — that can help Montreal buyers get there faster.",
+    body: `
+      <p>The down payment is often the largest single barrier between first-time buyers and homeownership. Understanding the minimum requirements, the insurance implications, and the tools available to build your down payment faster is the foundation of your buying strategy.</p>
+
+      <h2>Federal Minimum Down Payment Rules</h2>
+      <p>Canada's minimum down payment rules are set federally and apply across all provinces including Quebec:</p>
+      <ul>
+        <li>5% for properties priced up to $500,000</li>
+        <li>10% on the portion of the price between $500,000 and $999,999</li>
+        <li>20% for properties priced at $1,000,000 or more (no CMHC insurance available above $999,999)</li>
+      </ul>
+      <p>On a $650,000 Montreal condo: 5% of $500,000 = $25,000, plus 10% of $150,000 = $15,000. Minimum down payment: $40,000.</p>
+
+      <h2>CMHC Mortgage Insurance</h2>
+      <p>Any purchase with less than 20% down requires CMHC mortgage default insurance. The premium is added to your mortgage principal and ranges from 2.8% (10–19.99% down) to 4.0% (5–9.99% down). On a $600,000 purchase with 5% down ($30,000), the CMHC premium would be $22,800 — added to your mortgage balance.</p>
+      <p>Putting 20% down eliminates this cost entirely and reduces your monthly payment meaningfully. If your savings are close to 20%, it is often worth waiting the additional months to cross that threshold.</p>
+
+      <h2>The First Home Savings Account (FHSA)</h2>
+      <p>Introduced in 2023, the FHSA allows first-time buyers to contribute up to $8,000 per year (lifetime maximum $40,000) in a tax-sheltered account. Contributions are tax-deductible (like an RRSP), and withdrawals for a qualifying home purchase are tax-free (like a TFSA). For buyers with five or more years before purchase, the FHSA is one of the most powerful savings tools available in Canada.</p>
+
+      <h2>The RRSP Home Buyers' Plan</h2>
+      <p>First-time buyers can withdraw up to $35,000 per person ($70,000 per couple) from their RRSP for a home purchase under the Home Buyers' Plan. The funds must have been in the RRSP for at least 90 days. The amount must be repaid over 15 years, or it is treated as income. This remains one of the most commonly used down payment strategies for Montreal buyers.</p>
+
+      <h2>Gifted Down Payments</h2>
+      <p>Funds received as a gift from a direct family member are an acceptable source of down payment in Canada. The gift must be accompanied by a signed gift letter confirming the funds are non-repayable. Most lenders will also want to see the funds in your account for at least 15 days before the mortgage application.</p>
+    `
+  },
+  {
+    id: 34,
+    title: "What Closing Costs Do First-Time Buyers Pay in Quebec?",
+    category: "buyers",
+    categoryLabel: "Buyers",
+    date: "May 7, 2026",
+    readTime: "6 min read",
+    featured: false,
+    excerpt: "Closing costs in Quebec include the welcome tax, notary fees, and inspection costs. Here is a realistic breakdown so you can budget accurately before you buy.",
+    body: `
+      <p>First-time buyers who budget only for their down payment are consistently surprised by closing costs. In Quebec, these additional expenses are predictable — but they must be planned for separately from your down payment. Here is a complete breakdown of what to expect.</p>
+
+      <h2>Welcome Tax (Taxe de Bienvenue)</h2>
+      <p>Quebec's welcome tax — formally the Land Transfer Tax — is often the largest closing cost. It is calculated on a sliding scale based on the purchase price:</p>
+      <ul>
+        <li>0.5% on the first $55,200</li>
+        <li>1.0% on $55,201 to $276,200</li>
+        <li>1.5% on $276,201 to $552,300</li>
+        <li>2.0% on the portion above $552,300 (and higher rates apply at $1M+ in Montreal specifically)</li>
+      </ul>
+      <p>On a $550,000 purchase in Montreal, the welcome tax would be approximately $7,350. Budget for this as a separate expense from your down payment — it is due within 30 days of the notarial signing.</p>
+
+      <h2>Notary Fees</h2>
+      <p>In Quebec, the buyer chooses and pays the notary who handles the closing. Notary fees for a standard residential transaction typically range from $1,200 to $2,000, depending on the complexity of the transaction and the notary's rates. The notary conducts the title search, prepares the mortgage and transfer deeds, and registers the transaction.</p>
+
+      <h2>Home Inspection</h2>
+      <p>A professional home inspection costs $400 to $700 for a typical Montreal property. For plexes or larger properties, expect $600 to $1,000+. This is non-negotiable for first-time buyers — the inspection cost is trivial compared to the cost of a missed structural or mechanical issue.</p>
+
+      <h2>Mortgage Default Insurance (If Applicable)</h2>
+      <p>If your down payment is under 20%, the CMHC premium is added to your mortgage. However, Quebec also charges a provincial sales tax (9.975% QST) on the CMHC premium at closing — this must be paid in cash and cannot be added to the mortgage. On a $22,000 CMHC premium, the QST would be approximately $2,195.</p>
+
+      <h2>Other Costs to Budget For</h2>
+      <ul>
+        <li>Moving costs: $1,500–$5,000 depending on volume and distance</li>
+        <li>Condo reserve fund adjustment: if you buy mid-year, you may owe a portion of the annual condo fee upfront</li>
+        <li>Property tax adjustment: the buyer reimburses the seller for prepaid property taxes</li>
+        <li>Immediate repairs or updates after closing</li>
+        <li>Home insurance: required before the mortgage funds</li>
+      </ul>
+
+      <h2>Total Closing Cost Estimate</h2>
+      <p>As a practical rule for Montreal first-time buyers: budget 2–3% of the purchase price for closing costs on top of your down payment. On a $600,000 purchase, that means having $12,000–$18,000 available beyond your down payment amount. Better to overestimate and be pleasantly surprised than to arrive at the notary short of funds.</p>
+    `
+  },
+  {
+    id: 35,
+    title: "What Is the First Home Savings Account (FHSA) and How Does It Help Montreal Buyers?",
+    category: "buyers",
+    categoryLabel: "Buyers",
+    date: "May 8, 2026",
+    readTime: "5 min read",
+    featured: false,
+    excerpt: "The FHSA is one of the most powerful savings tools ever offered to Canadian first-time buyers. Here is how it works and how to use it strategically.",
+    body: `
+      <p>The First Home Savings Account (FHSA) was introduced by the federal government in 2023 and has quickly become the preferred savings vehicle for first-time buyers across Canada. For Montreal buyers facing rising property prices, understanding and maximizing the FHSA is a strategic imperative.</p>
+
+      <h2>What the FHSA Is</h2>
+      <p>The FHSA is a registered account that combines the best features of an RRSP and a TFSA specifically for the purpose of saving for a first home. Contributions are tax-deductible (reducing your taxable income for the year of contribution), and qualifying withdrawals for a home purchase are completely tax-free. The combination is unique — no other savings vehicle offers both benefits simultaneously.</p>
+
+      <h2>Contribution Limits</h2>
+      <ul>
+        <li>Annual limit: $8,000 per year</li>
+        <li>Lifetime limit: $40,000 per account holder</li>
+        <li>Unused contribution room carries forward one year only</li>
+        <li>Both partners in a couple can each open an FHSA, contributing a combined $80,000 lifetime</li>
+      </ul>
+
+      <h2>Eligibility Rules</h2>
+      <p>To open an FHSA, you must be a Canadian resident, at least 18 years old, and a first-time home buyer — meaning you have not owned a qualifying home in which you lived as your principal residence at any point in the current calendar year or in the preceding four calendar years.</p>
+
+      <h2>How It Works for Montreal Buyers</h2>
+      <p>Consider a buyer who opens an FHSA today and contributes $8,000 per year for five years. That is $40,000 in contributions, all tax-deductible (returning roughly $1,200–$2,400 per year in tax refunds depending on your bracket), plus any investment growth within the account — also tax-free on withdrawal.</p>
+      <p>Combined with a partner's FHSA and the RRSP Home Buyers' Plan ($35,000 per person), a first-time buyer couple in Montreal could access $150,000 or more in tax-sheltered funds for their down payment.</p>
+
+      <h2>Opening an FHSA Now, Even If You Are Years Away</h2>
+      <p>The FHSA begins accumulating contribution room from the year it is opened, not the year contributions are made. Opening an account today — even with a small initial deposit — preserves your future contribution room. If you expect to buy a property within the next 3–7 years, opening an FHSA immediately is one of the highest-return financial decisions you can make.</p>
+    `
+  },
+  {
+    id: 36,
+    title: "Condo vs. House in Montreal: What First-Time Buyers Should Consider",
+    category: "buyers",
+    categoryLabel: "Buyers",
+    date: "May 8, 2026",
+    readTime: "7 min read",
+    featured: false,
+    excerpt: "Both condos and houses have a place in Montreal's first-time buyer landscape. Here is an honest comparison of the financial and lifestyle trade-offs.",
+    body: `
+      <p>For most first-time buyers in Montreal, the first major decision is not which neighbourhood — it is which property type. Condos and single-family homes (or plexes) offer fundamentally different financial profiles, lifestyle trade-offs, and long-term trajectories. Here is how to think through the choice objectively.</p>
+
+      <h2>The Financial Starting Point</h2>
+      <p>Montreal condos offer a lower entry price in most neighbourhoods — significantly so compared to single-family homes on the same streets. A two-bedroom condo in Plateau-Mont-Royal or Rosemont that might be priced at $550,000–$650,000 would compare to a single-family home in the same area priced at $1,000,000+. For buyers with limited down payment savings, condos are often the only realistic entry point into desirable urban neighbourhoods.</p>
+      <p>However, condos carry monthly condo fees (typically $300–$700/month for Montreal units) that add to the true cost of ownership and reduce the amount of mortgage you can qualify for at a given income level.</p>
+
+      <h2>The Appreciation Question</h2>
+      <p>Historically, Montreal single-family homes in desirable neighbourhoods have outpaced condos on price appreciation — particularly land-bearing properties. However, condos in transit-adjacent urban neighbourhoods have also delivered strong appreciation, particularly through 2020–2024.</p>
+      <p>First-time buyers should not choose based on speculation about future appreciation. Choose based on your current financial capacity, your lifestyle needs, and your five-year plan.</p>
+
+      <h2>Maintenance Responsibility</h2>
+      <p>In a condo, exterior maintenance, roof, foundation, and major building systems are the responsibility of the co-ownership (condo) association. Your individual responsibility is limited to your unit interior. This is genuinely valuable for buyers without renovation experience or the time to manage maintenance.</p>
+      <p>Single-family homeowners bear full maintenance responsibility — roof, driveway, foundation, mechanical systems — and must budget for ongoing and capital maintenance costs of 1–2% of property value annually.</p>
+
+      <h2>Lifestyle Considerations</h2>
+      <p>Condos offer urban proximity, amenity access (gym, terrace, concierge in some buildings), and reduced outdoor maintenance. Houses offer space, privacy, outdoor ownership, and flexibility to renovate or expand. The right choice depends on your daily life — how much time you spend at home, whether you have children or pets, how much you value outdoor space, and how important urban walkability is to you.</p>
+
+      <h2>The Plex Option</h2>
+      <p>Montreal's plex market offers a third path: purchase a duplex or triplex, occupy one unit, and have tenants offset a substantial portion of your mortgage. This is a well-established wealth-building strategy in Montreal and is used by many first-time buyers to access better neighbourhoods at prices that would otherwise be unaffordable for owner-occupancy alone.</p>
+    `
+  },
+  {
+    id: 37,
+    title: "What Is the Welcome Tax in Quebec and How Is It Calculated?",
+    category: "buyers",
+    categoryLabel: "Buyers",
+    date: "May 9, 2026",
+    readTime: "5 min read",
+    featured: false,
+    excerpt: "The taxe de bienvenue catches many buyers off guard. Here is exactly how Quebec's land transfer tax is calculated — with real numbers for Montreal properties.",
+    body: `
+      <p>Few closing costs surprise Quebec buyers more than the welcome tax (taxe de bienvenue — formally the Land Transfer Tax or Droits de mutation). It arrives as an invoice within weeks of your closing and can amount to thousands of dollars that many first-time buyers did not account for. Here is a complete explanation.</p>
+
+      <h2>What It Is and Who Pays It</h2>
+      <p>The welcome tax is a provincial transfer tax levied by the municipality (not the Quebec government directly) on any property transfer. The buyer pays it — not the seller. It is not included in the purchase price and cannot be added to your mortgage. It must be paid in cash, typically within 30 days of receiving the municipality's invoice following closing.</p>
+
+      <h2>How It Is Calculated</h2>
+      <p>The tax applies to whichever is higher: the sale price, the assessed municipal value, or the market value. For standard residential purchases at market price, the sale price typically governs. The rate is progressive:</p>
+      <ul>
+        <li>0.5% on the first $55,200</li>
+        <li>1.0% on $55,201 to $276,200</li>
+        <li>1.5% on $276,201 to $552,300</li>
+        <li>2.0% on the portion above $552,300</li>
+        <li>3.0% on the portion above $1,508,700 (for Montreal specifically)</li>
+      </ul>
+
+      <h2>Real Examples for Montreal</h2>
+      <p><strong>$450,000 condo:</strong> 0.5% × $55,200 + 1.0% × $221,000 + 1.5% × $173,800 = $276 + $2,210 + $2,607 = <strong>$5,093</strong></p>
+      <p><strong>$750,000 townhouse:</strong> 0.5% × $55,200 + 1.0% × $221,000 + 1.5% × $276,100 + 2.0% × $197,500 = $276 + $2,210 + $4,142 + $3,950 = <strong>$10,578</strong></p>
+      <p><strong>$1,200,000 single-family:</strong> Approximately $22,000–$24,000 depending on exact thresholds.</p>
+
+      <h2>Is There a Rebate for First-Time Buyers?</h2>
+      <p>The City of Montreal previously offered a first-time buyer rebate on the welcome tax. This program has changed over time and eligibility criteria apply. Confirm current rebate availability with your notary at the time of purchase — the savings can be significant if you qualify.</p>
+
+      <h2>Planning for It</h2>
+      <p>Estimate your welcome tax early in the buying process and set that amount aside in a separate account from your down payment. It is a predictable cost, and arriving at the notary having planned for it is far better than scrambling to cover it after keys are already in hand.</p>
+    `
+  },
+  {
+    id: 38,
+    title: "How to Make a Competitive Offer in Montreal Without Overpaying",
+    category: "buyers",
+    categoryLabel: "Buyers",
+    date: "May 9, 2026",
+    readTime: "6 min read",
+    featured: false,
+    excerpt: "Making a strong offer is about strategy, not just price. Here is how to compete effectively in Montreal's active market while protecting your financial interests.",
+    body: `
+      <p>In Montreal's competitive neighbourhoods, the difference between buying the property you want and losing it to another buyer often comes down to strategy — not just money. Here is how to position your offer to win without paying more than the property is worth.</p>
+
+      <h2>Know the Market Before You Offer</h2>
+      <p>Your broker should provide you with recent sold comparables (not list prices — sold prices) for properties similar to the one you are offering on, from the past 60 to 90 days. This is your anchor. Understand whether the property is priced at, below, or above market value before you formulate your number.</p>
+      <p>In hot sub-markets like Outremont single-family or Plateau plexes, recent sales above asking are common. Your comparables tell you what that premium has looked like, and whether there is room to be strategic.</p>
+
+      <h2>Offer Price: Competing Without a Ceiling</h2>
+      <p>An escalation clause — "I offer $X, but will beat any competing offer by $Y up to a ceiling of $Z" — is not standard practice in Quebec's Promesse d'achat framework. Your offer must be a specific number. Set your maximum before you go in, and offer a number you would be satisfied paying — not one you hope to negotiate down from.</p>
+
+      <h2>Conditions: Strength vs. Protection</h2>
+      <p>Removing conditions (inspection, financing) makes an offer stronger in a seller's eyes. However, for first-time buyers, waiving inspection carries real risk — one missed structural issue can cost more than the property's entire appreciation over five years. A better approach: include conditions, but shorten the deadlines (5 business days instead of 10) and pre-schedule your inspector before submitting the offer.</p>
+
+      <h2>Deposit: Signal Serious Intent</h2>
+      <p>A larger deposit (5–10% rather than the minimum 3%) signals financial strength and serious intent. The deposit is fully protected by the conditions in your offer and is credited toward your purchase at closing — it is not a cost, just an earlier commitment of funds you were going to deploy anyway.</p>
+
+      <h2>Closing Date: Accommodate the Seller</h2>
+      <p>Asking your broker to find out the seller's preferred closing timeline — and accommodating it in your offer — can make the difference in a multiple-offer situation where the prices are close. Sellers who need to close quickly or who want a specific date are sometimes willing to accept a slightly lower price for the buyer who gives them certainty.</p>
+
+      <h2>Work with Your Broker, Not Around Them</h2>
+      <p>Experienced buyer's brokers have professional relationships with listing agents. A call from your broker to the listing agent before an offer is submitted — to confirm interest, clarify what the seller values most, and communicate your seriousness — is part of the process that buyers conducting private searches do not have access to.</p>
+    `
+  },
+  {
+    id: 39,
+    title: "Is Now a Good Time to Buy Real Estate in Montreal?",
+    category: "market",
+    categoryLabel: "Market Report",
+    date: "May 10, 2026",
+    readTime: "7 min read",
+    featured: false,
+    excerpt: "Market timing is the question every buyer asks. Here is an honest, data-driven answer for Montreal in 2026 — and why the question itself may be the wrong one.",
+    body: `
+      <p>Every buyer who has been watching Montreal's market eventually asks the same question: should I buy now, or wait? It is a reasonable question with an unsatisfying answer: the right time to buy depends almost entirely on your personal situation, not on market conditions alone.</p>
+
+      <h2>Where the Market Stands in 2026</h2>
+      <p>Montreal's market entered 2026 with more balanced conditions than the frenzied environment of 2021–2022. Inventory has expanded across most property types, giving buyers meaningfully more choice than existed two years ago. Days on market have moderated. The multiple-offer hysteria that characterized many segments has largely normalized.</p>
+      <p>At the same time, prices have not declined significantly in desirable urban neighbourhoods. Single-family homes in Outremont, Rosemont, and Plateau have maintained their value and continued to appreciate modestly. The "crash" that many buyers were waiting for has not materialized in core markets.</p>
+
+      <h2>Interest Rates in Context</h2>
+      <p>The Bank of Canada rate cycle shifted meaningfully through 2024 and 2025, and the rate environment in 2026 is more favourable than the peak of 2023. That said, rates remain above the historic lows of 2020–2021. Buyers who are waiting for rates to return to those levels are likely waiting for conditions that will not recur in the near term — and in the meantime, they are paying rent rather than building equity.</p>
+
+      <h2>The Cost of Waiting</h2>
+      <p>Every year spent renting rather than owning is a year without equity accumulation, mortgage principal reduction, or participation in price appreciation (if any). On a $600,000 property with a 5% appreciation assumption, waiting 24 months costs $60,000 in unrealized appreciation — plus 24 months of rent payments that build no equity.</p>
+
+      <h2>When Waiting Is Rational</h2>
+      <p>Waiting is rational when: your down payment is still being accumulated; your employment situation is uncertain; you have not yet found the right property at the right price; or you have a specific life change (marriage, children, relocation) that will materially affect your property needs within 12–18 months. These are personal reasons — not market reasons.</p>
+
+      <h2>The Right Frame</h2>
+      <p>The most successful buyers in Montreal over the past 20 years have been those who bought when they were financially ready and found the right property — not those who perfectly timed the market. Time in the market, as the saying goes, tends to outperform timing the market. If you are financially prepared and have found a property that meets your needs at a fair price, the market conditions of any particular month matter far less than they seem to in the moment.</p>
+    `
+  },
+  {
+    id: 40,
+    title: "Best Neighbourhoods in Montreal for First-Time Buyers in 2026",
+    category: "neighbourhoods",
+    categoryLabel: "Neighbourhoods",
+    date: "May 10, 2026",
+    readTime: "8 min read",
+    featured: false,
+    excerpt: "Entry price, appreciation history, walkability, and lifestyle — here is how Montreal's key neighbourhoods compare for first-time buyers in today's market.",
+    body: `
+      <p>Choosing a neighbourhood is arguably more important than choosing a specific property. The right neighbourhood appreciates, delivers quality of life, and serves as a platform for your next move. The wrong one — chosen for budget reasons alone — can mean years of frustration. Here is an honest assessment of Montreal's key areas for first-time buyers in 2026.</p>
+
+      <h2>Rosemont–La Petite-Patrie</h2>
+      <p><strong>Best for:</strong> First-time buyers who want urban lifestyle at a more accessible entry price than Plateau.</p>
+      <p>Rosemont has emerged as one of Montreal's most desirable residential neighbourhoods over the past decade, with strong appreciation, excellent walkability, and an increasingly vibrant commercial street network. Condo entry points begin around $400,000–$500,000 for a one-bedroom; plex prices have crossed $1M but remain below Plateau equivalents. The neighbourhood rewards early buyers — it is still in an appreciation arc that more established areas have already completed.</p>
+
+      <h2>Verdun</h2>
+      <p><strong>Best for:</strong> Buyers seeking more space for their budget, with direct metro access.</p>
+      <p>Verdun's transformation over the past five years has been remarkable. The neighbourhood now offers a genuine alternative to the Plateau for buyers who prioritize value, waterfront access, and a tight-knit community feel. Entry prices for condos begin below $400,000 in some parts of the neighbourhood, and single-family homes remain accessible at $700,000–$900,000 — well below equivalent properties in NDG or Rosemont.</p>
+
+      <h2>Côte-des-Neiges–Notre-Dame-de-Grâce (NDG)</h2>
+      <p><strong>Best for:</strong> Buyers who want a stable, established neighbourhood with broad property type diversity.</p>
+      <p>NDG offers a wide range of property types — condos, plexes, and single-family homes — across a neighbourhood that combines residential stability with convenient access to Côte-Sainte-Catherine and Sherbrooke West commercial corridors. Entry prices are competitive and the neighbourhood has historically been lower-volatility than trendier urban areas.</p>
+
+      <h2>Mercier–Hochelaga-Maisonneuve (HoMa)</h2>
+      <p><strong>Best for:</strong> First-time buyers who are comfortable with a neighbourhood in active transition.</p>
+      <p>HoMa offers Montreal's most accessible entry prices in a neighbourhood with genuine appreciation momentum. The eastern part of the island has benefited from significant investment in public space, cultural infrastructure, and transit access. Buyers who entered five years ago have seen strong returns. The neighbourhood still offers genuine value — though the "hidden gem" period is narrowing.</p>
+
+      <h2>Plateau-Mont-Royal</h2>
+      <p><strong>Best for:</strong> Buyers who have the budget and want the benchmark Montreal urban experience.</p>
+      <p>The Plateau is not a first-time buyer's market for single-family homes — prices have firmly crossed $1M+ for most properties. However, the condo segment remains relevant for buyers with budgets around $550,000–$700,000, and the lifestyle premium is real. The Plateau consistently ranks among the most liveable urban neighbourhoods in North America, and its property values have demonstrated remarkable resilience through every market cycle.</p>
+    `
+  },
+  {
+    id: 41,
+    title: "How to Sell a Plex in Montreal: What Sellers Need to Know",
+    category: "sellers",
+    categoryLabel: "Sellers",
+    date: "May 11, 2026",
+    readTime: "7 min read",
+    featured: false,
+    excerpt: "Selling a Montreal plex involves tenant law, pricing complexity, and a specific buyer pool. Here is what every plex seller needs to know before listing.",
+    body: `
+      <p>Montreal's plex market — duplexes, triplexes, and fourplexes — operates under a distinct set of rules and attracts a specific buyer profile. Selling a plex successfully requires understanding how tenancy affects value, how to price for both investor and owner-occupant buyers, and what disclosure obligations apply.</p>
+
+      <h2>Tenant Law Is Central to the Transaction</h2>
+      <p>Quebec has some of the strongest tenant protections in North America. Sitting tenants have the right to remain in their units, and their leases survive the sale of the property. The buyer takes over as landlord with all existing obligations intact. This means the value of your plex is directly tied to whether rents are at market, below market, or significantly below market.</p>
+      <p>Buyers will scrutinize lease terms carefully. A plex where all units are rented at or near market rate is a straightforward investment. A plex with long-term tenants paying 2018 rents in 2026 is a more complex proposition, and buyers will price in the time and risk required to normalize rents.</p>
+
+      <h2>Owner-Occupancy and Repossession</h2>
+      <p>One significant driver of Montreal plex values is the owner-occupancy option. A buyer who intends to occupy one unit can repossess it from a tenant, subject to Quebec's legal framework (proper notice, compensation where required, and specific timelines). Properties where one unit is vacant or where repossession conditions are favourable command a meaningful premium.</p>
+
+      <h2>Pricing a Plex Correctly</h2>
+      <p>Plex pricing balances two methodologies: income approach (what an investor would pay based on net rental income and cap rate) and comparable sales approach (what recent similar properties have sold for). The buyer pool for a $1M Rosemont triplex includes both investors and owner-occupants — and each values the property differently.</p>
+      <p>An experienced broker will run both analyses and position the property at the price that generates maximum competition between both buyer types.</p>
+
+      <h2>Pre-Listing Preparation for Plexes</h2>
+      <p>Before listing, ensure all leases are current and documented, all rental income is provable (bank statements or rent receipts), the building's mechanical systems have been maintained, and any deferred repairs are either completed or disclosed. Buyers of plexes conduct more detailed due diligence than condo buyers — prepare for it proactively.</p>
+
+      <h2>Timing the Sale</h2>
+      <p>Summer and early fall are typically the most active periods for plex buyers in Montreal — families planning owner-occupancy prefer to close before the school year, and investors are active year-round. Listing between April and August typically maximizes exposure to the deepest buyer pool.</p>
+    `
+  },
+  {
+    id: 42,
+    title: "What to Look for in a Home Inspection in Quebec",
+    category: "buyers",
+    categoryLabel: "Buyers",
+    date: "May 11, 2026",
+    readTime: "6 min read",
+    featured: false,
+    excerpt: "A home inspection is your last line of defence before a major financial commitment. Here is what a good inspection covers and how to use the results strategically.",
+    body: `
+      <p>The home inspection is the single most important due diligence step in a Quebec property purchase. It is the moment where the property's physical reality is documented — and where you gain the information needed to proceed with confidence, renegotiate, or withdraw. Here is how to make the most of it.</p>
+
+      <h2>What a Qualified Inspector Examines</h2>
+      <p>A thorough home inspection covers the major visible and accessible components of a property:</p>
+      <ul>
+        <li><strong>Structure:</strong> Foundation, load-bearing walls, roof framing</li>
+        <li><strong>Roof:</strong> Condition of shingles or membrane, flashings, drainage</li>
+        <li><strong>Exterior:</strong> Siding, windows, doors, grading and drainage away from the building</li>
+        <li><strong>Interior:</strong> Walls, floors, ceilings, stairways, visible insulation</li>
+        <li><strong>Plumbing:</strong> Water supply, drain lines, water heater, visible pipes</li>
+        <li><strong>Electrical:</strong> Panel capacity, visible wiring, grounding, outlets</li>
+        <li><strong>Heating and cooling:</strong> Furnace, heat pump, ventilation, air conditioning</li>
+      </ul>
+
+      <h2>Choosing the Right Inspector</h2>
+      <p>In Quebec, home inspectors are regulated under the Building Inspector Act and must be members of AIBQ (Association des inspecteurs en bâtiments du Québec) or an equivalent recognized organization. Ask your broker for recommendations — an inspector familiar with Montreal's older housing stock (Montreal has a high percentage of pre-1970 construction) will catch issues that a generalist might miss.</p>
+
+      <h2>Attend the Inspection in Person</h2>
+      <p>Read the report carefully, but also attend the inspection and walk through the property with the inspector. Seeing an issue in person — understanding its context, severity, and the inspector's explanation — is more valuable than reading about it later. Ask questions. A good inspector will explain what they are seeing in practical terms.</p>
+
+      <h2>Common Issues in Montreal Properties</h2>
+      <ul>
+        <li>Knob-and-tube wiring in pre-1950 homes (requires insurance disclosure)</li>
+        <li>Pyrite in basement floors (common in properties built in the 1980s–1990s in certain areas)</li>
+        <li>Flat roof membrane condition (very common in Montreal)</li>
+        <li>Foundation crack patterns (some are normal, some are not)</li>
+        <li>Older plumbing materials (lead pipes in pre-1970 homes, galvanized steel)</li>
+      </ul>
+
+      <h2>Using the Inspection Results</h2>
+      <p>A good inspection rarely kills a deal — it informs the negotiation. If significant issues are found, your options are: request that the seller repair them before closing, request a price reduction that reflects the cost of remediation, or withdraw under the inspection condition. Your broker will advise on the most appropriate strategy given the nature of the issues and the state of the negotiation.</p>
+    `
+  },
+  {
+    id: 43,
+    title: "How to Choose the Right Real Estate Agent to Sell Your Home in Montreal",
+    category: "sellers",
+    categoryLabel: "Sellers",
+    date: "May 12, 2026",
+    readTime: "6 min read",
+    featured: false,
+    excerpt: "Not all real estate agents are equal — especially in a market as neighbourhood-specific as Montreal. Here is a framework for finding the right one.",
+    body: `
+      <p>Choosing a real estate agent to list your Montreal property is one of the most consequential decisions in the selling process. The right broker adds value far beyond their commission — the wrong one costs you time, money, and significantly more stress than necessary. Here is how to evaluate candidates objectively.</p>
+
+      <h2>Local Transaction History</h2>
+      <p>The most important question to ask any prospective listing agent is: what have you sold within 500 metres of my property in the past 12 months? An agent with recent, relevant comparable sales understands your specific buyer pool, knows what premium your property type commands, and has likely already worked with buyers who would be perfect candidates for your home.</p>
+      <p>Beware of agents who respond with citywide statistics or portfolio volume numbers. That is not the same as neighbourhood-level expertise.</p>
+
+      <h2>Marketing Quality and Infrastructure</h2>
+      <p>Ask to see examples of previous listings: photography, video tours, listing copy, and social media promotion. The gap between agents in marketing quality is enormous, and it shows directly in how many buyers see your property and how they perceive it.</p>
+      <p>A broker who takes smartphone photos and writes generic descriptions is not providing the same service as one with professional photographers, videographers, and a targeted digital distribution strategy. Ask specifically who takes their listing photos and where listings are distributed beyond Centris.</p>
+
+      <h2>Communication Style</h2>
+      <p>You will be working closely with this person through one of the larger financial transactions of your life. Ask how they communicate (calls, texts, email), how often you can expect updates, and how they handle situations where the market is not responding as expected. The answer reveals as much about their character as their competence.</p>
+
+      <h2>Avoid the Highest-Price Trap</h2>
+      <p>"Buying the listing" — suggesting an inflated price to win your business — is one of the oldest tactics in real estate. If one agent suggests a list price $80,000 higher than two others, ask them to show you the comparable sales that support it. If they cannot, the number is a pitch, not an analysis.</p>
+
+      <h2>The Interview Is a Two-Way Evaluation</h2>
+      <p>The best agents interview clients as much as clients interview them. An agent who asks intelligent questions about your timeline, your goals, your next property, and your concerns is one who is thinking about your outcome — not just about winning the listing. That orientation is exactly what you want carrying your property to market.</p>
+    `
+  },
+  {
+    id: 44,
+    title: "Rosemont vs. Plateau-Mont-Royal: Which Is Better for First-Time Buyers?",
+    category: "neighbourhoods",
+    categoryLabel: "Neighbourhoods",
+    date: "May 12, 2026",
+    readTime: "6 min read",
+    featured: false,
+    excerpt: "Two of Montreal's most desirable urban neighbourhoods, with meaningfully different price points. Here is an honest side-by-side for buyers trying to choose.",
+    body: `
+      <p>Rosemont and Plateau-Mont-Royal sit next to each other on Montreal's urban grid, share a similar aesthetic, and attract a largely overlapping buyer demographic. But their markets are meaningfully different — particularly for first-time buyers where every dollar of purchase price affects long-term financial strategy.</p>
+
+      <h2>Entry Price Comparison</h2>
+      <p><strong>Plateau-Mont-Royal:</strong> One-bedroom condos begin around $430,000–$500,000. Two-bedrooms range from $550,000 to $750,000+ depending on size and building quality. Single-family homes have firmly crossed $1M in most of the neighbourhood. Plexes average $1.08M.</p>
+      <p><strong>Rosemont:</strong> One-bedroom condos begin around $350,000–$430,000. Two-bedrooms $450,000–$600,000. Single-family homes in the $700,000–$900,000 range remain available. Plexes average around $1.02M.</p>
+      <p>The gap is real: on equivalent units, Rosemont is typically 10–18% less expensive than the Plateau. On a $600,000 purchase, that difference is $60,000–$108,000 in purchase price — and proportionally less mortgage, less welcome tax, and less CMHC premium if applicable.</p>
+
+      <h2>Appreciation History</h2>
+      <p>Both neighbourhoods have delivered strong appreciation over the past decade. The Plateau's appreciation cycle is more mature — prices have risen significantly and are now growing more modestly. Rosemont's cycle, while advanced, still has appreciating tailwinds as the neighbourhood's commercial and cultural infrastructure continues to develop.</p>
+      <p>Buyers entering Rosemont today are buying into a neighbourhood that most analysts consider still in a growth arc. Plateau buyers are buying into an already-established premium. Both are defensible — the question is your time horizon and budget.</p>
+
+      <h2>Lifestyle: The Real Differences</h2>
+      <p>The Plateau offers unmatched walkability, density of restaurants and independent shops, and a particular urban energy that attracts a specific kind of buyer. Rosemont offers similar lifestyle elements with slightly more breathing room — wider streets in some areas, more accessible parking, a somewhat calmer residential character in its quieter zones, and excellent cycling infrastructure.</p>
+
+      <h2>The First-Timer's Verdict</h2>
+      <p>If your budget comfortably reaches the Plateau and you love the energy of that neighbourhood specifically, buy there. If you are stretching to reach Plateau prices and Rosemont delivers the lifestyle you need at a more sustainable financial commitment, Rosemont is the more responsible choice — and its current appreciation trajectory makes it an excellent first purchase. You can always move to the Plateau with your Rosemont equity in five years.</p>
+    `
+  },
+  {
+    id: 45,
+    title: "What Happens After Your Offer Is Accepted? The Quebec Closing Process Explained",
+    category: "buyers",
+    categoryLabel: "Buyers",
+    date: "May 13, 2026",
+    readTime: "6 min read",
+    featured: false,
+    excerpt: "Most buyers are well-prepared for finding a property and making an offer. Fewer understand what happens in the 30-60 days between accepted offer and keys in hand.",
+    body: `
+      <p>The period between an accepted offer and the notarial closing is often the most stressful phase of a property purchase — particularly for first-time buyers who do not know what to expect at each step. Here is a clear, sequential breakdown of everything that happens after your Promesse d'achat is signed by both parties.</p>
+
+      <h2>Days 1–5: Condition Period</h2>
+      <p>If your offer included conditions (inspection and/or financing — which it should), the clock starts immediately. Book your home inspector within 24 hours of offer acceptance — good inspectors are busy, and your condition deadline is firm. Simultaneously, forward your accepted offer to your mortgage broker or bank contact to begin the formal approval process.</p>
+
+      <h2>The Home Inspection</h2>
+      <p>Your inspector will examine the property and deliver a written report, typically within 24 hours of the inspection appointment. Review it carefully with your buyer's broker. Minor issues are normal — every property has them. Significant structural, mechanical, or water issues warrant a conversation with your broker about how to proceed: renegotiation, repair request, or in rare cases, withdrawal.</p>
+
+      <h2>Mortgage Approval</h2>
+      <p>Your lender will issue a commitment letter once the underwriting review is complete and the property has been appraised. If the appraisal comes in below the purchase price, you may need to make up the difference in cash, renegotiate the price, or change lenders. Your mortgage broker manages this process — ask for status updates every two days if you have not heard.</p>
+
+      <h2>Waiving Conditions</h2>
+      <p>Once both inspection and financing conditions are satisfied, you (or your broker) will sign a written waiver of conditions. From this moment, the deal is firm. Both parties are legally committed to completing the transaction on the agreed terms. Ensure your broker sends a copy to the seller's broker immediately.</p>
+
+      <h2>Choosing Your Notary</h2>
+      <p>Now is the time to confirm your notary. If you do not have one, your broker can recommend several. The notary will conduct a title search (confirming ownership chain and that the property is free of hidden charges), prepare the mortgage deed and transfer deed, and coordinate the closing logistics with all parties.</p>
+
+      <h2>Pre-Closing Walkthrough</h2>
+      <p>Within 24–48 hours of closing, you have the right to conduct a pre-closing walkthrough to confirm the property is in the condition agreed upon and that all agreed inclusions are present. If anything is wrong, notify your broker immediately — this is your last opportunity to address it before keys change hands.</p>
+
+      <h2>Notarial Closing Day</h2>
+      <p>You will sign the mortgage deed and transfer deed at the notary's office. Bring government-issued identification. The balance of the purchase price (down payment less deposit, plus any adjustments) is transferred via certified funds before signing. The notary registers the transaction at the land registry, and keys are yours.</p>
+    `
+  },
+  {
+    id: 46,
+    title: "How to Prepare Your Montreal Home for Sale: A Room-by-Room Checklist",
+    category: "sellers",
+    categoryLabel: "Sellers",
+    date: "May 13, 2026",
+    readTime: "7 min read",
+    featured: false,
+    excerpt: "Preparation is where top-dollar sales are won before a single buyer visits. Here is a practical room-by-room checklist for Montreal sellers.",
+    body: `
+      <p>The condition and presentation of your property when it hits the market determines the quality of buyers it attracts and the offers it generates. This checklist covers every area of a typical Montreal home — from entrance to storage — with the specific improvements that deliver the best return on effort and investment.</p>
+
+      <h2>Exterior and Entrance</h2>
+      <ul>
+        <li>Power-wash the front facade, steps, and walkway</li>
+        <li>Repaint the front door if it shows wear — a fresh door makes an outsized first impression</li>
+        <li>Clean all windows inside and out</li>
+        <li>Remove seasonal clutter, bicycles, and stored items from the entrance</li>
+        <li>Ensure all exterior lighting functions</li>
+        <li>If you have a balcony or terrace, stage it with simple furniture and planters</li>
+      </ul>
+
+      <h2>Living and Dining Areas</h2>
+      <ul>
+        <li>Remove 30–40% of furniture — most homes show better with less</li>
+        <li>Remove personal photographs and highly specific decorative items</li>
+        <li>Repair any visible wall damage (nail holes, scuffs, small cracks)</li>
+        <li>Repaint in a neutral, warm white if current colours are bold or dated</li>
+        <li>Ensure all light fixtures have working, matching bulbs — a room with a burned-out bulb reads as neglected</li>
+        <li>Clean all flooring; refinish hardwood if visibly scratched</li>
+      </ul>
+
+      <h2>Kitchen</h2>
+      <ul>
+        <li>Deep clean: appliances, range hood, inside the oven, under the fridge</li>
+        <li>Clear countertops entirely — store small appliances and items</li>
+        <li>Replace dated cabinet hardware if the cost is modest (under $200)</li>
+        <li>Ensure all appliances function and are clean</li>
+        <li>Fix dripping faucets and replace caulking if discoloured</li>
+      </ul>
+
+      <h2>Bathrooms</h2>
+      <ul>
+        <li>Replace caulk if it shows any mould or discolouration</li>
+        <li>Re-grout tile where grout is darkened</li>
+        <li>Stage with fresh towels, a simple plant, and minimal personal items</li>
+        <li>Ensure ventilation fans function</li>
+        <li>Replace toilet seats that show age</li>
+      </ul>
+
+      <h2>Bedrooms</h2>
+      <ul>
+        <li>Remove excess furniture — rooms should feel spacious</li>
+        <li>Use neutral bedding — it photographs better and helps buyers project their own style</li>
+        <li>Clear closets to 50% capacity — buyers open everything, and full closets signal lack of storage</li>
+      </ul>
+
+      <h2>Basement and Storage Areas</h2>
+      <ul>
+        <li>Clear and organize — a messy basement reads as a potential problem</li>
+        <li>Address any moisture or smell issues before listing</li>
+        <li>Ensure electrical panel is accessible and labelled</li>
+      </ul>
+
+      <h2>The Photography Day</h2>
+      <p>On the day of photography, ensure every room is lit (open curtains, turn on all lights), all surfaces are clear, all doors are open or purposefully closed, and there are no personal items visible. The photographer's lens exaggerates both what is right and what is wrong about a space. Treat the photo session as the most important showing your property will ever have.</p>
+    `
+  },
+  {
+    id: 47,
+    title: "Understanding Mortgage Options for First-Time Buyers in Canada",
+    category: "buyers",
+    categoryLabel: "Buyers",
+    date: "May 14, 2026",
+    readTime: "7 min read",
+    featured: false,
+    excerpt: "Fixed vs. variable, open vs. closed, 25 vs. 30 years — mortgage decisions made at purchase affect your finances for years. Here is how to navigate them.",
+    body: `
+      <p>Choosing a mortgage is not just about finding the lowest rate. The type of mortgage you choose, its term, its amortization, and the flexibility provisions within it can add up to tens of thousands of dollars in difference over the life of the loan. Here is what first-time buyers in Canada need to understand.</p>
+
+      <h2>Fixed vs. Variable Rate</h2>
+      <p>A fixed-rate mortgage locks your interest rate for the term (typically 1 to 5 years), providing payment certainty. A variable-rate mortgage fluctuates with the prime rate — your payments may change if rates move. Historically, variable rates have been lower over time, but the payment certainty of fixed rates has real value for first-time buyers who are budgeting tightly.</p>
+      <p>In the current rate environment (2026), the spread between fixed and variable has narrowed significantly. Neither option is universally superior — your risk tolerance and financial buffer determine which is the better fit.</p>
+
+      <h2>Mortgage Term vs. Amortization</h2>
+      <p>The term is the period your rate and conditions are locked in (typically 1–5 years). The amortization is the total repayment period (25 or 30 years). At the end of each term, you renew — either with the same lender at current rates, or by switching lenders.</p>
+      <p>First-time buyers with insured mortgages (less than 20% down) are currently limited to a maximum 30-year amortization in Canada. A longer amortization reduces monthly payments but significantly increases total interest paid over the life of the mortgage.</p>
+
+      <h2>Prepayment Privileges</h2>
+      <p>Most Canadian mortgage products allow annual lump-sum prepayments (typically 15–20% of the original principal) and increased regular payments without penalty. Using these options aggressively — particularly in the early years when more of your payment goes to interest — can shave years off your amortization and save substantial interest.</p>
+
+      <h2>Working with a Mortgage Broker</h2>
+      <p>Unlike a bank that can only offer its own products, an independent mortgage broker has access to dozens of lenders and can compare rates and terms across the market. For first-time buyers with complex income situations (self-employed, variable income, multiple properties), a mortgage broker often finds solutions that a single bank would not.</p>
+
+      <h2>The True Cost of a Mortgage</h2>
+      <p>The rate is only one component of total mortgage cost. Prepayment restrictions, portability provisions (can you take the mortgage with you to a new property?), and break penalties (what does it cost to exit the mortgage before the term ends?) all affect the long-term cost. Read the fine print, and ask your mortgage professional to walk through all scenarios before you commit.</p>
+    `
+  },
+  {
+    id: 48,
+    title: "What Does It Really Cost to Sell a House in Montreal?",
+    category: "sellers",
+    categoryLabel: "Sellers",
+    date: "May 14, 2026",
+    readTime: "6 min read",
+    featured: false,
+    excerpt: "Sellers focus on the sale price, but the net proceeds depend on the costs along the way. Here is a complete breakdown of what it actually costs to sell in Montreal.",
+    body: `
+      <p>Most sellers think about their gross sale price. The number that matters is the net — what you walk away with after all transaction costs are paid. Here is a transparent breakdown of every cost typically involved in selling a Montreal property.</p>
+
+      <h2>Broker Commission</h2>
+      <p>In Quebec, real estate broker commissions are negotiable and not regulated at a fixed rate. A typical full-service commission structure for a Montreal property is 4–5% of the sale price, split between the listing broker and the buyer's broker. On a $700,000 sale at 5%: $35,000 in total commission, with QST applied on the commission amount (adding approximately $3,500).</p>
+      <p>This is the largest single cost of selling, and it is also the one that most directly affects how well your property is marketed and negotiated. A broker who reduces their commission may also reduce their marketing investment and negotiating effort.</p>
+
+      <h2>Notary Fees (Seller)</h2>
+      <p>The seller's notary (if separate from the buyer's, which is common) handles the discharge of the existing mortgage and preparation of the deed of sale on the seller's side. Fees are typically $800–$1,500.</p>
+
+      <h2>Mortgage Discharge Penalty</h2>
+      <p>If you are selling before the end of your mortgage term, your lender will assess a prepayment penalty. For fixed-rate mortgages, this is typically the greater of 3 months' interest or the Interest Rate Differential (IRD) — which can be substantial in certain interest rate environments. Get a discharge quote from your lender before listing so this number is not a surprise at closing.</p>
+
+      <h2>Pre-Listing Preparation Costs</h2>
+      <p>Depending on the property's condition: professional cleaning ($300–$700), painting ($1,000–$5,000+), staging consultation ($300–$600), minor repairs ($500–$2,000+). These costs are optional in a technical sense but typically return 3–10x their value in sale price. Budget them as investments, not expenses.</p>
+
+      <h2>Capital Gains (If Applicable)</h2>
+      <p>If the property was your principal residence for all years of ownership, the sale is exempt from capital gains tax in Canada. If the property was a rental or investment property for some or all of the ownership period, capital gains tax applies on the proportional gain. This is a significant consideration for plex sellers — consult an accountant before listing if your property was not exclusively owner-occupied.</p>
+
+      <h2>Your Net Proceeds Calculation</h2>
+      <p>Sale price − commission − QST on commission − seller notary fees − mortgage discharge penalty − pre-listing costs − capital gains tax (if applicable) − moving costs = net proceeds. Run this calculation with real numbers before committing to a list price, and share it with your financial advisor if the proceeds are funding a subsequent purchase.</p>
+    `
+  },
+  {
+    id: 49,
+    title: "How Montreal's Real Estate Market Differs from Toronto and Vancouver",
+    category: "market",
+    categoryLabel: "Market Report",
+    date: "May 15, 2026",
+    readTime: "6 min read",
+    featured: false,
+    excerpt: "Montreal is often lumped in with Canada's other major markets, but its dynamics, price levels, and fundamentals are genuinely distinct. Here is what sets it apart.",
+    body: `
+      <p>Canada's real estate narrative is dominated by Toronto and Vancouver — markets that have become global benchmarks for high prices and intense competition. Montreal operates under different fundamentals, and buyers and sellers who understand those differences are better positioned to make decisions specific to this market.</p>
+
+      <h2>Price Levels: Still the Most Accessible Major Market</h2>
+      <p>Despite meaningful appreciation over the past decade, Montreal remains significantly more affordable than Toronto or Vancouver on an absolute basis. A three-bedroom single-family home in a desirable Montreal neighbourhood (Rosemont, NDG, Verdun) that might be priced at $900,000 would cost $1.5M–$2M+ in an equivalent Toronto neighbourhood and $2M+ in Vancouver.</p>
+      <p>This relative affordability is both a feature (accessible to a broader range of buyers) and a risk factor (if the gap narrows, appreciation potential is significant; if it widens, catch-up may be slower).</p>
+
+      <h2>The Quebec Legal Framework</h2>
+      <p>Ontario and BC real estate transactions operate under common law, with lawyers handling the transfer process. Quebec operates under civil law, with notaries conducting closings, mandatory seller declarations, and the Promesse d'achat framework governing offers. These are not merely procedural differences — they create different risk profiles and disclosure obligations for both buyers and sellers.</p>
+
+      <h2>Rental and Plex Culture</h2>
+      <p>Montreal has one of the highest rental rates of any major Canadian city — over 60% of households rent. This has sustained a robust plex market that does not exist in the same form in Toronto or Vancouver. The cultural and legal framework around tenant-landlord relationships in Quebec is also meaningfully different, with stronger tenant protections that directly affect investment property valuations.</p>
+
+      <h2>Linguistic Dimension</h2>
+      <p>Montreal's bilingual character affects real estate in ways that do not apply elsewhere in Canada. Neighbourhood character, school access, and professional services all have linguistic dimensions that influence buyer preferences and, consequently, property demand in specific areas.</p>
+
+      <h2>Lower Speculation, Stronger Fundamentals</h2>
+      <p>Montreal's market has historically had less speculative activity than Toronto or Vancouver. Prices have been driven more by local income growth, population increase, and genuine demand than by investor speculation or foreign capital. This creates a market that is more sustainable but also slower to recover when it corrects — and slower to appreciate in boom cycles.</p>
+    `
+  },
+  {
+    id: 50,
+    title: "What Is a Notary in Quebec and Why Do You Need One to Buy Property?",
+    category: "buyers",
+    categoryLabel: "Buyers",
+    date: "May 15, 2026",
+    readTime: "5 min read",
+    featured: false,
+    excerpt: "In Quebec, property transactions close through a notary, not a lawyer. Here is what a notary does, why they are required, and how to choose one.",
+    body: `
+      <p>If you are moving to Quebec from another province or buying your first property here, the role of the notary in a real estate transaction is one of the most important things to understand. In most of Canada, real estate lawyers handle the closing process. In Quebec, this role belongs exclusively to notaries — and the distinction matters.</p>
+
+      <h2>What a Notary Is</h2>
+      <p>A notary (notaire) in Quebec is a legally qualified professional who holds the authority to authenticate legal documents and record them in the official public register. Unlike a lawyer who acts as an advocate for one party, a notary is a neutral officer of the law — their duty is to the law and to the integrity of the transaction, not to either party specifically.</p>
+
+      <h2>What the Notary Does in a Property Transaction</h2>
+      <p><strong>Title search:</strong> The notary examines the property's legal history to confirm the seller has clear title, that there are no undisclosed charges (hypothecs/mortgages) against the property, and that there are no legal disputes affecting ownership.</p>
+      <p><strong>Deed preparation:</strong> The notary prepares the mortgage deed (between you and your lender) and the transfer deed (between seller and buyer) in the required legal form.</p>
+      <p><strong>Fund coordination:</strong> The notary ensures the purchase funds are correctly transferred from the buyer's lender to the seller, and that any existing mortgage on the property is discharged.</p>
+      <p><strong>Registration:</strong> The notary registers the transfer of ownership at the Quebec Land Registry (Registre foncier du Québec), making you the official legal owner.</p>
+
+      <h2>Who Pays the Notary?</h2>
+      <p>The buyer typically pays the notary fees, which cover all of the above services. Fees generally range from $1,200 to $2,000 for a standard residential transaction. The seller may have their own notary to handle the discharge of their existing mortgage — this cost is the seller's responsibility.</p>
+
+      <h2>Choosing a Notary</h2>
+      <p>Your buyer's broker can typically provide two or three notary recommendations. Alternatively, you can search the Chambre des notaires du Québec directory. Choose a notary who communicates clearly in your preferred language (most Montreal notaries are bilingual), responds promptly to questions, and has experience with residential real estate transactions specifically.</p>
+
+      <h2>The Notarial Signing Appointment</h2>
+      <p>The closing appointment at the notary's office typically takes 60–90 minutes. You will review and sign the mortgage deed and transfer deed, provide certified funds for the balance owing, and confirm all details are accurate. The notary then registers the transaction and hands over the keys. It is the final step in your ownership journey — and it is surprisingly manageable when you know what to expect.</p>
+    `
+  }
+
+
+];
+
+let currentFilter = 'all';
+
+function renderGrid(filter) {
+  const grid = document.getElementById('blog-grid');
+  const filtered = filter === 'all' ? articles : articles.filter(a => a.category === filter);
+  grid.innerHTML = filtered.map(article => `
+    <div class="blog-card" onclick="showArticle(${article.id})">
+      ${article.featured ? '<span class="featured-badge">Featured</span>' : ''}
+      <div class="card-category">${article.categoryLabel}</div>
+      <h2 class="card-title">${article.title}</h2>
+      <p class="card-excerpt">${article.excerpt}</p>
+      <div class="card-meta">
+        <span>${article.date} &bull; ${article.readTime}</span>
+        <span class="card-read-more">
+          Read Article
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 7H11M11 7L7.5 3.5M11 7L7.5 10.5" stroke="currentColor" stroke-width="1.2"/></svg>
+        </span>
+      </div>
+    </div>
+  `).join('');
+}
+
+function showArticle(id) {
+  const article = articles.find(a => a.id === id);
+  if (!article) return;
+  document.getElementById('blog-list').style.display = 'none';
+  const view = document.getElementById('article-view');
+  view.classList.add('active');
+  document.getElementById('article-content').innerHTML = `
+    <div class="article-category">${article.categoryLabel}</div>
+    <h1 class="article-title">${article.title}</h1>
+    <div class="article-meta">
+      <span>${article.date}</span>
+      <span>${article.readTime}</span>
+      <span>Delaram Farzin</span>
+    </div>
+    <div class="article-body">${article.body}</div>
+    <div class="author-card">
+      <div class="author-avatar">D</div>
+      <div class="author-info">
+        <h4>Delaram Farzin</h4>
+        <p>Montreal real estate broker at Sutton Group Centre-Ouest. Background in finance and investment management. Focused on data-driven strategy for buyers and sellers across the island. Reachable at <a href="tel:5148033472" style="color:var(--gold)">514-803-3472</a> or <a href="mailto:info@farzin.realtor" style="color:var(--gold)">info@farzin.realtor</a>.</p>
+      </div>
+    </div>
+    <div class="article-cta">
+      <h3>Ready to Make Your Move?</h3>
+      <p>Whether buying, selling, or exploring your options, let's have a direct conversation about your situation.</p>
+      <a href="index.html#contact" class="cta-btn">Schedule a Consultation</a>
+    </div>
+  `;
+  window.scrollTo(0, 0);
+  // SEO
+  document.title = article.title + ' | Delaram Farzin';
+}
+
+function showList() {
+  document.getElementById('blog-list').style.display = 'block';
+  const view = document.getElementById('article-view');
+  view.classList.remove('active');
+  document.title = 'Montreal Real Estate Insights | Delaram Farzin';
+  window.scrollTo(0, 0);
+}
+
+document.querySelectorAll('.filter-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    currentFilter = btn.dataset.cat;
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    renderGrid(currentFilter);
+  });
+});
+
+renderGrid('all');
+
+// Handle URL hash for direct article links
+const hash = window.location.hash;
+if (hash && hash.startsWith('#article-')) {
+  const id = parseInt(hash.replace('#article-', ''));
+  if (!isNaN(id)) showArticle(id);
+}
+</script>
+</body>
+</html>
