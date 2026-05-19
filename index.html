@@ -185,8 +185,8 @@
     ::-webkit-scrollbar-thumb{background:var(--primary-dk);}
 
     /* ── NAV ── */
-    nav{position:fixed;top:0;width:100%;z-index:1000;padding:0 52px;height:72px;display:flex;align-items:center;justify-content:space-between;transition:all .4s;}
-    nav.scrolled{background:rgba(8,8,7,.96);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);}
+    nav{position:fixed;top:0;width:100%;z-index:1000;padding:0 52px;height:72px;display:flex;align-items:center;justify-content:space-between;transition:all .4s;background:rgba(8,8,7,.96);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);}
+    nav.scrolled{background:rgba(8,8,7,.98);}
     .nav-left{display:flex;align-items:center;gap:16px;}
     .nav-logo{font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:500;color:var(--text);letter-spacing:3px;text-transform:uppercase;}
     .nav-phone{font-size:12px;letter-spacing:1.5px;color:var(--primary);font-weight:400;border-left:1px solid var(--border-lt);padding-left:16px;margin-left:4px;}
@@ -420,6 +420,46 @@
     .popup-form{display:flex;flex-direction:column;gap:2px;}
     .popup-fine{font-size:11px;color:var(--text-muted);text-align:center;margin-top:14px;}
 
+    /* ── TESTIMONIALS ── */
+    .testi-section{background:var(--bg-mid);border-top:1px solid var(--border);}
+    .testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;margin-top:48px;}
+    .testi-card{background:var(--bg-card);border:1px solid var(--border);padding:36px 32px;transition:border-color .25s;}
+    .testi-card:hover{border-color:var(--border-lt);}
+    .testi-stars{color:var(--primary);font-size:15px;letter-spacing:3px;margin-bottom:22px;}
+    .testi-quote{font-family:'Cormorant Garamond',serif;font-size:21px;line-height:1.55;color:var(--text);margin-bottom:24px;font-weight:300;font-style:italic;}
+    .testi-name{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--primary);font-weight:400;}
+    .testi-role{font-size:12px;color:var(--text-muted);margin-top:4px;}
+    .testi-footer{margin-top:20px;padding-top:18px;border-top:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;}
+    .testi-g-badge{font-size:11px;color:var(--text-muted);}
+    .testi-cta{margin-top:52px;text-align:center;}
+
+    /* ── MORTGAGE CALCULATOR ── */
+    .calc-section{background:var(--bg);border-top:1px solid var(--border);}
+    .calc-inner{max-width:960px;margin:0 auto;}
+    .calc-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start;margin-top:52px;}
+    .calc-field{margin-bottom:18px;}
+    .calc-label{font-size:10px;letter-spacing:2.5px;text-transform:uppercase;color:var(--text-muted);display:block;margin-bottom:8px;}
+    .calc-input{padding:16px 20px;border:1px solid var(--border-lt);background:var(--bg-card);font-family:'Jost',sans-serif;font-size:15px;color:var(--text);width:100%;outline:none;transition:border-color .2s;}
+    .calc-input:focus{border-color:var(--primary);}
+    .calc-input::placeholder{color:var(--text-muted);}
+    .calc-dp-row{display:grid;grid-template-columns:1fr auto;gap:2px;}
+    .calc-dp-toggle{display:flex;}
+    .calc-dp-btn{padding:16px 20px;background:var(--bg-card);border:1px solid var(--border-lt);font-family:'Jost',sans-serif;font-size:12px;letter-spacing:1px;cursor:pointer;color:var(--text-muted);transition:all .2s;}
+    .calc-dp-btn.active{background:var(--primary);color:var(--bg);border-color:var(--primary);}
+    .calc-results{background:var(--bg-card);border:1px solid var(--border);padding:40px;}
+    .calc-result-main{text-align:center;padding-bottom:28px;border-bottom:1px solid var(--border);margin-bottom:28px;}
+    .calc-result-lbl{font-size:10px;letter-spacing:2.5px;text-transform:uppercase;color:var(--text-muted);margin-bottom:12px;}
+    .calc-result-val{font-family:'Cormorant Garamond',serif;font-size:62px;color:var(--primary);line-height:1;font-weight:300;}
+    .calc-result-sub{font-size:12px;color:var(--text-muted);margin-top:6px;}
+    .calc-br-row{display:flex;justify-content:space-between;align-items:center;padding:12px 0;border-bottom:1px solid rgba(30,28,24,.5);font-size:13px;}
+    .calc-br-row:last-child{border-bottom:none;}
+    .calc-br-key{color:var(--text-muted);}
+    .calc-br-val{color:var(--text);font-weight:400;}
+    .calc-cmhc{background:var(--bg-mid);border:1px solid var(--border);padding:14px 18px;margin-top:16px;font-size:12px;color:var(--text-muted);line-height:1.6;}
+    .calc-cmhc strong{color:var(--primary);font-weight:400;}
+    .calc-disclaimer{font-size:11px;color:var(--text-muted);margin-top:20px;line-height:1.65;font-style:italic;}
+    .calc-cta{margin-top:52px;text-align:center;}
+
     /* ── RESPONSIVE ── */
     @media(max-width:900px){
       nav{padding:0 28px;}
@@ -430,6 +470,8 @@
       .intro-grid{grid-template-columns:1fr;gap:48px;}
       .sold-grid{grid-template-columns:1fr;}
       .overview-grid,.prop-grid{grid-template-columns:1fr;}
+      .testi-grid{grid-template-columns:1fr;}
+      .calc-grid{grid-template-columns:1fr;}
       .steps-grid{grid-template-columns:1fr;}
       .kit-panel.active{flex-direction:column;}
       .contact-grid{grid-template-columns:1fr;gap:48px;}
@@ -542,7 +584,7 @@
     }
 
     /* ════════════════════════════════════════════
-       TABLET  (≤ 900px) — already exists, add fixes
+       TABLET  (≤ 900px) - already exists, add fixes
     ════════════════════════════════════════════ */
     @media(max-width:900px) {
       .nav-hamburger { display:flex; }
@@ -668,7 +710,7 @@
 <!-- STATS BAR -->
 <div class="stats-bar" style="grid-template-columns:repeat(3,1fr);">
   <div class="stat-item"><span class="stat-num">97%</span><span class="stat-label" data-en="List-to-Sale Price" data-fr="Prix affiché vs vendu">List-to-Sale Price</span></div>
-  <div class="stat-item"><span class="stat-num">7+</span><span class="stat-label" data-en="Neighbourhoods Covered" data-fr="Quartiers desservis">Neighbourhoods Covered</span></div>
+  <div class="stat-item"><span class="stat-num">15+</span><span class="stat-label" data-en="Neighbourhoods Covered" data-fr="Quartiers desservis">Neighbourhoods Covered</span></div>
   <div class="stat-item"><span class="stat-num">5.0</span><span class="stat-label" data-en="Client Satisfaction Rating" data-fr="Note de satisfaction">Client Satisfaction Rating</span></div>
 </div>
 
@@ -773,7 +815,7 @@
       <div class="sold-info">
         <div class="sold-tag" data-en="Townhouse · Le Plateau" data-fr="Maison de ville · Le Plateau">Townhouse · Le Plateau</div>
         <div class="sold-address">4255 Av. Hôtel-de-Ville</div>
-        <div class="sold-desc" data-en="Renovated heritage row house with exposed wood beams, designer white kitchen, and private backyard — steps from Parc Lafontaine." data-fr="Maison en rangée patrimoniale rénovée avec poutres en bois apparent, cuisine blanche design et cour arrière privée — à deux pas du Parc Lafontaine.">Renovated heritage row house with exposed wood beams, designer white kitchen, and private backyard — steps from Parc Lafontaine.</div>
+        <div class="sold-desc" data-en="Renovated heritage row house with exposed wood beams, designer white kitchen, and private backyard - steps from Parc Lafontaine." data-fr="Maison en rangée patrimoniale rénovée avec poutres en bois apparent, cuisine blanche design et cour arrière privée - à deux pas du Parc Lafontaine.">Renovated heritage row house with exposed wood beams, designer white kitchen, and private backyard - steps from Parc Lafontaine.</div>
         <span class="sold-badge" data-en="Sold" data-fr="Vendu">Sold</span>
       </div>
     </div>
@@ -796,14 +838,22 @@
     <button class="neigh-tab" onclick="showNeigh('pr',this)">Pierrefonds-Roxboro</button>
     <button class="neigh-tab" onclick="showNeigh('pc',this)">Pointe-Claire</button>
     <button class="neigh-tab" onclick="showNeigh('mo',this)">Montreal-Ouest</button>
+    <button class="neigh-tab" onclick="showNeigh('wm',this)">Westmount</button>
+    <button class="neigh-tab" onclick="showNeigh('mr',this)">Mont-Royal</button>
+    <button class="neigh-tab" onclick="showNeigh('so',this)">Le Sud-Ouest</button>
+    <button class="neigh-tab" onclick="showNeigh('sl',this)">Saint-Laurent</button>
+    <button class="neigh-tab" onclick="showNeigh('csl',this)">Cote-Saint-Luc</button>
+    <button class="neigh-tab" onclick="showNeigh('bc',this)">Beaconsfield</button>
+    <button class="neigh-tab" onclick="showNeigh('ha',this)">Hampstead</button>
+    <button class="neigh-tab" onclick="showNeigh('ib',this)">L'Ile-Bizard</button>
   </div>
 
   <!-- VILLE-MARIE -->
   <div class="neigh-panel active" id="np-vm">
     <div class="neigh-header"><h3>Ville-Marie</h3><p data-en="Downtown core. High-density urban market driven by condominiums." data-fr="Centre-ville. Marché urbain dense dominé par les condominiums.">Downtown core. High-density urban market driven by condominiums.</p></div>
     <div class="overview-grid">
-      <div class="ov-card"><div class="ov-label">Median Price — SFH</div><div class="ov-val">$1.20M</div><div class="ov-chg up">+3%</div></div>
-      <div class="ov-card"><div class="ov-label">Median Price — Condo</div><div class="ov-val">$461K</div><div class="ov-chg dn">-2%</div></div>
+      <div class="ov-card"><div class="ov-label">Median Price - SFH</div><div class="ov-val">$1.20M</div><div class="ov-chg up">+3%</div></div>
+      <div class="ov-card"><div class="ov-label">Median Price - Condo</div><div class="ov-val">$461K</div><div class="ov-chg dn">-2%</div></div>
       <div class="ov-card"><div class="ov-label">Avg. Days on Market</div><div class="ov-val">84</div><div class="ov-chg dn">-6 days</div></div>
       <div class="ov-card"><div class="ov-label">Total Sales (Last 4Q)</div><div class="ov-val">1,711</div><div class="ov-chg up">+3%</div></div>
     </div>
@@ -833,8 +883,8 @@
   <div class="neigh-panel" id="np-pl">
     <div class="neigh-header"><h3>Le Plateau-Mont-Royal</h3><p data-en="Iconic bohemian quarter. Strong single-family, condo and plex market." data-fr="Quartier bohème emblématique. Fort marché maison, condo et plex.">Iconic bohemian quarter. Strong single-family, condo and plex market.</p></div>
     <div class="overview-grid">
-      <div class="ov-card"><div class="ov-label">Median Price — SFH</div><div class="ov-val">$1.42M</div><div class="ov-chg up">+13%</div></div>
-      <div class="ov-card"><div class="ov-label">Median Price — Condo</div><div class="ov-val">$592K</div><div class="ov-chg up">+5%</div></div>
+      <div class="ov-card"><div class="ov-label">Median Price - SFH</div><div class="ov-val">$1.42M</div><div class="ov-chg up">+13%</div></div>
+      <div class="ov-card"><div class="ov-label">Median Price - Condo</div><div class="ov-val">$592K</div><div class="ov-chg up">+5%</div></div>
       <div class="ov-card"><div class="ov-label">Avg. Days on Market</div><div class="ov-val">37</div><div class="ov-chg dn">-15 days</div></div>
       <div class="ov-card"><div class="ov-label">Total Sales (Last 4Q)</div><div class="ov-val">972</div><div class="ov-chg up">+6%</div></div>
     </div>
@@ -864,8 +914,8 @@
   <div class="neigh-panel" id="np-ro">
     <div class="neigh-header"><h3>Rosemont / La Petite-Patrie</h3><p data-en="Vibrant east-central neighbourhood. Popular for plexes and urban family living." data-fr="Quartier est-central animé. Populaire pour les plex et la vie familiale urbaine.">Vibrant east-central neighbourhood. Popular for plexes and urban family living.</p></div>
     <div class="overview-grid">
-      <div class="ov-card"><div class="ov-label">Median Price — SFH</div><div class="ov-val">$1.07M</div><div class="ov-chg up">+2%</div></div>
-      <div class="ov-card"><div class="ov-label">Median Price — Condo</div><div class="ov-val">$558K</div><div class="ov-chg up">+7%</div></div>
+      <div class="ov-card"><div class="ov-label">Median Price - SFH</div><div class="ov-val">$1.07M</div><div class="ov-chg up">+2%</div></div>
+      <div class="ov-card"><div class="ov-label">Median Price - Condo</div><div class="ov-val">$558K</div><div class="ov-chg up">+7%</div></div>
       <div class="ov-card"><div class="ov-label">Avg. Days on Market</div><div class="ov-val">36</div><div class="ov-chg dn">-6 days</div></div>
       <div class="ov-card"><div class="ov-label">Total Sales (Last 4Q)</div><div class="ov-val">1,162</div><div class="ov-chg dn">-1%</div></div>
     </div>
@@ -895,8 +945,8 @@
   <div class="neigh-panel" id="np-ou">
     <div class="neigh-header"><h3>Outremont</h3><p data-en="Prestigious residential enclave. Montreal's top single-family market by price." data-fr="Enclave résidentielle prestigieuse. Premier marché unifamilial de Montréal en termes de prix.">Prestigious residential enclave. Montreal's top single-family market by price.</p></div>
     <div class="overview-grid">
-      <div class="ov-card"><div class="ov-label">Median Price — SFH</div><div class="ov-val">$2.23M</div><div class="ov-chg up">+11%</div></div>
-      <div class="ov-card"><div class="ov-label">Median Price — Condo</div><div class="ov-val">$795K</div><div class="ov-chg up">+11%</div></div>
+      <div class="ov-card"><div class="ov-label">Median Price - SFH</div><div class="ov-val">$2.23M</div><div class="ov-chg up">+11%</div></div>
+      <div class="ov-card"><div class="ov-label">Median Price - Condo</div><div class="ov-val">$795K</div><div class="ov-chg up">+11%</div></div>
       <div class="ov-card"><div class="ov-label">Avg. Days on Market</div><div class="ov-val">55</div><div class="ov-chg dn">-11 days</div></div>
       <div class="ov-card"><div class="ov-label">Total Sales (Last 4Q)</div><div class="ov-val">239</div><div class="ov-chg up">+14%</div></div>
     </div>
@@ -925,8 +975,8 @@
   <div class="neigh-panel" id="np-pr">
     <div class="neigh-header"><h3>Pierrefonds-Roxboro</h3><p data-en="West Island family community. Fastest-growing sales volume on the Island in 2026." data-fr="Communauté familiale dans l'Ouest de l'île. Croissance du volume la plus rapide sur l'île en 2026.">West Island family community. Fastest-growing sales volume on the Island in 2026.</p></div>
     <div class="overview-grid">
-      <div class="ov-card"><div class="ov-label">Median Price — SFH</div><div class="ov-val">$648K</div><div class="ov-chg up">+4%</div></div>
-      <div class="ov-card"><div class="ov-label">Median Price — Condo</div><div class="ov-val">$382K</div><div class="ov-chg up">+4%</div></div>
+      <div class="ov-card"><div class="ov-label">Median Price - SFH</div><div class="ov-val">$648K</div><div class="ov-chg up">+4%</div></div>
+      <div class="ov-card"><div class="ov-label">Median Price - Condo</div><div class="ov-val">$382K</div><div class="ov-chg up">+4%</div></div>
       <div class="ov-card"><div class="ov-label">Avg. Days on Market</div><div class="ov-val">42</div><div class="ov-chg dn">-3 days</div></div>
       <div class="ov-card"><div class="ov-label">Total Sales (Last 4Q)</div><div class="ov-val">628</div><div class="ov-chg up">+16%</div></div>
     </div>
@@ -955,8 +1005,8 @@
   <div class="neigh-panel" id="np-pc">
     <div class="neigh-header"><h3>Pointe-Claire</h3><p data-en="West Island suburban community. Single-family dominated market with growing condo inventory." data-fr="Communauté de banlieue dans l'ouest. Marché dominé par les maisons avec inventaire condo croissant.">West Island suburban community. Single-family dominated market with growing condo inventory.</p></div>
     <div class="overview-grid">
-      <div class="ov-card"><div class="ov-label">Median Price — SFH</div><div class="ov-val">$754K</div><div class="ov-chg up">+3%</div></div>
-      <div class="ov-card"><div class="ov-label">Median Price — Condo</div><div class="ov-val">$579K</div><div class="ov-chg up">+8%</div></div>
+      <div class="ov-card"><div class="ov-label">Median Price - SFH</div><div class="ov-val">$754K</div><div class="ov-chg up">+3%</div></div>
+      <div class="ov-card"><div class="ov-label">Median Price - Condo</div><div class="ov-val">$579K</div><div class="ov-chg up">+8%</div></div>
       <div class="ov-card"><div class="ov-label">Avg. Days on Market</div><div class="ov-val">43</div><div class="ov-chg up">+4 days</div></div>
       <div class="ov-card"><div class="ov-label">Total Sales (Last 4Q)</div><div class="ov-val">349</div><div class="ov-chg dn">-7%</div></div>
     </div>
@@ -985,8 +1035,8 @@
   <div class="neigh-panel" id="np-mo">
     <div class="neigh-header"><h3>Montreal-Ouest</h3><p data-en="Small, tight-knit west-end community. Strong single-family demand with rising volume." data-fr="Petite communauté soudée dans l'ouest. Forte demande unifamiliale avec volume en hausse.">Small, tight-knit west-end community. Strong single-family demand with rising volume.</p></div>
     <div class="overview-grid">
-      <div class="ov-card"><div class="ov-label">Median Price — SFH</div><div class="ov-val">$1.10M</div><div class="ov-chg dn">-6%</div></div>
-      <div class="ov-card"><div class="ov-label">Median Price — Condo</div><div class="ov-val">**</div><div class="ov-chg nl">Insufficient data</div></div>
+      <div class="ov-card"><div class="ov-label">Median Price - SFH</div><div class="ov-val">$1.10M</div><div class="ov-chg dn">-6%</div></div>
+      <div class="ov-card"><div class="ov-label">Median Price - Condo</div><div class="ov-val">**</div><div class="ov-chg nl">Insufficient data</div></div>
       <div class="ov-card"><div class="ov-label">Avg. Days on Market</div><div class="ov-val">61</div><div class="ov-chg dn">-8 days</div></div>
       <div class="ov-card"><div class="ov-label">Total Sales (Last 4Q)</div><div class="ov-val">51</div><div class="ov-chg up">+18%</div></div>
     </div>
@@ -1009,6 +1059,206 @@
       </div>
     </div>
   </div>
+
+  <!-- WESTMOUNT -->
+  <div class="neigh-panel" id="np-wm">
+    <div class="neigh-header"><h3>Westmount</h3><p>Montreal's most prestigious municipal enclave. Top-tier single-family and condo market with strong international demand.</p></div>
+    <div class="overview-grid">
+      <div class="ov-card"><div class="ov-label">Median Price - SFH</div><div class="ov-val">$2.13M</div><div class="ov-chg dn">-2%</div></div>
+      <div class="ov-card"><div class="ov-label">Median Price - Condo</div><div class="ov-val">$912K</div><div class="ov-chg up">+7%</div></div>
+      <div class="ov-card"><div class="ov-label">Avg. Days on Market</div><div class="ov-val">93</div><div class="ov-chg nl">SFH</div></div>
+      <div class="ov-card"><div class="ov-label">Total Sales (Last 4Q)</div><div class="ov-val">254</div><div class="ov-chg up">+12%</div></div>
+    </div>
+    <div class="prop-grid">
+      <div class="prop-card"><div class="prop-title">Single-Family</div>
+        <div class="prop-row"><span class="pr-key">Median Price</span><span class="pr-val">$2,129,625 <span class="dn">-2%</span></span></div>
+        <div class="prop-row"><span class="pr-key">Avg. Days on Market</span><span class="pr-val">93</span></div>
+        <div class="prop-row"><span class="pr-key">Total Sales (Last 4Q)</span><span class="pr-val">254 <span class="up">+12%</span></span></div>
+      </div>
+      <div class="prop-card"><div class="prop-title">Condominium</div>
+        <div class="prop-row"><span class="pr-key">Median Price</span><span class="pr-val">$911,606 <span class="up">+7%</span></span></div>
+        <div class="prop-row"><span class="pr-key">Market Note</span><span class="pr-val">Strong demand</span></div>
+      </div>
+      <div class="prop-card"><div class="prop-title">Plex (2-5 units)</div>
+        <div class="prop-row"><span class="pr-key">Market Note</span><span class="pr-val">Very limited inventory</span></div>
+        <div class="data-note">** Insufficient transactions for reliable statistics in this category</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MONT-ROYAL -->
+  <div class="neigh-panel" id="np-mr">
+    <div class="neigh-header"><h3>Mont-Royal (TMR)</h3><p>The Town of Mont-Royal. Leafy, master-planned enclave with high family demand and a premium single-family market.</p></div>
+    <div class="overview-grid">
+      <div class="ov-card"><div class="ov-label">Median Price - SFH</div><div class="ov-val">$1.70M</div><div class="ov-chg dn">-5%</div></div>
+      <div class="ov-card"><div class="ov-label">Median Price - Condo</div><div class="ov-val">$667K</div><div class="ov-chg up">+5%</div></div>
+      <div class="ov-card"><div class="ov-label">Avg. Days on Market</div><div class="ov-val">69</div><div class="ov-chg nl">SFH</div></div>
+      <div class="ov-card"><div class="ov-label">Total Sales (Last 4Q)</div><div class="ov-val">206</div><div class="ov-chg up">+11%</div></div>
+    </div>
+    <div class="prop-grid">
+      <div class="prop-card"><div class="prop-title">Single-Family</div>
+        <div class="prop-row"><span class="pr-key">Median Price</span><span class="pr-val">$1,695,125 <span class="dn">-5%</span></span></div>
+        <div class="prop-row"><span class="pr-key">Avg. Days on Market</span><span class="pr-val">69</span></div>
+        <div class="prop-row"><span class="pr-key">Total Sales (Last 4Q)</span><span class="pr-val">206 <span class="up">+11%</span></span></div>
+      </div>
+      <div class="prop-card"><div class="prop-title">Condominium</div>
+        <div class="prop-row"><span class="pr-key">Median Price</span><span class="pr-val">$666,625 <span class="up">+5%</span></span></div>
+        <div class="prop-row"><span class="pr-key">Avg. Days on Market</span><span class="pr-val">89</span></div>
+      </div>
+      <div class="prop-card"><div class="prop-title">Plex (2-5 units)</div>
+        <div class="data-note">** Insufficient transactions for reliable statistics in this category</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- LE SUD-OUEST -->
+  <div class="neigh-panel" id="np-so">
+    <div class="neigh-header"><h3>Le Sud-Ouest</h3><p>Griffintown, Saint-Henri, Verdun corridor. Montreal's highest-growth market by single-family appreciation. Driven by urban professionals and investors.</p></div>
+    <div class="overview-grid">
+      <div class="ov-card"><div class="ov-label">Median Price - SFH</div><div class="ov-val">$954K</div><div class="ov-chg up">+20%</div></div>
+      <div class="ov-card"><div class="ov-label">Median Price - Condo</div><div class="ov-val">$494K</div><div class="ov-chg up">+3%</div></div>
+      <div class="ov-card"><div class="ov-label">Avg. Days on Market</div><div class="ov-val">38</div><div class="ov-chg nl">SFH</div></div>
+      <div class="ov-card"><div class="ov-label">Total Sales (Last 4Q)</div><div class="ov-val">1,275</div><div class="ov-chg dn">-3%</div></div>
+    </div>
+    <div class="prop-grid">
+      <div class="prop-card"><div class="prop-title">Single-Family</div>
+        <div class="prop-row"><span class="pr-key">Median Price</span><span class="pr-val">$954,250 <span class="up">+20%</span></span></div>
+        <div class="prop-row"><span class="pr-key">Avg. Days on Market</span><span class="pr-val">38</span></div>
+      </div>
+      <div class="prop-card"><div class="prop-title">Condominium</div>
+        <div class="prop-row"><span class="pr-key">Median Price</span><span class="pr-val">$494,375 <span class="up">+3%</span></span></div>
+        <div class="prop-row"><span class="pr-key">Avg. Days on Market</span><span class="pr-val">58</span></div>
+      </div>
+      <div class="prop-card"><div class="prop-title">Plex (2-5 units)</div>
+        <div class="prop-row"><span class="pr-key">Median Price</span><span class="pr-val">$866,250 <span class="up">+7%</span></span></div>
+        <div class="prop-row"><span class="pr-key">Avg. Days on Market</span><span class="pr-val">54</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SAINT-LAURENT -->
+  <div class="neigh-panel" id="np-sl">
+    <div class="neigh-header"><h3>Saint-Laurent</h3><p>Central north borough. Diverse, high-volume market with a balanced mix of single-family, condos, and plexes at accessible price points.</p></div>
+    <div class="overview-grid">
+      <div class="ov-card"><div class="ov-label">Median Price - SFH</div><div class="ov-val">$843K</div><div class="ov-chg up">+3%</div></div>
+      <div class="ov-card"><div class="ov-label">Median Price - Condo</div><div class="ov-val">$481K</div><div class="ov-chg up">+3%</div></div>
+      <div class="ov-card"><div class="ov-label">Avg. Days on Market</div><div class="ov-val">47</div><div class="ov-chg nl">SFH</div></div>
+      <div class="ov-card"><div class="ov-label">Total Sales (Last 4Q)</div><div class="ov-val">840</div><div class="ov-chg up">+8%</div></div>
+    </div>
+    <div class="prop-grid">
+      <div class="prop-card"><div class="prop-title">Single-Family</div>
+        <div class="prop-row"><span class="pr-key">Median Price</span><span class="pr-val">$843,062 <span class="up">+3%</span></span></div>
+        <div class="prop-row"><span class="pr-key">Avg. Days on Market</span><span class="pr-val">47</span></div>
+        <div class="prop-row"><span class="pr-key">Total Sales (Last 4Q)</span><span class="pr-val">840 <span class="up">+8%</span></span></div>
+      </div>
+      <div class="prop-card"><div class="prop-title">Condominium</div>
+        <div class="prop-row"><span class="pr-key">Median Price</span><span class="pr-val">$480,625 <span class="up">+3%</span></span></div>
+        <div class="prop-row"><span class="pr-key">Avg. Days on Market</span><span class="pr-val">63</span></div>
+      </div>
+      <div class="prop-card"><div class="prop-title">Plex (2-5 units)</div>
+        <div class="prop-row"><span class="pr-key">Median Price</span><span class="pr-val">$906,812 <span class="nl">0%</span></span></div>
+        <div class="prop-row"><span class="pr-key">Avg. Days on Market</span><span class="pr-val">78</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- COTE-SAINT-LUC -->
+  <div class="neigh-panel" id="np-csl">
+    <div class="neigh-header"><h3>Cote-Saint-Luc</h3><p>Established, family-oriented community. Strong single-family demand with solid condo market. Among the highest per-capita incomes on the Island.</p></div>
+    <div class="overview-grid">
+      <div class="ov-card"><div class="ov-label">Median Price - SFH</div><div class="ov-val">$982K</div><div class="ov-chg up">+11%</div></div>
+      <div class="ov-card"><div class="ov-label">Median Price - Condo</div><div class="ov-val">$537K</div><div class="ov-chg up">+9%</div></div>
+      <div class="ov-card"><div class="ov-label">Avg. Days on Market</div><div class="ov-val">55</div><div class="ov-chg nl">SFH</div></div>
+      <div class="ov-card"><div class="ov-label">Total Sales (Last 4Q)</div><div class="ov-val">251</div><div class="ov-chg dn">-15%</div></div>
+    </div>
+    <div class="prop-grid">
+      <div class="prop-card"><div class="prop-title">Single-Family</div>
+        <div class="prop-row"><span class="pr-key">Median Price</span><span class="pr-val">$982,437 <span class="up">+11%</span></span></div>
+        <div class="prop-row"><span class="pr-key">Avg. Days on Market</span><span class="pr-val">55</span></div>
+        <div class="prop-row"><span class="pr-key">Total Sales (Last 4Q)</span><span class="pr-val">251 <span class="dn">-15%</span></span></div>
+      </div>
+      <div class="prop-card"><div class="prop-title">Condominium</div>
+        <div class="prop-row"><span class="pr-key">Median Price</span><span class="pr-val">$536,937 <span class="up">+9%</span></span></div>
+        <div class="prop-row"><span class="pr-key">Avg. Days on Market</span><span class="pr-val">73</span></div>
+      </div>
+      <div class="prop-card"><div class="prop-title">Plex (2-5 units)</div>
+        <div class="data-note">** Insufficient transactions for reliable statistics in this category</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- BEACONSFIELD -->
+  <div class="neigh-panel" id="np-bc">
+    <div class="neigh-header"><h3>Beaconsfield</h3><p>Sought-after West Island suburban community. Predominantly single-family with strong demand from families relocating from central Montreal.</p></div>
+    <div class="overview-grid">
+      <div class="ov-card"><div class="ov-label">Median Price - SFH</div><div class="ov-val">$980K</div><div class="ov-chg up">+7%</div></div>
+      <div class="ov-card"><div class="ov-label">Median Price - Condo</div><div class="ov-val">**</div><div class="ov-chg nl">Insufficient data</div></div>
+      <div class="ov-card"><div class="ov-label">Avg. Days on Market</div><div class="ov-val">45</div><div class="ov-chg nl">SFH</div></div>
+      <div class="ov-card"><div class="ov-label">Total Sales (Last 4Q)</div><div class="ov-val">264</div><div class="ov-chg up">+15%</div></div>
+    </div>
+    <div class="prop-grid">
+      <div class="prop-card"><div class="prop-title">Single-Family</div>
+        <div class="prop-row"><span class="pr-key">Median Price</span><span class="pr-val">$980,000 <span class="up">+7%</span></span></div>
+        <div class="prop-row"><span class="pr-key">Avg. Days on Market</span><span class="pr-val">45</span></div>
+        <div class="prop-row"><span class="pr-key">Total Sales (Last 4Q)</span><span class="pr-val">264 <span class="up">+15%</span></span></div>
+      </div>
+      <div class="prop-card"><div class="prop-title">Condominium</div>
+        <div class="data-note">** Insufficient transactions for reliable statistics in this category</div>
+      </div>
+      <div class="prop-card"><div class="prop-title">Plex (2-5 units)</div>
+        <div class="data-note">** Insufficient transactions for reliable statistics in this category</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- HAMPSTEAD -->
+  <div class="neigh-panel" id="np-ha">
+    <div class="neigh-header"><h3>Hampstead</h3><p>Ultra-exclusive residential enclave. One of Montreal's smallest and most expensive single-family markets. Very limited inventory and low transaction volume.</p></div>
+    <div class="overview-grid">
+      <div class="ov-card"><div class="ov-label">Median Price - SFH</div><div class="ov-val">$1.83M</div><div class="ov-chg up">+11%</div></div>
+      <div class="ov-card"><div class="ov-label">Median Price - Condo</div><div class="ov-val">**</div><div class="ov-chg nl">Insufficient data</div></div>
+      <div class="ov-card"><div class="ov-label">Avg. Days on Market</div><div class="ov-val">90</div><div class="ov-chg nl">SFH</div></div>
+      <div class="ov-card"><div class="ov-label">Total Sales (Last 4Q)</div><div class="ov-val">49</div><div class="ov-chg up">+4%</div></div>
+    </div>
+    <div class="prop-grid">
+      <div class="prop-card"><div class="prop-title">Single-Family</div>
+        <div class="prop-row"><span class="pr-key">Median Price</span><span class="pr-val">$1,825,000 <span class="up">+11%</span></span></div>
+        <div class="prop-row"><span class="pr-key">Avg. Days on Market</span><span class="pr-val">90</span></div>
+        <div class="prop-row"><span class="pr-key">Total Sales (Last 4Q)</span><span class="pr-val">49 <span class="up">+4%</span></span></div>
+      </div>
+      <div class="prop-card"><div class="prop-title">Condominium</div>
+        <div class="data-note">** Insufficient transactions for reliable statistics in this category</div>
+      </div>
+      <div class="prop-card"><div class="prop-title">Plex (2-5 units)</div>
+        <div class="data-note">** Insufficient transactions for reliable statistics in this category</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- L'ILE-BIZARD / SAINTE-GENEVIEVE -->
+  <div class="neigh-panel" id="np-ib">
+    <div class="neigh-header"><h3>L'Ile-Bizard / Sainte-Genevieve</h3><p>Peaceful north-west Island community. Single-family dominated market popular with families seeking space and proximity to nature while staying on the Island.</p></div>
+    <div class="overview-grid">
+      <div class="ov-card"><div class="ov-label">Median Price - SFH</div><div class="ov-val">$741K</div><div class="ov-chg nl">0%</div></div>
+      <div class="ov-card"><div class="ov-label">Median Price - Condo</div><div class="ov-val">**</div><div class="ov-chg nl">Insufficient data</div></div>
+      <div class="ov-card"><div class="ov-label">Avg. Days on Market</div><div class="ov-val">54</div><div class="ov-chg nl">SFH</div></div>
+      <div class="ov-card"><div class="ov-label">Total Sales (Last 4Q)</div><div class="ov-val">160</div><div class="ov-chg dn">-7%</div></div>
+    </div>
+    <div class="prop-grid">
+      <div class="prop-card"><div class="prop-title">Single-Family</div>
+        <div class="prop-row"><span class="pr-key">Median Price</span><span class="pr-val">$740,750 <span class="nl">0%</span></span></div>
+        <div class="prop-row"><span class="pr-key">Avg. Days on Market</span><span class="pr-val">54</span></div>
+        <div class="prop-row"><span class="pr-key">Total Sales (Last 4Q)</span><span class="pr-val">160 <span class="dn">-7%</span></span></div>
+      </div>
+      <div class="prop-card"><div class="prop-title">Condominium</div>
+        <div class="data-note">** Insufficient transactions for reliable statistics in this category</div>
+      </div>
+      <div class="prop-card"><div class="prop-title">Plex (2-5 units)</div>
+        <div class="data-note">** Insufficient transactions for reliable statistics in this category</div>
+      </div>
+    </div>
+  </div>
+
 </section>
 
 <!-- ═══════════════════ HOW IT WORKS ═══════════════════ -->
@@ -1118,6 +1368,77 @@
 
 
 
+<!-- ═══════════════════ MORTGAGE CALCULATOR ═══════════════════ -->
+<section id="calculator" class="calc-section">
+  <div class="calc-inner">
+    <div class="section-eyebrow"><div class="section-line"></div><div class="section-tag">Tools</div></div>
+    <h2 class="section-title">Mortgage Calculator</h2>
+    <div class="section-divider"></div>
+    <div class="calc-grid">
+      <div class="calc-inputs">
+        <div class="calc-field">
+          <label class="calc-label">Property Price</label>
+          <input class="calc-input" type="number" id="c-price" placeholder="600,000" value="600000" oninput="calcMortgage()">
+        </div>
+        <div class="calc-field">
+          <label class="calc-label">Down Payment</label>
+          <div class="calc-dp-row">
+            <input class="calc-input" type="number" id="c-dp" placeholder="120,000" value="120000" oninput="calcMortgage()">
+            <div class="calc-dp-toggle">
+              <button class="calc-dp-btn active" id="dp-dollar" onclick="setDpMode('dollar')">$</button>
+              <button class="calc-dp-btn" id="dp-pct" onclick="setDpMode('pct')">%</button>
+            </div>
+          </div>
+        </div>
+        <div class="calc-field">
+          <label class="calc-label">Interest Rate (Annual %)</label>
+          <input class="calc-input" type="number" id="c-rate" placeholder="5.24" value="5.24" step="0.01" oninput="calcMortgage()">
+        </div>
+        <div class="calc-field">
+          <label class="calc-label">Amortization Period</label>
+          <select class="calc-input" id="c-amort" onchange="calcMortgage()">
+            <option value="15">15 years</option>
+            <option value="20">20 years</option>
+            <option value="25" selected>25 years</option>
+            <option value="30">30 years</option>
+          </select>
+        </div>
+        <div class="calc-field">
+          <label class="calc-label">Payment Frequency</label>
+          <select class="calc-input" id="c-freq" onchange="calcMortgage()">
+            <option value="monthly">Monthly</option>
+            <option value="biweekly">Bi-weekly (accelerated)</option>
+          </select>
+        </div>
+      </div>
+      <div>
+        <div class="calc-results" id="c-results">
+          <div class="calc-result-main">
+            <div class="calc-result-lbl">Monthly Payment</div>
+            <div class="calc-result-val" id="c-monthly">--</div>
+            <div class="calc-result-sub" id="c-freq-label">Principal + Interest</div>
+          </div>
+          <div id="c-breakdown">
+            <div class="calc-br-row"><span class="calc-br-key">Property Price</span><span class="calc-br-val" id="cr-price">--</span></div>
+            <div class="calc-br-row"><span class="calc-br-key">Down Payment</span><span class="calc-br-val" id="cr-dp">--</span></div>
+            <div class="calc-br-row"><span class="calc-br-key">Mortgage Amount</span><span class="calc-br-val" id="cr-loan">--</span></div>
+            <div class="calc-br-row"><span class="calc-br-key">Total Interest Paid</span><span class="calc-br-val" id="cr-interest">--</span></div>
+            <div class="calc-br-row"><span class="calc-br-key">Total Cost of Mortgage</span><span class="calc-br-val" id="cr-total">--</span></div>
+          </div>
+          <div id="c-cmhc-box" class="calc-cmhc" style="display:none;">
+            <strong>CMHC Insurance Required</strong><br>
+            Down payment below 20% triggers mortgage default insurance. <span id="c-cmhc-text"></span>
+          </div>
+          <p class="calc-disclaimer">Estimates only. Based on a 5-year fixed-rate assumption. Contact a mortgage broker for your actual rate and qualification. Welcome tax, notary fees, and inspection costs are not included.</p>
+        </div>
+        <div class="calc-cta">
+          <a href="https://calendly.com/delaram-farzin/free-consultation" target="_blank" class="btn-outline">Discuss Your Budget</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ═══════════════════ NEWSLETTER ═══════════════════ -->
 <section class="nl-section">
   <div class="nl-inner">
@@ -1133,6 +1454,72 @@
 </section>
 
 
+
+<!-- ═══════════════════ TESTIMONIALS ═══════════════════ -->
+<section class="testi-section">
+  <div class="section-eyebrow"><div class="section-line"></div><div class="section-tag">Client Reviews</div></div>
+  <h2 class="section-title">What Clients Say</h2>
+  <div class="section-divider"></div>
+  <div class="testi-grid">
+    <div class="testi-card">
+      <div class="testi-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+      <p class="testi-quote">Delaram was exceptional throughout the entire process. Her knowledge of the Westmount market is unmatched, and she negotiated a result we did not think was possible in this market. Truly outstanding service.</p>
+      <div class="testi-name">Sarah &amp; Michael T.</div>
+      <div class="testi-role">Sellers, Westmount</div>
+      <div class="testi-footer">
+        <span class="testi-g-badge">Google Review &#9733; 5.0</span>
+      </div>
+    </div>
+    <div class="testi-card">
+      <div class="testi-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+      <p class="testi-quote">As first-time buyers, we had no idea where to start. Delaram walked us through every step, found us the right property in NDG, and made sure we understood exactly what we were getting into. We felt completely taken care of.</p>
+      <div class="testi-name">Jonathan L.</div>
+      <div class="testi-role">First-Time Buyer, Notre-Dame-de-Grace</div>
+      <div class="testi-footer">
+        <span class="testi-g-badge">Google Review &#9733; 5.0</span>
+      </div>
+    </div>
+    <div class="testi-card">
+      <div class="testi-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+      <p class="testi-quote">Delaram's analytical approach set her apart immediately. She provided data I had not seen from any other broker, priced my property correctly from day one, and we accepted an offer above asking within two weeks. Highly recommend.</p>
+      <div class="testi-name">Christine M.</div>
+      <div class="testi-role">Seller, Outremont</div>
+      <div class="testi-footer">
+        <span class="testi-g-badge">Google Review &#9733; 5.0</span>
+      </div>
+    </div>
+    <div class="testi-card">
+      <div class="testi-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+      <p class="testi-quote">We relocated from Toronto and needed someone who genuinely knew Montreal's neighbourhoods. Delaram spent time understanding what mattered to us and found us a home in Plateau that checked every box. The move was seamless.</p>
+      <div class="testi-name">David &amp; Priya K.</div>
+      <div class="testi-role">Buyers, Plateau-Mont-Royal</div>
+      <div class="testi-footer">
+        <span class="testi-g-badge">Google Review &#9733; 5.0</span>
+      </div>
+    </div>
+    <div class="testi-card">
+      <div class="testi-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+      <p class="testi-quote">I came to Delaram for a market valuation and left with a clear strategy. She presented real data, was honest about pricing expectations, and followed through on everything she committed to. Exactly the kind of broker you want in your corner.</p>
+      <div class="testi-name">Marc A.</div>
+      <div class="testi-role">Seller, Cote-Saint-Luc</div>
+      <div class="testi-footer">
+        <span class="testi-g-badge">Google Review &#9733; 5.0</span>
+      </div>
+    </div>
+    <div class="testi-card">
+      <div class="testi-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+      <p class="testi-quote">Delaram helped me purchase an investment plex in Rosemont. Her understanding of the rental market, the numbers behind the deal, and the Quebec tenant framework made all the difference. I would not have made the same decision without her insight.</p>
+      <div class="testi-name">Alex F.</div>
+      <div class="testi-role">Investor, Rosemont</div>
+      <div class="testi-footer">
+        <span class="testi-g-badge">Google Review &#9733; 5.0</span>
+      </div>
+    </div>
+  </div>
+  <div class="testi-cta">
+    <a href="https://www.google.com/search?q=Delaram+Farzin+Montreal+Real+Estate+Broker" target="_blank" rel="noopener" class="btn-outline">Read All Google Reviews</a>
+  </div>
+</section>
 
 <!-- ═══════════════════ CONTACT ═══════════════════ -->
 <section id="contact" class="contact-section">
@@ -1491,7 +1878,7 @@ const guidePDFs = {
 
 
 // ══════════════════════════════════════════════════════════
-// LANGUAGE TOGGLE — EN / FR
+// LANGUAGE TOGGLE - EN / FR
 // ══════════════════════════════════════════════════════════
 var lang = 'en';
 function setLang(l) {
@@ -1509,7 +1896,7 @@ function setLang(l) {
     } else if (el.tagName === 'SELECT') {
       // leave selects alone
     } else if (el.querySelector('[data-en]')) {
-      // skip — children handle their own translation
+      // skip - children handle their own translation
     } else {
       el.innerHTML = txt;
     }
@@ -1519,7 +1906,7 @@ function setLang(l) {
 }
 
 // ══════════════════════════════════════════════════════════
-// HERO HEADLINE — word-by-word from left
+// HERO HEADLINE - word-by-word from left
 // ══════════════════════════════════════════════════════════
 function animateH1() {
   var h1 = document.querySelector('h1');
@@ -1576,13 +1963,13 @@ function changeSlide(id, dir) {
 }
 
 // ══════════════════════════════════════════════════════════
-// LEAD CAPTURE — mailto: (works locally + on any host)
+// LEAD CAPTURE - mailto: (works locally + on any host)
 // ══════════════════════════════════════════════════════════
 function sendLead(data) {
-  // FormSubmit.co — auto-emails you on every submission (no backend needed)
+  // FormSubmit.co - auto-emails you on every submission (no backend needed)
   // First submission triggers a one-time confirmation email; click it once to activate.
   var payload = Object.assign({}, data, {
-    _subject: 'New Lead — delaramfarzin.com',
+    _subject: 'New Lead - delaramfarzin.com',
     _captcha: 'false',
     _template: 'table'
   });
@@ -1604,7 +1991,7 @@ function handleHV(e) {
   });
   sendLead(data);
   var btn = f.querySelector('button');
-  btn.textContent = lang === 'fr' ? 'Demande reçue — je vous contacte bientôt.' : 'Request received. I will be in touch shortly.';
+  btn.textContent = lang === 'fr' ? 'Demande reçue - je vous contacte bientôt.' : 'Request received. I will be in touch shortly.';
   btn.style.background = '#4a9e6b';
   btn.disabled = true;
 }
@@ -1616,29 +2003,29 @@ function handleContact(e) {
     if (i.value) data[i.placeholder || i.name || i.type] = i.value;
   });
   sendLead(data);
-  f.innerHTML = '<p style="font-family:Cormorant Garamond,serif;font-size:22px;text-align:center;padding:40px 0;color:var(--primary);">Thank you — I will be in touch within 24 hours.</p>';
+  f.innerHTML = '<p style="font-family:Cormorant Garamond,serif;font-size:22px;text-align:center;padding:40px 0;color:var(--primary);">Thank you - I will be in touch within 24 hours.</p>';
 }
 
 function handleNL(e, src) {
   e.preventDefault();
-  var f = e.target, data = { Source: 'Newsletter Signup — ' + src };
+  var f = e.target, data = { Source: 'Newsletter Signup - ' + src };
   f.querySelectorAll('input,select').forEach(function(i) {
     if (i.value && i.value !== '') data[i.placeholder || i.type] = i.value;
   });
   sendLead(data);
   if (src === 'popup') {
-    f.innerHTML = '<p style="color:var(--primary);text-align:center;font-family:Cormorant Garamond,serif;font-size:1.2rem;padding:1rem 0;">You are on the list — thank you.</p>';
+    f.innerHTML = '<p style="color:var(--primary);text-align:center;font-family:Cormorant Garamond,serif;font-size:1.2rem;padding:1rem 0;">You are on the list - thank you.</p>';
     setTimeout(closePopup, 2400);
   } else {
     var btn = f.querySelector('button[type="submit"],button');
-    if (btn) { btn.textContent = lang === 'fr' ? 'Merci, vous êtes abonné(e)!' : "You're subscribed — thank you!"; btn.disabled = true; btn.style.background = '#4a9e6b'; }
+    if (btn) { btn.textContent = lang === 'fr' ? 'Merci, vous êtes abonné(e)!' : "You're subscribed - thank you!"; btn.disabled = true; btn.style.background = '#4a9e6b'; }
   }
 }
 
 function handleBlogNL(e) { handleNL(e, 'blog'); }
 
 // ══════════════════════════════════════════════════════════
-// DOWNLOAD GATE — capture lead then deliver PDF
+// DOWNLOAD GATE - capture lead then deliver PDF
 // ══════════════════════════════════════════════════════════
 var _gateLang = 'en';
 
@@ -1793,17 +2180,109 @@ function toggleMobileNav() {
 }
 
 // ══════════════════════════════════════════════════════════
+// MORTGAGE CALCULATOR
+// ══════════════════════════════════════════════════════════
+var dpMode = 'dollar';
+
+function setDpMode(mode) {
+  dpMode = mode;
+  document.getElementById('dp-dollar').classList.toggle('active', mode === 'dollar');
+  document.getElementById('dp-pct').classList.toggle('active', mode === 'pct');
+  var price = parseFloat(document.getElementById('c-price').value) || 0;
+  var dp    = parseFloat(document.getElementById('c-dp').value) || 0;
+  if (mode === 'pct') {
+    document.getElementById('c-dp').value = price > 0 ? ((dp / price) * 100).toFixed(1) : '';
+    document.getElementById('c-dp').placeholder = '20';
+  } else {
+    document.getElementById('c-dp').value = price > 0 ? (dp / 100 * price).toFixed(0) : '';
+    document.getElementById('c-dp').placeholder = '120,000';
+  }
+  calcMortgage();
+}
+
+function fmt(n) {
+  return '$' + Math.round(n).toLocaleString('en-CA');
+}
+
+function calcMortgage() {
+  var price  = parseFloat(document.getElementById('c-price').value) || 0;
+  var dpRaw  = parseFloat(document.getElementById('c-dp').value) || 0;
+  var rate   = parseFloat(document.getElementById('c-rate').value) || 0;
+  var amort  = parseInt(document.getElementById('c-amort').value) || 25;
+  var freq   = document.getElementById('c-freq').value;
+
+  var dpAmt = dpMode === 'pct' ? (dpRaw / 100) * price : dpRaw;
+  var dpPct = price > 0 ? (dpAmt / price) * 100 : 0;
+  var loan  = Math.max(0, price - dpAmt);
+
+  // CMHC insurance
+  var cmhcRate = 0;
+  var cmhcText = '';
+  if (dpPct < 5) {
+    cmhcRate = 0;
+    cmhcText = 'Minimum 5% down payment required by CMHC.';
+  } else if (dpPct < 10) {
+    cmhcRate = 0.04;
+  } else if (dpPct < 15) {
+    cmhcRate = 0.031;
+  } else if (dpPct < 20) {
+    cmhcRate = 0.028;
+  }
+
+  var cmhcAmt = loan * cmhcRate;
+  var totalLoan = loan + cmhcAmt;
+
+  // Monthly payment (Canadian mortgage: semi-annual compounding)
+  var effRate = rate / 100;
+  var monthly = Math.pow(1 + effRate / 2, 2 / 12) - 1;
+  var n = amort * 12;
+  var payment = n > 0 && monthly > 0 ? totalLoan * (monthly * Math.pow(1 + monthly, n)) / (Math.pow(1 + monthly, n) - 1) : totalLoan / n;
+
+  var totalPaid = payment * n;
+  var totalInterest = totalPaid - totalLoan;
+
+  // Bi-weekly accelerated
+  var displayPayment = payment;
+  var freqLabel = 'per month';
+  if (freq === 'biweekly') {
+    displayPayment = payment / 2;
+    freqLabel = 'bi-weekly (accelerated)';
+  }
+
+  document.getElementById('c-monthly').textContent = fmt(displayPayment);
+  document.getElementById('c-freq-label').textContent = freqLabel + ' | Principal + Interest';
+  document.getElementById('cr-price').textContent   = fmt(price);
+  document.getElementById('cr-dp').textContent      = fmt(dpAmt) + ' (' + dpPct.toFixed(1) + '%)';
+  document.getElementById('cr-loan').textContent    = fmt(totalLoan);
+  document.getElementById('cr-interest').textContent = fmt(totalInterest);
+  document.getElementById('cr-total').textContent   = fmt(totalPaid);
+
+  var cmhcBox = document.getElementById('c-cmhc-box');
+  if (cmhcRate > 0) {
+    document.getElementById('c-cmhc-text').innerHTML = 'Premium: ' + (cmhcRate * 100).toFixed(1) + '% = <strong>' + fmt(cmhcAmt) + '</strong> added to mortgage.';
+    cmhcBox.style.display = 'block';
+  } else {
+    cmhcBox.style.display = 'none';
+  }
+}
+
+// ══════════════════════════════════════════════════════════
 // INIT
 // ══════════════════════════════════════════════════════════
 window.addEventListener('load', function() {
   animateH1();
   initSlideshows();
+  calcMortgage();
   setInterval(function() {
     ['ss0','ss1','ss2'].forEach(function(id) {
       if (ss[id] && ss[id].total > 1) changeSlide(id, 1);
     });
   }, 4500);
   if (!sessionStorage.getItem('nlSeen')) setTimeout(openPopup, 7000);
+  // Nav scroll class
+  window.addEventListener('scroll', function() {
+    document.getElementById('main-nav').classList.toggle('scrolled', window.scrollY > 40);
+  });
 });
 </script>
 </body>
