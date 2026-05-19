@@ -1,0 +1,14 @@
+{
+  "cleanUrls": true,
+  "trailingSlash": true,
+  "routes": [
+    { "src": "^/$", "dest": "/index.html" },
+    { "src": "^/buyers/?$", "dest": "/buyers/index.html" },
+    { "src": "^/sellers/?$", "dest": "/sellers/index.html" },
+    { "src": "^/blog/?$", "dest": "/blog.html" },
+    { "src": "^/fr/?$", "dest": "/fr/index.html" },
+    { "src": "^/fr/acheteurs/?$", "dest": "/fr/acheteurs/index.html" },
+    { "src": "^/fr/vendeurs/?$", "dest": "/fr/vendeurs/index.html" },
+    { "src": "^/neighbourhoods/([^/]+)/?$", "dest": "/neighbourhoods/$1/index.html" }
+  ]
+}
