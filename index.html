@@ -639,6 +639,7 @@
     <li><a href="/buyers/"          data-en="Buyers"         data-fr="Acheteurs">Buyers</a></li>
     <li><a href="/sellers/"         data-en="Sellers"        data-fr="Vendeurs">Sellers</a></li>
     <li><a href="/blog.html" data-en="Blog" data-fr="Blogue">Blog</a></li>
+    <li><a href="/faq.html" data-en="FAQ" data-fr="FAQ">FAQ</a></li>
     <li><a href="#contact"        data-en="Contact"        data-fr="Contact">Contact</a></li>
     <li><a href="https://calendly.com/delaram-farzin/free-consultation" target="_blank" class="nav-book" data-en="Book a Call" data-fr="Prendre RDV">Book a Call</a></li>
   </ul>
@@ -667,6 +668,7 @@
     <li><a href="/buyers/"          onclick="toggleMobileNav()" data-en="Buyers"        data-fr="Acheteurs">Buyers</a></li>
     <li><a href="/sellers/"         onclick="toggleMobileNav()" data-en="Sellers"       data-fr="Vendeurs">Sellers</a></li>
     <li><a href="/blog.html" onclick="toggleMobileNav()" data-en="Blog" data-fr="Blogue">Blog</a></li>
+    <li><a href="/faq.html" onclick="toggleMobileNav()" data-en="FAQ" data-fr="FAQ">FAQ</a></li>
     <li><a href="#contact"        onclick="toggleMobileNav()" data-en="Contact"       data-fr="Contact">Contact</a></li>
   </ul>
   <a href="https://calendly.com/delaram-farzin/free-consultation" target="_blank" class="mobile-nav-cta" data-en="Book a Free Call" data-fr="Réserver un appel gratuit">Book a Free Call</a>
@@ -1923,17 +1925,15 @@ function changeSlide(id, dir) {
 }
 
 // ══════════════════════════════════════════════════════════
-// LEAD CAPTURE - mailto: (works locally + on any host)
+// LEAD CAPTURE - Web3Forms (no activation required)
 // ══════════════════════════════════════════════════════════
 function sendLead(data) {
-  // FormSubmit.co - auto-emails you on every submission (no backend needed)
-  // First submission triggers a one-time confirmation email; click it once to activate.
   var payload = Object.assign({}, data, {
-    _subject: 'New Lead - delaramfarzin.com',
-    _captcha: 'false',
-    _template: 'table'
+    access_key: '26581c0a-962d-4fb6-87f1-cd1e163d4a0b',
+    subject: 'New Lead - delaramfarzin.com',
+    from_name: 'delaramfarzin.com'
   });
-  fetch('https://formsubmit.co/ajax/delaram.farzin@hotmail.com', {
+  fetch('https://api.web3forms.com/submit', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
     body: JSON.stringify(payload)
