@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Site Patch Instructions  -  delaramfarzin.html</title>
+<style>
+body{font-family:monospace;background:#0d0d0d;color:#e8e4dc;padding:3rem;line-height:1.7;max-width:900px}
+h1{color:#C8A882;font-family:sans-serif;margin-bottom:2rem}
+h2{color:#C8A882;font-family:sans-serif;margin-top:3rem;border-bottom:1px solid #333;padding-bottom:0.5rem}
+p{margin-bottom:1rem;color:#aaa}
+code{background:#1a1a18;padding:0.2rem 0.5rem;border-radius:2px;color:#C8A882}
+pre{background:#1a1a18;border:1px solid #333;padding:2rem;overflow-x:auto;white-space:pre-wrap;color:#e8e4dc;font-size:0.85rem;margin:1rem 0}
+.label{color:#C8A882;font-weight:bold}
+.step{background:#111;border-left:3px solid #C8A882;padding:1.5rem;margin:1.5rem 0}
+</style>
+</head>
+<body>
+
+<h1>Patch Guide: delaramfarzin.html  -  3 Fixes</h1>
+<p>Apply each patch below directly inside <code>delaramfarzin.html</code>. Search for the <span class="label">FIND</span> string and replace with the <span class="label">REPLACE WITH</span> block. Each patch is surgical and does not affect surrounding code.</p>
+
+<!-- ===================== PATCH 1 ===================== -->
+<h2>Patch 1  -  Restore the Newsletter Popup</h2>
+<p>The popup was removed. Add this block right before the closing <code>&lt;/body&gt;</code> tag.</p>
+<div class="step">
+<p><span class="label">FIND (near bottom of file):</span></p>
+<pre>&lt;/body&gt;
+&lt;/html&gt;</pre>
+<p><span class="label">REPLACE WITH (paste this entire block before &lt;/body&gt;):</span></p>
+<pre>&lt;!-- NEWSLETTER POPUP --&gt;
+&lt;div id="nl-popup" style="display:none;position:fixed;inset:0;z-index:9999;background:rgba(0,0,0,0.75);backdrop-filter:blur(6px);align-items:center;justify-content:center"&gt;
+  &lt;div style="background:#111110;border:1px solid rgba(200,168,130,0.3);padding:3.5rem;max-width:480px;width:90%;position:relative"&gt;
+    &lt;button onclick="closePopup()" style="position:absolute;top:1rem;right:1.2rem;background:none;border:none;color:#8a8578;font-size:1.4rem;cursor:pointer;line-height:1"&gt;&amp;times;&lt;/button&gt;
+    &lt;p style="font-size:0.72rem;letter-spacing:0.2em;text-transform:uppercase;color:#C8A882;margin-bottom:1rem" data-en="Market Intelligence" data-fr="Intelligence du march&eacute;"&gt;Market Intelligence&lt;/p&gt;
+    &lt;h3 style="font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:300;color:#e8e4dc;line-height:1.2;margin-bottom:1rem" data-en="Stay Ahead of the Montreal Market" data-fr="Gardez une longueur d'avance sur le march&eacute;"&gt;Stay Ahead of the Montreal Market&lt;/h3&gt;
+    &lt;p style="color:#8a8578;font-size:0.88rem;margin-bottom:2rem" data-en="Bi-weekly analysis of Montreal real estate trends, neighbourhood data, and strategic insights. No fluff." data-fr="Analyses bihebdomadaires du march&eacute; immobilier montr&eacute;alais. Sans superflu."&gt;Bi-weekly analysis of Montreal real estate trends, neighbourhood data, and strategic insights. No fluff.&lt;/p&gt;
+    &lt;div style="display:flex;gap:0.75rem;flex-wrap:wrap"&gt;
+      &lt;input id="popup-email" type="email" placeholder="Your email address" style="flex:1;min-width:180px;background:#080807;border:1px solid rgba(200,168,130,0.3);color:#e8e4dc;padding:0.8rem 1.2rem;font-family:'Jost',sans-serif;font-size:0.9rem;outline:none"&gt;
+      &lt;button onclick="submitPopup()" style="background:#C8A882;color:#080807;border:none;padding:0.8rem 1.5rem;font-family:'Jost',sans-serif;font-size:0.78rem;letter-spacing:0.12em;text-transform:uppercase;cursor:pointer;white-space:nowrap;font-weight:500"&gt;Subscribe&lt;/button&gt;
+    &lt;/div&gt;
+    &lt;div id="popup-success" style="display:none;color:#C8A882;font-size:0.88rem;margin-top:1rem"&gt;You are on the list. Thank you.&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+// Newsletter popup  -  fires after 7 seconds, once per session
+(function(){
+  if(sessionStorage.getItem('nl_shown')) return;
+  setTimeout(function(){
+    var p = document.getElementById('nl-popup');
+    if(p){ p.style.display='flex'; sessionStorage.setItem('nl_shown','1'); }
+  }, 7000);
+})();
+function closePopup(){
+  document.getElementById('nl-popup').style.display='none';
+}
+function submitPopup(){
+  var email = document.getElementById('popup-email').value;
+  if(!email || !email.includes('@')) return;
+  document.getElementById('popup-success').style.display='block';
+  document.getElementById('popup-email').style.display='none';
+  document.querySelector('#nl-popup button:last-of-type').style.display='none';
+  // TODO: POST to your Mailchimp/HubSpot/Zapier webhook here
+  setTimeout(function(){ closePopup(); }, 2500);
+}
+// Close on backdrop click
+document.getElementById('nl-popup').addEventListener('click',function(e){
+  if(e.target===this) closePopup();
+});
+&lt;/script&gt;</pre>
+</div>
+
+<!-- ===================== PATCH 2 ===================== -->
+<h2>Patch 2  -  Fix the Homebuyer Kit Download Gate</h2>
+<p>Replace the existing download section buttons with a proper lead-capture gate modal that fires before the PDF downloads. Find the current download button(s) in the Homebuyer Kit section and replace the onclick handlers, then add the modal.</p>
+<div class="step">
+<p><span class="label">FIND the existing EN download button (exact text may vary):</span></p>
+<pre>onclick="downloadKit('en')"</pre>
+<p><span class="label">REPLACE WITH:</span></p>
+<pre>onclick="openDownloadGate('en')"</pre>
+
+<p style="margin-top:1.5rem"><span class="label">FIND the existing FR download button:</span></p>
+<pre>onclick="downloadKit('fr')"</pre>
+<p><span class="label">REPLACE WITH:</span></p>
+<pre>onclick="openDownloadGate('fr')"</pre>
+
+<p style="margin-top:1.5rem"><span class="label">Then paste this entire modal + script right before &lt;/body&gt; (after Patch 1 code, before the closing &lt;/body&gt; tag):</span></p>
+<pre>&lt;!-- DOWNLOAD GATE MODAL --&gt;
+&lt;div id="download-gate" style="display:none;position:fixed;inset:0;z-index:10000;background:rgba(0,0,0,0.8);backdrop-filter:blur(8px);align-items:center;justify-content:center"&gt;
+  &lt;div style="background:#111110;border:1px solid rgba(200,168,130,0.3);padding:3rem;max-width:460px;width:90%;position:relative"&gt;
+    &lt;button onclick="closeGate()" style="position:absolute;top:1rem;right:1.2rem;background:none;border:none;color:#8a8578;font-size:1.4rem;cursor:pointer;line-height:1"&gt;&amp;times;&lt;/button&gt;
+    &lt;p style="font-size:0.68rem;letter-spacing:0.2em;text-transform:uppercase;color:#C8A882;margin-bottom:0.8rem"&gt;Free Guide&lt;/p&gt;
+    &lt;h3 id="gate-title" style="font-family:'Cormorant Garamond',serif;font-size:1.8rem;font-weight:300;color:#e8e4dc;line-height:1.2;margin-bottom:0.8rem"&gt;First-Time Homebuyer Kit&lt;/h3&gt;
+    &lt;p style="color:#8a8578;font-size:0.85rem;margin-bottom:2rem"&gt;Enter your details below and your guide will download instantly.&lt;/p&gt;
+    &lt;div style="display:flex;flex-direction:column;gap:0.85rem"&gt;
+      &lt;input id="gate-name" type="text" placeholder="Full name" style="background:#080807;border:1px solid rgba(200,168,130,0.25);color:#e8e4dc;padding:0.85rem 1.2rem;font-family:'Jost',sans-serif;font-size:0.9rem;outline:none;width:100%"&gt;
+      &lt;input id="gate-phone" type="tel" placeholder="Phone number" style="background:#080807;border:1px solid rgba(200,168,130,0.25);color:#e8e4dc;padding:0.85rem 1.2rem;font-family:'Jost',sans-serif;font-size:0.9rem;outline:none;width:100%"&gt;
+      &lt;input id="gate-email" type="email" placeholder="Email address" style="background:#080807;border:1px solid rgba(200,168,130,0.25);color:#e8e4dc;padding:0.85rem 1.2rem;font-family:'Jost',sans-serif;font-size:0.9rem;outline:none;width:100%"&gt;
+      &lt;button onclick="submitGate()" style="background:#C8A882;color:#080807;border:none;padding:0.9rem;font-family:'Jost',sans-serif;font-size:0.8rem;letter-spacing:0.15em;text-transform:uppercase;cursor:pointer;font-weight:500;margin-top:0.25rem"&gt;Get My Free Guide&lt;/button&gt;
+    &lt;/div&gt;
+    &lt;div id="gate-error" style="display:none;color:#e87070;font-size:0.82rem;margin-top:0.75rem"&gt;Please fill in all fields.&lt;/div&gt;
+    &lt;p style="color:#555;font-size:0.72rem;margin-top:1.2rem;line-height:1.6"&gt;Your information is never shared. You may receive follow-up from Delaram Farzin regarding Montreal real estate.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+var _gateLanguage = 'en';
+
+function openDownloadGate(lang) {
+  _gateLanguage = lang || 'en';
+  var title = lang === 'fr' ? 'Guide de l\'acheteur (Fran&ccedil;ais)' : 'First-Time Homebuyer Kit';
+  document.getElementById('gate-title').innerHTML = title;
+  document.getElementById('gate-error').style.display = 'none';
+  ['gate-name','gate-phone','gate-email'].forEach(function(id){ document.getElementById(id).value=''; });
+  document.getElementById('download-gate').style.display = 'flex';
+}
+
+function closeGate() {
+  document.getElementById('download-gate').style.display = 'none';
+}
+
+function submitGate() {
+  var name  = document.getElementById('gate-name').value.trim();
+  var phone = document.getElementById('gate-phone').value.trim();
+  var email = document.getElementById('gate-email').value.trim();
+  if (!name || !phone || !email || !email.includes('@')) {
+    document.getElementById('gate-error').style.display = 'block';
+    return;
+  }
+  document.getElementById('gate-error').style.display = 'none';
+
+  // TODO: POST lead data to your CRM/Zapier webhook
+  // fetch('YOUR_WEBHOOK_URL', { method:'POST', headers:{'Content-Type':'application/json'},
+  //   body: JSON.stringify({ name, phone, email, guide: _gateLanguage, source: 'homebuyer_kit' }) });
+
+  closeGate();
+
+  // Trigger the actual download
+  if (typeof downloadKit === 'function') {
+    downloadKit(_gateLanguage);
+  } else {
+    // Fallback: trigger download link directly
+    var linkId = _gateLanguage === 'fr' ? 'kit-download-fr' : 'kit-download-en';
+    var link = document.getElementById(linkId);
+    if (link) link.click();
+  }
+}
+
+// Close on backdrop click
+document.getElementById('download-gate').addEventListener('click', function(e){
+  if (e.target === this) closeGate();
+});
+&lt;/script&gt;</pre>
+</div>
+
+<!-- ===================== PATCH 3 ===================== -->
+<h2>Patch 3  -  Fix Property Photo Slideshows</h2>
+<p>If property card images are not auto-advancing, replace the slideshow initialization script. Find the existing slideshow JS inside a <code>&lt;script&gt;</code> block and ensure this pattern is present. If the script is missing or broken, paste this full replacement inside a <code>&lt;script&gt;</code> tag near the bottom of the file:</p>
+<div class="step">
+<p><span class="label">FIND the existing slideshow script block (look for something like):</span></p>
+<pre>// slideshow or carousel init</pre>
+<p><span class="label">REPLACE THAT ENTIRE BLOCK WITH:</span></p>
+<pre>// Property card slideshow  -  auto-advances every 4.8 seconds
+(function() {
+  function initSlideshows() {
+    document.querySelectorAll('.property-slideshow, .listing-slideshow, [data-slideshow]').forEach(function(el) {
+      var slides = el.querySelectorAll('img, .slide');
+      if (slides.length < 2) return;
+      var dots = el.querySelectorAll('.slide-dot, .dot');
+      var prevBtn = el.querySelector('.slide-prev, .prev-btn, [data-prev]');
+      var nextBtn = el.querySelector('.slide-next, .next-btn, [data-next]');
+      var current = 0;
+      var timer;
+
+      function goTo(n) {
+        slides[current].classList.remove('active');
+        slides[current].style.opacity = '0';
+        if (dots[current]) dots[current].classList.remove('active');
+        current = (n + slides.length) % slides.length;
+        slides[current].classList.add('active');
+        slides[current].style.opacity = '1';
+        if (dots[current]) dots[current].classList.add('active');
+      }
+
+      function next() { goTo(current + 1); }
+      function prev() { goTo(current - 1); }
+      function start() { timer = setInterval(next, 4800); }
+      function stop()  { clearInterval(timer); }
+
+      // Initialize first slide
+      slides.forEach(function(s, i) {
+        s.style.transition = 'opacity 0.5s ease';
+        s.style.position = 'absolute';
+        s.style.inset = '0';
+        s.style.opacity = i === 0 ? '1' : '0';
+        if (i === 0) s.classList.add('active');
+      });
+
+      if (prevBtn) prevBtn.addEventListener('click', function(e){ e.stopPropagation(); stop(); prev(); start(); });
+      if (nextBtn) nextBtn.addEventListener('click', function(e){ e.stopPropagation(); next(); stop(); start(); });
+      dots.forEach(function(d, i) {
+        d.addEventListener('click', function(e){ e.stopPropagation(); stop(); goTo(i); start(); });
+      });
+
+      el.addEventListener('mouseenter', stop);
+      el.addEventListener('mouseleave', start);
+
+      start();
+    });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initSlideshows);
+  } else {
+    initSlideshows();
+  }
+})();</pre>
+
+<p style="margin-top:1.5rem"><strong>Also ensure each property card's image container has the correct structure:</strong></p>
+<pre>&lt;!-- Each property card image wrapper needs: --&gt;
+&lt;div class="property-slideshow" style="position:relative;overflow:hidden;height:260px"&gt;
+  &lt;img src="[image1]" style="width:100%;height:100%;object-fit:cover"&gt;
+  &lt;img src="[image2]" style="width:100%;height:100%;object-fit:cover"&gt;
+  &lt;img src="[image3]" style="width:100%;height:100%;object-fit:cover"&gt;
+  &lt;img src="[image4]" style="width:100%;height:100%;object-fit:cover"&gt;
+  &lt;!-- Navigation arrows --&gt;
+  &lt;button class="prev-btn" style="position:absolute;left:0.6rem;top:50%;transform:translateY(-50%);background:rgba(0,0,0,0.5);border:none;color:#fff;width:32px;height:32px;cursor:pointer;font-size:1rem"&gt;&amp;lsaquo;&lt;/button&gt;
+  &lt;button class="next-btn" style="position:absolute;right:0.6rem;top:50%;transform:translateY(-50%);background:rgba(0,0,0,0.5);border:none;color:#fff;width:32px;height:32px;cursor:pointer;font-size:1rem"&gt;&amp;rsaquo;&lt;/button&gt;
+  &lt;!-- Dot indicators --&gt;
+  &lt;div style="position:absolute;bottom:0.6rem;left:50%;transform:translateX(-50%);display:flex;gap:5px"&gt;
+    &lt;span class="dot active" style="width:6px;height:6px;border-radius:50%;background:#fff;cursor:pointer;opacity:1"&gt;&lt;/span&gt;
+    &lt;span class="dot" style="width:6px;height:6px;border-radius:50%;background:#fff;cursor:pointer;opacity:0.5"&gt;&lt;/span&gt;
+    &lt;span class="dot" style="width:6px;height:6px;border-radius:50%;background:#fff;cursor:pointer;opacity:0.5"&gt;&lt;/span&gt;
+    &lt;span class="dot" style="width:6px;height:6px;border-radius:50%;background:#fff;cursor:pointer;opacity:0.5"&gt;&lt;/span&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
+</div>
+
+<!-- ===================== BLOG LINK ===================== -->
+<h2>Patch 4  -  Link the Blog in the Nav</h2>
+<p>Find the nav Blog link and ensure it points to <code>blog.html</code> (opening in a new tab):</p>
+<div class="step">
+<p><span class="label">FIND (in the nav):</span></p>
+<pre>&lt;a href="#blog"&gt;Blog&lt;/a&gt;</pre>
+<p><span class="label">REPLACE WITH:</span></p>
+<pre>&lt;a href="blog.html" target="_blank" rel="noopener"&gt;Blog&lt;/a&gt;</pre>
+</div>
+
+<h2>Deployment Checklist</h2>
+<pre>[ ] blog.html uploaded to same directory as delaramfarzin.html
+[ ] Nav Blog link updated to href="blog.html" target="_blank"
+[ ] Newsletter popup script added before &lt;/body&gt;
+[ ] Download gate modal added before &lt;/body&gt;
+[ ] Download buttons changed from downloadKit() to openDownloadGate()
+[ ] Slideshow script verified or replaced
+[ ] Webhook URL added to submitGate() and submitPopup() for lead capture
+[ ] Test popup fires after 7 seconds on fresh session
+[ ] Test download gate captures info before download triggers
+[ ] Test photo slideshows auto-advance on all 3 property cards</pre>
+
+</body>
+</html>
