@@ -845,19 +845,19 @@
 </footer>
 
 <script>
-function toggleFaq(btn) {
-  var item = btn.parentElement;
-  var wasOpen = item.classList.contains('open');
-  // Close all in same category
-  var cat = item.closest('.faq-category');
-  cat.querySelectorAll('.faq-item').forEach(function(i) {
-    i.classList.remove('open');
-    i.querySelector('.faq-icon').textContent = '+';
-  });
-  if (!wasOpen) {
+// Open all FAQ items on load
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('.faq-item').forEach(function(item) {
     item.classList.add('open');
     item.querySelector('.faq-icon').textContent = '-';
-  }
+  });
+});
+
+function toggleFaq(btn) {
+  var item = btn.parentElement;
+  var isOpen = item.classList.contains('open');
+  item.classList.toggle('open', !isOpen);
+  item.querySelector('.faq-icon').textContent = isOpen ? '+' : '-';
 }
 
 function showCat(id, btn) {
