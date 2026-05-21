@@ -182,8 +182,8 @@
       <li><a href="/#contact" data-en="Contact" data-fr="Contact">Contact</a></li>
     </ul>
     <div class="lang-toggle">
-      <button class="lang-btn active" id="btn-en" onclick="setLang('en')">EN</button>
-      <button class="lang-btn" id="btn-fr" onclick="setLang('fr')">FR</button>
+      <span class="lang-btn active">EN</span>
+      <a href="/fr/vendeurs/" class="lang-btn">FR</a>
     </div>
   </nav>
 
@@ -327,9 +327,10 @@
   </footer>
 
   <script>
-    let currentLang = 'en';
+    let currentLang = (function(){ try { return localStorage.getItem('sitelang') || 'en'; } catch(e){ return 'en'; } })();
     function setLang(lang) {
       currentLang = lang;
+      try { localStorage.setItem('sitelang', lang); } catch(e) {}
       document.querySelectorAll('[data-en]').forEach(el => {
         const val = el.getAttribute('data-' + lang);
         if (val) el.innerHTML = val;
@@ -339,6 +340,7 @@
       document.documentElement.lang = lang;
       document.title = document.querySelector('title').getAttribute('data-' + lang) || document.title;
     }
+    document.addEventListener('DOMContentLoaded', function(){ setLang(currentLang); });
   </script>
 </body>
 </html>

@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FAQ Immobilier Montreal | Delaram Farzin, Courtiere Immobiliere</title>
+  <meta name="description" content="Reponses aux questions les plus importantes sur l'immobilier a Montreal: taxe de bienvenue, hypotheques, processus d'achat et de vente, plex, condos et plus. Par Delaram Farzin.">
+  <link rel="canonical" href="https://delaramfarzin.com/fr/faq/">
+  <link rel="alternate" hreflang="fr" href="https://delaramfarzin.com/fr/faq/">
+  <link rel="alternate" hreflang="en" href="https://delaramfarzin.com/faq.html">
+  <link rel="alternate" hreflang="x-default" href="https://delaramfarzin.com/faq.html">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Jost:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg:#080807;--bg-alt:#0D0C0A;--bg-mid:#181613;--bg-card:#111009;--primary:#C8A882;--primary-lt:#DFC09A;--text:#F2EDE6;--text-lt:#B8B0A4;--text-muted:#6A6258;--border:#1E1C18;--border-lt:#2C2924;}
+    *{margin:0;padding:0;box-sizing:border-box;}
+    html{scroll-behavior:smooth;}
+    body{font-family:'Jost',sans-serif;background:var(--bg);color:var(--text);font-weight:300;line-height:1.65;overflow-x:hidden;}
+    h1,h2,h3,h4{font-family:'Cormorant Garamond',serif;font-weight:400;}
+    a{text-decoration:none;}
+    ::selection{background:var(--primary);color:var(--bg);}
+    ::-webkit-scrollbar{width:4px;}
+    ::-webkit-scrollbar-track{background:var(--bg);}
+    ::-webkit-scrollbar-thumb{background:#9B7D5A;}
+
+    nav{position:fixed;top:0;width:100%;z-index:1000;padding:0 52px;height:72px;display:flex;align-items:center;justify-content:space-between;background:rgba(8,8,7,.96);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);}
+    .nav-logo{font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:500;color:var(--text);letter-spacing:3px;text-transform:uppercase;}
+    .nav-links{display:flex;align-items:center;gap:28px;list-style:none;}
+    .nav-links a{color:var(--text-muted);font-size:11px;font-weight:400;letter-spacing:1.8px;text-transform:uppercase;transition:color .25s;}
+    .nav-links a:hover,.nav-links a.active{color:var(--primary);}
+    .nav-book{padding:8px 18px;background:var(--primary);color:var(--bg)!important;font-size:12px;letter-spacing:1px;text-transform:uppercase;}
+    .nav-book:hover{background:var(--primary-lt)!important;}
+    .lang-toggle{display:flex;border:1px solid var(--border-lt);border-radius:2px;overflow:hidden;margin-left:24px;}
+    .lang-btn{padding:5px 12px;font-size:11px;font-weight:500;letter-spacing:1px;cursor:pointer;border:none;background:transparent;color:var(--text-muted);font-family:'Jost',sans-serif;transition:all .2s;display:inline-block;}
+    .lang-btn.active{background:var(--primary);color:var(--bg);cursor:default;}
+    .lang-btn:not(.active):hover{color:var(--primary);}
+
+    .hero{padding:140px 80px 80px;background:var(--bg-mid);border-bottom:1px solid var(--border);}
+    .eyebrow{display:flex;align-items:center;gap:12px;margin-bottom:16px;}
+    .line{width:32px;height:1px;background:var(--primary);}
+    .tag{font-size:10px;letter-spacing:4.5px;text-transform:uppercase;color:var(--primary);}
+    .hero h1{font-size:clamp(44px,6vw,88px);line-height:1;letter-spacing:-1px;margin-bottom:20px;font-weight:300;}
+    .hero h1 em{font-style:italic;color:var(--primary);}
+    .hero-sub{font-size:16px;color:var(--text-lt);max-width:680px;line-height:1.8;margin-bottom:40px;}
+    .breadcrumb{font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:var(--text-muted);margin-bottom:28px;}
+    .breadcrumb a{color:var(--text-muted);transition:color .2s;}
+    .breadcrumb a:hover{color:var(--primary);}
+    .btn-primary{padding:14px 36px;background:var(--primary);color:var(--bg);border:none;font-family:'Jost',sans-serif;font-size:11px;letter-spacing:2.5px;text-transform:uppercase;cursor:pointer;display:inline-block;transition:all .3s;font-weight:500;}
+    .btn-primary:hover{background:var(--primary-lt);transform:translateY(-2px);}
+    .btn-outline{padding:14px 36px;background:transparent;color:var(--text);border:1px solid var(--border-lt);font-family:'Jost',sans-serif;font-size:11px;letter-spacing:2.5px;text-transform:uppercase;cursor:pointer;display:inline-block;transition:all .3s;font-weight:400;}
+    .btn-outline:hover{border-color:var(--primary);color:var(--primary);transform:translateY(-2px);}
+
+    .filter-wrap{background:var(--bg-alt);border-bottom:1px solid var(--border);padding:0 80px;display:flex;gap:0;overflow-x:auto;}
+    .cat-btn{padding:18px 20px;background:transparent;font-family:'Jost',sans-serif;font-size:10px;letter-spacing:1.5px;text-transform:uppercase;cursor:pointer;color:var(--text-muted);border:none;border-bottom:2px solid transparent;transition:all .2s;white-space:nowrap;flex-shrink:0;}
+    .cat-btn.active,.cat-btn:hover{color:var(--primary);border-bottom-color:var(--primary);}
+
+    .faq-wrap{padding:72px 80px;}
+    .faq-category{margin-bottom:72px;display:none;}
+    .faq-category.active{display:block;}
+    .cat-header{display:flex;align-items:center;gap:16px;margin-bottom:36px;padding-bottom:18px;border-bottom:1px solid var(--border-lt);}
+    .cat-num{font-family:'Cormorant Garamond',serif;font-size:42px;font-weight:300;color:var(--border-lt);line-height:1;}
+    .cat-title{font-size:clamp(24px,3vw,38px);font-weight:300;line-height:1.1;}
+    .cat-title em{font-style:italic;color:var(--primary);}
+    .faq-item{border-bottom:1px solid var(--border);padding:0;}
+    .faq-q{width:100%;background:none;border:none;text-align:left;padding:24px 0;cursor:pointer;display:flex;justify-content:space-between;align-items:flex-start;gap:24px;}
+    .faq-q h3{font-family:'Cormorant Garamond',serif;font-size:21px;font-weight:400;color:var(--text);line-height:1.25;flex:1;}
+    .faq-icon{flex-shrink:0;width:22px;height:22px;border:1px solid var(--border-lt);display:flex;align-items:center;justify-content:center;font-size:14px;color:var(--text-muted);transition:all .2s;margin-top:3px;}
+    .faq-item.open .faq-icon{background:var(--primary);color:var(--bg);border-color:var(--primary);}
+    .faq-a{display:none;padding:0 0 24px;}
+    .faq-a p{font-size:14px;color:var(--text-lt);line-height:1.9;max-width:820px;}
+    .faq-a p a{color:var(--primary);border-bottom:1px solid transparent;transition:border-color .2s;}
+    .faq-a p a:hover{border-bottom-color:var(--primary);}
+    .faq-item.open .faq-a{display:block;}
+
+    .faq-cta{background:var(--primary);padding:80px;text-align:center;}
+    .faq-cta h2{color:var(--bg);font-size:clamp(32px,4vw,52px);margin-bottom:16px;font-weight:400;}
+    .faq-cta p{color:rgba(8,8,7,.7);font-size:15px;margin-bottom:36px;line-height:1.8;max-width:540px;margin-left:auto;margin-right:auto;}
+    .faq-cta .btn-dark{padding:14px 36px;background:var(--bg);color:var(--primary);font-family:'Jost',sans-serif;font-size:11px;letter-spacing:2.5px;text-transform:uppercase;display:inline-block;font-weight:500;transition:all .3s;margin:6px;}
+    .faq-cta .btn-dark:hover{background:#111;}
+    .faq-cta .btn-ghost{padding:14px 36px;background:transparent;color:var(--bg);border:1px solid rgba(8,8,7,.35);font-family:'Jost',sans-serif;font-size:11px;letter-spacing:2.5px;text-transform:uppercase;display:inline-block;font-weight:400;transition:all .3s;margin:6px;}
+    .faq-cta .btn-ghost:hover{border-color:var(--bg);}
+
+    footer{background:#050504;color:var(--text-muted);padding:48px 80px;border-top:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:24px;}
+    .f-logo{font-family:'Cormorant Garamond',serif;font-size:18px;color:var(--text);letter-spacing:2px;}
+    .f-info{font-size:12px;line-height:1.8;}
+    .f-info a{color:var(--primary);}
+    .f-links-row{display:flex;gap:20px;list-style:none;}
+    .f-links-row a{font-size:12px;color:var(--text-muted);transition:color .2s;}
+    .f-links-row a:hover{color:var(--primary);}
+
+    @media(max-width:900px){nav{padding:0 24px;}.nav-links{display:none;}.hero,.faq-wrap,.faq-cta,footer{padding-left:24px;padding-right:24px;}.filter-wrap{padding:0 24px;}}
+    @media(max-width:480px){nav{height:60px;padding:0 20px;}.hero{padding:100px 20px 60px;}.faq-wrap{padding:48px 20px;}}
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="/fr/" class="nav-logo">Delaram Farzin</a>
+  <ul class="nav-links">
+    <li><a href="/fr/">Accueil</a></li>
+    <li><a href="/fr/acheteurs/">Acheteurs</a></li>
+    <li><a href="/fr/vendeurs/">Vendeurs</a></li>
+    <li><a href="/blog.html">Blogue</a></li>
+    <li><a href="/fr/faq/" class="active">FAQ</a></li>
+    <li><a href="/fr/#contact">Contact</a></li>
+    <li><a href="https://calendly.com/delaram-farzin/free-consultation" target="_blank" class="nav-book">Prendre RDV</a></li>
+  </ul>
+  <div class="lang-toggle">
+    <a href="/faq.html" class="lang-btn">EN</a>
+    <span class="lang-btn active">FR</span>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="breadcrumb">
+    <a href="/fr/">Accueil</a> <span> / </span> <span>FAQ</span>
+  </div>
+  <div class="eyebrow"><div class="line"></div><span class="tag">Base de Connaissances</span></div>
+  <h1>Immobilier Montreal <em>FAQ</em></h1>
+  <p class="hero-sub">Reponses aux questions les plus importantes que les acheteurs, vendeurs et investisseurs posent sur le marche immobilier de Montreal. 20 categories, 80 questions, mise a jour pour 2026.</p>
+  <div style="display:flex;gap:14px;flex-wrap:wrap;">
+    <a href="https://calendly.com/delaram-farzin/free-consultation" target="_blank" class="btn-primary">Reserver une consultation gratuite</a>
+    <a href="/fr/" class="btn-outline">Voir les statistiques du marche</a>
+  </div>
+</section>
+
+<!-- CATEGORY FILTER -->
+<div class="filter-wrap">
+  <button class="cat-btn active" onclick="showCat('all',this)">Tous les sujets</button>
+  <button class="cat-btn" onclick="showCat('c1',this)">Taxe de bienvenue</button>
+  <button class="cat-btn" onclick="showCat('c2',this)">Divise vs Indivis</button>
+  <button class="cat-btn" onclick="showCat('c3',this)">Investir en Plex</button>
+  <button class="cat-btn" onclick="showCat('c4',this)">Processus d'achat</button>
+  <button class="cat-btn" onclick="showCat('c5',this)">Vendre</button>
+  <button class="cat-btn" onclick="showCat('c6',this)">Centris vs MLS</button>
+  <button class="cat-btn" onclick="showCat('c7',this)">Juridique / OACIQ</button>
+  <button class="cat-btn" onclick="showCat('c8',this)">Hypotheques</button>
+  <button class="cat-btn" onclick="showCat('c9',this)">Taxes immobilieres</button>
+  <button class="cat-btn" onclick="showCat('c10',this)">Premiers acheteurs</button>
+  <button class="cat-btn" onclick="showCat('c11',this)">Inspections</button>
+  <button class="cat-btn" onclick="showCat('c12',this)">Immobilier de luxe</button>
+  <button class="cat-btn" onclick="showCat('c13',this)">Banlieue</button>
+  <button class="cat-btn" onclick="showCat('c14',this)">Relocalisation</button>
+  <button class="cat-btn" onclick="showCat('c15',this)">Preconstruction</button>
+  <button class="cat-btn" onclick="showCat('c16',this)">Reduction de logement</button>
+  <button class="cat-btn" onclick="showCat('c17',this)">Multigenerationnel</button>
+  <button class="cat-btn" onclick="showCat('c18',this)">Maisons ecologiques</button>
+  <button class="cat-btn" onclick="showCat('c19',this)">Commercial</button>
+  <button class="cat-btn" onclick="showCat('c20',this)">Cycles du marche</button>
+</div>
+
+<!-- FAQ CONTENT -->
+<div class="faq-wrap">
+  <!-- 01 -->
+  <div class="faq-category active" id="c1">
+    <div class="cat-header">
+      <div class="cat-num">01</div>
+      <h2 class="cat-title">La <em>Taxe de Bienvenue</em> a Montreal</h2>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        <h3>Comment est calculee la taxe de bienvenue a Montreal?</h3><div class="faq-icon">+</div>
+      </button>
+      <div class="faq-a"><p>La taxe de bienvenue est calculee selon un systeme de paliers progressifs base sur le plus eleve entre le prix d'achat et l'evaluation municipale. Les taux commencent a 0,5% sur les premiers 58 900 $, montent a 1% entre 58 900 $ et 294 600 $, puis a 1,5% jusqu'a 500 000 $. Au-dela de 500 000 $, le taux est de 2%, et de 2,5% ou plus pour les proprietes de luxe. Utilisez un <a href="/#calculator">calculateur hypothecaire</a> pour estimer vos couts d'acquisition totaux incluant cette taxe.">The welcome tax (taxe de bienvenue) is calculated using a progressive bracket system based on the higher of the property purchase price or the municipal valuation. Rates start at 0.5 percent on the first $58,900, rise to 1 percent on amounts between $58,900 and $294,600, then 1.5 percent up to $500,000. For properties above $500,000, the rate is 2 percent, rising to 2.5 percent or higher for luxury-tier properties. Use a <a href="/#calculator</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        <h3>Qui est exempte de la taxe de bienvenue au Quebec?</h3><div class="faq-icon">+</div>
+      </button>
+      <div class="faq-a"><p>Les exemptions comprennent les transferts entre ascendants et descendants directs (parent a enfant), les transferts entre conjoints legaux ou de fait, et les transferts d'un particulier a une societe qu'il controle. Les transferts lies a une succession peuvent egalement etre admissibles. Consultez votre notaire pour confirmer l'admissibilite avant votre acte de vente.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        <h3>Quand doit-on payer la taxe de bienvenue apres avoir achete une maison a Montreal?</h3><div class="faq-icon">+</div>
+      </button>
+      <div class="faq-a"><p>La facture de droits de mutation municipaux est envoyee par courrier a votre nouvelle adresse par la ville ou la municipalite. La plupart des acheteurs recoivent cette facture dans les 30 a 90 jours suivant la signature de l'acte de vente chez le notaire. Prevoyez ce cout a l'avance dans votre planification des frais de cloture.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        <h3>La taxe de bienvenue s'applique-t-elle aux proprietes neuves a Montreal?</h3><div class="faq-icon">+</div>
+      </button>
+      <div class="faq-a"><p>Oui, les droits de mutation s'appliquent egalement aux maisons existantes et aux constructions neuves. Le taux est applique de la meme facon que la propriete soit une revente ou un projet neuf achete aupres d'un promoteur.</p></div>
+    </div>
+  </div>
+  <!-- 02 -->
+  <div class="faq-category active" id="c2">
+    <div class="cat-header">
+      <div class="cat-num">02</div>
+      <h2 class="cat-title">Copropriete <em>Divise vs Indivise</em></h2>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        <h3>Quelle est la difference entre un condo divise et indivis a Montreal?</h3><div class="faq-icon">+</div>
+      </button>
+      <div class="faq-a"><p>Un condo en copropriete divise possede son propre numero de lot distinct enregistre au registre foncier. Vous etes proprietaire de votre unite specifique, et les parties communes sont partagees collectivement. Un condo indivis signifie que vous possedez un pourcentage de l'ensemble de l'immeuble plutot qu'une unite distincte. Cette distinction a des implications importantes pour le financement, les exigences de mise de fonds et la revente. Pour plus de details, consultez la <a href="/buyers/">page Acheteurs</a>.">A divided co-ownership condo (copropriete divise) has its own distinct lot number registered at the land registry. You own your specific unit outright, and the common areas are shared collectively. An undivided condo (copropriete indivise) means you own a percentage share of the entire building rather than a discrete unit. This distinction has significant implications for financing, down payment requirements, and resale. For more detail, see the <a href="/buyers/</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        <h3>Pourquoi les condos indivis exigent-ils une mise de fonds de 20%?</h3><div class="faq-icon">+</div>
+      </button>
+      <div class="faq-a"><p>Les proprietes indivises exigent une mise de fonds minimale de 20% parce que les assureurs hypothecaires canadiens (SCHL, Sagen, Canada Guaranty) n'offrent pas de produits hypothecaires assures pour les coproprietes indivises. Sans assurance hypothecaire disponible, les preteurs exigent ce seuil plus eleve pour gerer leur exposition au risque.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        <h3>Les taxes foncieres sont-elles moins elevees pour un condo indivis a Montreal?</h3><div class="faq-icon">+</div>
+      </button>
+      <div class="faq-a"><p>En general, oui. Dans un immeuble indivis, il n'y a qu'une seule facture de taxe fonciere emise pour l'ensemble de la structure, repartie entre les coproprietaires selon leur pourcentage de propriete. Cela peut se traduire par un taux effectif inferieur par rapport aux unites en copropriete divise comparables, selon l'evaluation municipale.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        <h3>Puis-je louer un condo indivis que j'achete a Montreal?</h3><div class="faq-icon">+</div>
+      </button>
+      <div class="faq-a"><p>Dans la plupart des cas, la location d'un condo indivis est strictement interdite par la convention de copropriete indivise. Il s'agit d'un element crucial de diligence raisonnable a verifier avant tout achat. Demandez toujours a examiner la convention de copropriete complete et confirmez les droits de location avec un notaire specialise en immobilier avant de signer une promesse d'achat.</p></div>
+    </div>
+  </div>
+  <!-- 03 -->
+  <div class="faq-category active" id="c3">
+    <div class="cat-header">
+      <div class="cat-num">03</div>
+      <h2 class="cat-title">Investir dans les <em>Plex</em> a Montreal</h2>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        <h3>Quels sont les avantages d'acheter un duplex ou triplex comme proprietaire occupant?</h3><div class="faq-icon">+</div>
+      </button>
+      <div class="faq-a"><p>Acheter un plex comme proprietaire occupant vous permet de comptabiliser les revenus locatifs des unites secondaires dans votre demande hypothecaire, augmentant ainsi votre capacite d'emprunt. Vous beneficiez egalement d'une reduction nette des couts de logement grace aux revenus generateurs, d'un acces preferentiel au financement residentiel, et d'une appreciation du capital sur l'ensemble de la propriete.">Purchasing a plex as an owner occupant allows you to qualify the rental income from secondary units toward your mortgage application, increasing your borrowing power. You also benefit from reduced net housing costs, building equity in an asset with two or more income streams, and favourable residential mortgage terms (for properties under five units). The Montreal plex market in <a href="/#neighbourhoods</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        <h3>Comment le financement commercial differe-t-il du financement residentiel pour les plex de Montreal?</h3><div class="faq-icon">+</div>
+      </button>
+      <div class="faq-a"><p>Les proprietes de 1 a 4 unites residentielles sont admissibles aux produits hypothecaires residentiels standard avec des taux competitifs et des periodes d'amortissement jusqu'a 25 ans. Les proprietes de 5 unites ou plus sont classifiees comme immobilier commercial, exigeant des produits de financement commercial avec des criteres de souscription differents, des taux generalement plus eleves et des periodes d'amortissement typiquement limitees a 20-25 ans selon le preteur.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        <h3>Quel est un bon taux de capitalisation pour une propriete locative a Montreal?</h3><div class="faq-icon">+</div>
+      </button>
+      <div class="faq-a"><p>Les taux de capitalisation varient considerablement selon le secteur. Les zones urbaines centrales comme le Plateau-Mont-Royal, Mile End et Griffintown affichent generalement des taux de cap inferieurs de 3 a 4%, refletant un risque moindre et une appreciation plus elevee. Les secteurs de banlieue et les marches peripheriques peuvent offrir des taux de 5 a 6% ou plus, avec un potentiel d'appreciation plus faible. Evaluez toujours les proprietes sur la base du revenu net reel, et non du revenu potentiel.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        <h3>Un proprietaire peut-il expulser un locataire pour occuper un logement locatif au Quebec?</h3><div class="faq-icon">+</div>
+      </button>
+      <div class="faq-a"><p>Les proprietaires peuvent legalement reprendre un logement pour occupation personnelle ou pour un membre de la famille immediate par un processus juridique specifique appele reprise de logement. Des exigences strictes de preavis s'appliquent (generalement 6 mois), des droits d'indemnisation des locataires existent, et les locataires de longue date ou ages peuvent beneficier d'une protection accrue. Consultez un notaire ou avocat specialise avant d'initier toute procedure de reprise.</p></div>
+    </div>
+  </div>
+  <!-- 04 -->
+  <div class="faq-category active" id="c4">
+    <div class="cat-header">
+      <div class="cat-num">04</div>
+      <h2 class="cat-title">Le Processus <em>d'Achat Immobilier</em> a Montreal</h2>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        <h3>Quelles sont les principales etapes pour acheter une maison a Montreal?</h3><div class="faq-icon">+</div>
+      </button>
+      <div class="faq-a"><p>Les etapes cles sont : (1) obtenir une preapprobation hypothecaire formelle, (2) s'associer a un courtier immobilier agree de Montreal, (3) configurer des alertes Centris automatiques pour les proprietes correspondantes, (4) visiter et evaluer les proprietes, (5) rediger et soumettre une promesse d'achat, (6) satisfaire les conditions (financement et inspection), (7) signer l'acte de vente chez le notaire et recevoir les cles.">The key milestones are: (1) securing a formal mortgage pre-approval, (2) partnering with a licensed Montreal real estate broker, (3) setting up automated Centris alerts for matching properties, (4) touring shortlisted homes, (5) submitting a promesse d'achat with appropriate conditions, (6) completing due diligence (inspection, condo documents, financing), (7) clearing all conditions, and (8) signing the final deed at the notary. See the full breakdown on the <a href="/buyers/</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        <h3>Combien d'argent dois-je economiser pour les frais de cloture a Montreal?</h3><div class="faq-icon">+</div>
+      </button>
+      <div class="faq-a"><p>Prevoyez un supplement de 2 a 3% du prix d'achat total pour couvrir les frais de cloture. Ceux-ci comprennent la taxe de bienvenue, les frais de notaire (typiquement 1 500 $ a 2 500 $ pour un achat), l'inspection immobiliere (500 $ a 800 $), les ajustements de taxes foncieres, les frais de dossier hypothecaire et l'assurance titre. Prenez en compte chacune de ces composantes dans votre planification budgetaire.">Budget an additional 2 to 3 percent of the total purchase price to cover closing costs. These include the welcome tax, notary fees (typically $1,500 to $2,500 for a purchase), home inspection ($500 to $800), title insurance if applicable, and any adjustments for prepaid municipal taxes or condo fees. Use the <a href="/#calculator</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        <h3>Les acheteurs paient-ils une commission aux courtiers immobiliers au Quebec?</h3><div class="faq-icon">+</div>
+      </button>
+      <div class="faq-a"><p>Dans les transactions residentielles standard, le courtier de l'acheteur est remunere par la commission totale etablie par le vendeur dans le contrat d'inscription. Cette commission est partagee entre le courtier inscripteur et le courtier de l'acheteur. En pratique, l'acheteur ne paie pas directement de commission - les couts sont integres dans la structure de prix de la transaction.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        <h3>Combien de temps faut-il pour conclure une transaction immobiliere a Montreal?</h3><div class="faq-icon">+</div>
+      </button>
+      <div class="faq-a"><p>Une fois qu'une promesse d'achat est pleinement acceptee par le vendeur, la levee des conditions (financement et inspection) prend generalement 10 a 14 jours ouvrables. Le notaire prepare ensuite l'acte de vente, qui est signe habituellement 30 a 60 jours apres l'acceptation. Le calendrier total de la recherche active a la remise des cles est typiquement de 2 a 4 mois.</p></div>
+    </div>
+  </div>
+  <!-- 05 -->
+  <div class="faq-category active" id="c5">
+    <div class="cat-header">
+      <div class="cat-num">05</div>
+      <h2 class="cat-title">Vendre une Propriete a <em>Montreal</em></h2>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        <h3>Quel est le meilleur mois pour inscrire une propriete residentielle a Montreal?</h3><div class="faq-icon">+</div>
+      </button>
+      <div class="faq-a"><p>Le marche printanier de fevrier a mai offre constamment la plus haute activite des acheteurs et la plus grande velocite des transactions. Les proprietes inscrites au debut du printemps beneficient d'une demande de pointe, du plus grand bassin d'acheteurs actifs et du sentiment general que c'est "la saison pour acheter". Les inscriptions d'automne de septembre a novembre constituent un deuxieme marche fort. Evitez juillet-aout et decembre-janvier.">The spring market from February to May consistently delivers the highest buyer activity and fastest transaction velocity. Properties listed in early spring benefit from peak demand, the largest active buyer pool, and the strongest potential for multiple offers. September to October is the second-best window. Winter listings face reduced competition but a smaller buyer pool. For a free home valuation, <a href="https://calendly.com/delaram-farzin/free-consultation" target="_blank</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        <h3>Comment les courtiers determinent-ils le prix d'inscription d'une maison a Montreal?</h3><div class="faq-icon">+</div>
+      </button>
+      <div class="faq-a"><p>Les courtiers etablissent un prix d'inscription optimal par une analyse comparative de marche (ACM) : un examen rigoureux des proprietes comparables recemment vendues dans votre quartier specifique, ajuste pour les differences de superficie, de condition, de caracteristiques et de date de vente. L'objectif est d'identifier la fourchette de prix qui attire la concurrence des acheteurs tout en maximisant le produit net final.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        <h3>Quel est le but du formulaire Declaration du vendeur au Quebec?</h3><div class="faq-icon">+</div>
+      </button>
+      <div class="faq-a"><p>La Declaration du vendeur est un document legalement obligatoire ou le proprietaire divulgue tous les vices caches connus, incluant l'historique d'infiltration d'eau, les problemes de structure, les reparations anterieures majeures et les litiges de voisinage. Une divulgation incomplete peut engager la responsabilite du vendeur apres la vente. Soyez complet et precis - les tribunaux interpretent strictement les obligations de divulgation au Quebec.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        <h3>Comment puis-je maximiser la valeur de ma maison avant de la mettre en vente?</h3><div class="faq-icon">+</div>
+      </button>
+      <div class="faq-a"><p>Concentrez-vous sur les ameliorations a fort rendement : peinture neutre fraiche partout, luminaires mis a jour, nettoyage professionnel et desencombrement, modernisations mineures de cuisine (quincaillerie, dosseret, robinetterie), et amenagement paysager. Evitez les renovations majeures avant la vente a moins d'avoir un ROI clair. La presentation professionnelle et la strategie de prix correct rapportent plus que tout projet de renovation.">Focus on high-ROI improvements: fresh neutral paint throughout, updated lighting fixtures, professional cleaning and decluttering, minor kitchen modernizations (hardware, backsplash, faucets), and landscaping or curb appeal improvements. Avoid costly structural renovations that rarely recover their full cost in the sale price. A pre-listing walkthrough with your broker will identify exactly where to invest. See the <a href="/sellers/</p></div>
+    </div>
+  </div>
+  <!-- 06 -->
+  <div class="faq-category active" id="c6">
+    <div class="cat-header">
+      <div class="cat-num">06</div>
+      <h2 class="cat-title">Le Systeme <em>Centris</em> vs MLS</h2>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        <h3>Qu'est-ce que Centris et comment fonctionne-t-il au Quebec?</h3><div class="faq-icon">+</div>
+      </button>
+      <div class="faq-a"><p>Centris est la plateforme technologique exclusive et complete utilisee par les courtiers immobiliers du Quebec pour inscrire, suivre et gerer les transactions immobilieres. Il sert de base de donnees officielle pour toutes les inscriptions de courtiers au Quebec et est administre par l'OACIQ. L'acces complet aux donnees en temps reel est reserve aux courtiers agrees; les acheteurs et vendeurs publics accedent a une version filtrée via centris.ca.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        <h3>Centris est-il different du systeme MLS national canadien?</h3><div class="faq-icon">+</div>
+      </button>
+      <div class="faq-a"><p>Oui. Le reste du Canada utilise le Service inter-agences gere par l'Association canadienne de l'immeuble via REALTOR.ca. Le Quebec exploite son propre systeme distinct via Centris, gouverne par l'OACIQ plutot que par l'ACI. Les inscriptions du Quebec apparaissent sur centris.ca comme plateforme principale, avec une visibilite nationale via des partenariats de partage de donnees.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        <h3>Pourquoi certaines proprietes ne sont-elles pas visibles sur les sites de recherche immobiliere publics?</h3><div class="faq-icon">+</div>
+      </button>
+      <div class="faq-a"><p>Certaines proprietes de luxe ou sensibles sont commercialisees comme inscriptions exclusives ou "de poche" a la demande explicite du vendeur. Elles peuvent etre partagees uniquement dans les reseaux de courtiers ou par approche directe aupres d'acheteurs cibles. C'est pourquoi travailler avec un courtier bien reseaute vous donne acces aux opportunites hors marche que les recherches publiques ne peuvent jamais vous offrir.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        <h3>A quelle frequence les donnees sur Centris sont-elles mises a jour pour les acheteurs?</h3><div class="faq-icon">+</div>
+      </button>
+      <div class="faq-a"><p>La base de donnees interne de Centris pour les courtiers se met a jour en temps reel des qu'un statut de propriete change (nouvelle inscription, changement de prix, vente conditionnelle, vente ferme). Le site public centris.ca reflete ces changements avec un leger delai. En travaillant avec un courtier, vous beneficiez d'alertes en temps reel sur les nouvelles inscriptions correspondant a vos criteres.</p></div>
+    </div>
+  </div>
+  <!-- 07 -->
+  <div class="faq-category active" id="c7">
+    <div class="cat-header">
+      <div class="cat-num">07</div>
+      <h2 class="cat-title">Cadres Juridiques et <em>l'OACIQ</em></h2>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        <h3>Qu'est-ce que l'OACIQ et quel est son role dans l'immobilier au Quebec?</h3><div class="faq-icon">+</div>
+      </button>
+      <div class="faq-a"><p>L'OACIQ (Organisme d'autoregulation du courtage immobilier du Quebec) est l'organisme de reglementation autorise par le gouvernement responsable de surveiller l'industrie du courtage immobilier au Quebec. Il etablit les normes professionnelles, administre la formation et les examens de licence, traite les plaintes des consommateurs et maintient le fonds d'indemnisation.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        <h3>Quels fonds de protection sont disponibles pour les consommateurs qui achevent de l'immobilier au Quebec?</h3><div class="faq-icon">+</div>
+      </button>
+      <div class="faq-a"><p>Le Fonds d'indemnisation du courtage immobilier offre une compensation financiere aux consommateurs qui subissent des pertes dues a la fraude, au detournement de fonds fiduciaires ou aux fautes professionnelles commises par des courtiers agrees. La protection est limitee par transaction et n'est disponible que lorsqu'un courtier agree est implique dans la transaction.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        <h3>Un acheteur peut-il annuler une promesse d'achat signee au Quebec?</h3><div class="faq-icon">+</div>
+      </button>
+      <div class="faq-a"><p>Une fois qu'une promesse d'achat est signee et acceptee par le vendeur, elle constitue un contrat juridiquement contraignant en vertu du droit civil quebecois. Un acheteur peut seulement se retirer de l'entente en invoquant formellement une condition specifique prevue (financement non obtenu, inspection insatisfaisante) dans les delais stipules. Se retirer sans motif contractuel valide expose l'acheteur a des reclamations de dommages-interets.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        <h3>Que se passe-t-il si un courtier commet une violation ethique au Quebec?</h3><div class="faq-icon">+</div>
+      </button>
+      <div class="faq-a"><p>Les consommateurs peuvent deposer une plainte officielle aupres du service d'assistance de l'OACIQ. L'OACIQ enquete et peut imposer des sanctions disciplinaires incluant des amendes, une suspension ou la revocation permanente du permis du courtier. Le Fonds d'indemnisation peut offrir une compensation si la violation a cause une perte financiere directe.</p></div>
+    </div>
+  </div>
+  <!-- 08 -->
+  <div class="faq-category active" id="c8">
+    <div class="cat-header">
+      <div class="cat-num">08</div>
+      <h2 class="cat-title">Financement Immobilier et <em>Regles Hypothecaires</em></h2>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        <h3>Pourquoi l'obtention d'une preapprobation hypothecaire est-elle essentielle avant de chercher une maison?</h3><div class="faq-icon">+</div>
+      </button>
+      <div class="faq-a"><p>La preapprobation fournit une evaluation claire et precise de votre budget d'achat maximal et bloque un taux d'interet pour 90 a 120 jours. Dans les quartiers competitifs de Montreal, les offres sans preapprobation sont souvent rejetees directement. La preapprobation vous positionne egalement pour agir rapidement lorsque la bonne propriete apparait et identifie a l'avance les problemes de qualification potentiels.">Pre-approval provides a clear, accurate assessment of your maximum purchase budget and locks in an interest rate for 90 to 120 days. In competitive Montreal neighbourhoods like <a href="/#neighbourhoods">Outremont or Plateau-Mont-Royal</a>, presenting an offer without pre-approval significantly weakens your position. Sellers and their brokers treat pre-approved buyers as serious, credible purchasers. Use the <a href="/#calculator</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        <h3>Comment fonctionne le test de resistance hypothecaire canadien aujourd'hui?</h3><div class="faq-icon">+</div>
+      </button>
+      <div class="faq-a"><p>Le test de resistance hypothecaire exige que tous les emprunteurs, y compris ceux avec une mise de fonds superieure a 20%, prouvent qu'ils peuvent se permettre des paiements mensuels calcules au taux de qualification, soit le taux de contrat reel plus 2%, ou le taux plancher de 5,25%, selon le plus eleve. Cela reduit effectivement la capacite d'emprunt maximale d'environ 20% par rapport aux calculs de paiement au taux reel.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        <h3>Puis-je utiliser des fonds donnes par la famille pour ma mise de fonds a Montreal?</h3><div class="faq-icon">+</div>
+      </button>
+      <div class="faq-a"><p>Oui, la plupart des preteurs canadiens acceptent les fonds de mise de fonds donnes par des membres de la famille immediate. Le don doit etre documente par une lettre de don signee confirmant que les fonds ne constituent pas un pret et ne requierent aucun remboursement. Des exigences de documentation specifiques varient selon le preteur - votre courtier hypothecaire vous guidera sur les formalites exactes.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        <h3>Quelle est la difference entre une hypotheque conventionnelle et une hypotheque assuree?</h3><div class="faq-icon">+</div>
+      </button>
+      <div class="faq-a"><p>Une hypotheque assuree s'applique lorsque la mise de fonds est inferieure a 20% du prix d'achat. L'assurance pret hypothecaire (de la SCHL, Sagen ou Canada Guaranty) est obligatoire et la prime est ajoutee au solde hypothecaire. Une hypotheque conventionnelle s'applique avec une mise de fonds de 20% ou plus, ne necessitant pas d'assurance pret hypothecaire obligatoire et offrant generalement plus de flexibilite dans les conditions.</p></div>
+    </div>
+  </div>
+  <!-- 09 -->
+  <div class="faq-category active" id="c9">
+    <div class="cat-header">
+      <div class="cat-num">09</div>
+      <h2 class="cat-title">Les <em>Taxes Immobilieres</em> au Quebec</h2>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        <h3>Y a-t-il un impot sur les gains en capital lors de la vente de ma residence principale a Montreal?</h3><div class="faq-icon">+</div>
+      </button>
+      <div class="faq-a"><p>Non. En vertu de la loi fiscale federale canadienne, si la propriete que vous vendez a ete designee comme votre residence principale pour chaque annee de propriete, le gain complet est protege par l'exemption pour residence principale. Aucun impot sur les gains en capital ne s'applique. Si vous avez possede la propriete pendant une partie seulement des annees comme residence principale, une exemption partielle peut s'appliquer.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        <h3>Comment les proprietes d'investissement sont-elles imposees sur les gains en capital au Quebec?</h3><div class="faq-icon">+</div>
+      </button>
+      <div class="faq-a"><p>Lorsque vous vendez une residence secondaire ou une propriete d'investissement locatif, tout benefice realise est sujet a l'impot sur les gains en capital. Au Canada, 50% du gain en capital (le taux d'inclusion) est ajoute a votre revenu imposable et impose a votre taux marginal. Au Quebec, les impots provinciaux s'appliquent egalement. Consultez un comptable qualifie pour planifier le calendrier de vente afin d'optimiser votre situation fiscale.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        <h3>A quelle frequence les proprietaires paient-ils les taxes foncieres a Montreal?</h3><div class="faq-icon">+</div>
+      </button>
+      <div class="faq-a"><p>Les taxes foncieres municipales a Montreal sont facturees annuellement. Elles peuvent generalement etre payees en deux versements egaux au cours de l'annee civile. La taxe scolaire est facturee separement par le conseil scolaire competent. Les deux factures doivent etre prises en compte dans vos calculs de couts mensuels de propriete.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        <h3>Qu'est-ce que la taxe scolaire au Quebec et qui la percoit?</h3><div class="faq-icon">+</div>
+      </button>
+      <div class="faq-a"><p>La taxe scolaire est une taxe fonciere separee percue par le conseil scolaire local (soit le conseil scolaire de langue anglaise ou francaise servant votre secteur) pour financer les infrastructures educatives et les operations des ecoles publiques. Le montant est base sur la valeur d'evaluation de votre propriete multipliee par le taux du conseil scolaire local.</p></div>
+    </div>
+  </div>
+  <!-- 10 -->
+  <div class="faq-category active" id="c10">
+    <div class="cat-header">
+      <div class="cat-num">10</div>
+      <h2 class="cat-title">Programmes pour <em>Premiers Acheteurs</em></h2>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        <h3>Comment le Regime d'acces a la propriete (RAP) aide-t-il les premiers acheteurs?</h3><div class="faq-icon">+</div>
+      </button>
+      <div class="faq-a"><p>Le plan federal d'acces a la propriete permet aux premiers acheteurs admissibles de retirer jusqu'a 35 000 $ en franchise d'impot de leur Regime enregistre d'epargne-retraite (REER) pour l'utiliser comme mise de fonds. Si les deux partenaires sont admissibles, jusqu'a 70 000 $ peuvent etre retires. Les fonds doivent etre rembourses sur 15 ans. C'est l'un des outils les plus puissants disponibles pour les premiers acheteurs canadiens.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        <h3>Quels sont les avantages fiscaux du Compte d'epargne libre d'impot pour l'achat d'une premiere propriete (CELIAPP)?</h3><div class="faq-icon">+</div>
+      </button>
+      <div class="faq-a"><p>Le CELIAPP, lance en 2023, est un outil puissant pour les futurs acheteurs. Les cotisations annuelles jusqu'a 8 000 $ (maximum viager de 40 000 $) sont entierement deductibles d'impot contre votre revenu, similaire a un REER. Les investissements fructifient en franchise d'impot, et les retraits pour l'achat d'une premiere maison qualifiante sont egalement libres d'impot - une combinaison avantages REER + avantages CELI.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        <h3>Existe-t-il des subventions municipales pour l'achat d'une maison sur le territoire de la ville de Montreal?</h3><div class="faq-icon">+</div>
+      </button>
+      <div class="faq-a"><p>La Ville de Montreal offre periodiquement des programmes d'aide financiere ou des subventions a la propriete cibles aux jeunes familles et aux premiers acheteurs acquerrant des proprietes dans des zones urbaines specifiques ou des projets de logement social. L'admissibilite, les montants et les zones cibles changent d'une annee a l'autre - verifiez directement sur montreal.ca pour les programmes actifs.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        <h3>Les premiers acheteurs peuvent-ils obtenir un remboursement de la taxe de bienvenue?</h3><div class="faq-icon">+</div>
+      </button>
+      <div class="faq-a"><p>Certains programmes municipaux offrent une aide financiere qui compense effectivement une partie de la taxe de bienvenue pour les jeunes familles admissibles acquerrant une residence principale. Les criteres d'admissibilite, les montants des demandes et les delais changent annuellement. Consultez votre courtier immobilier et le bureau de taxation municipale pour les programmes actifs au moment de votre achat.</p></div>
+    </div>
+  </div>
+  <!-- 11 -->
+  <div class="faq-category active" id="c11">
+    <div class="cat-header">
+      <div class="cat-num">11</div>
+      <h2 class="cat-title">Entretien et <em>Inspections</em></h2>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        <h3>Quels sont les problemes les plus courants trouves lors des inspections immobilieres a Montreal?</h3><div class="faq-icon">+</div>
+      </button>
+      <div class="faq-a"><p>Les deficiences courantes identifiees dans les maisons plus anciennes de Montreal comprennent les toitures vieillissantes ou endommagees, les panneaux electriques desuets (particulierement Federal Pacific ou filage en aluminium), les fissures ou mouvements de fondation, la plomberie en desaccord avec les standards actuels (tuyaux en plomb ou fonte), les infiltrations d'eau au sous-sol et l'isolation inadequate dans les combles.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        <h3>Quelle est la definition juridique d'un vice cache au Quebec?</h3><div class="faq-icon">+</div>
+      </button>
+      <div class="faq-a"><p>En vertu du Code civil du Quebec, un vice cache est une defectuosite physique significative dans une propriete qui etait inconnue de l'acheteur au moment de l'achat, n'etait pas visible lors d'une inspection prudente standard avant la vente, et qui, si elle avait ete connue, aurait conduit l'acheteur a ne pas acheter du tout ou a offrir un prix inferieur.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        <h3>Qu'est-ce qu'un test de pyrite et pourquoi est-il important dans l'immobilier de Montreal?</h3><div class="faq-icon">+</div>
+      </button>
+      <div class="faq-a"><p>La pyrite est un mineral present dans certains materiaux de remblai en pierre utilises sous les dalles de beton de sous-sol et de garage dans les maisons construites entre 1970 et 1990, principalement dans certaines regions de la grande Montreal. Lorsqu'elle est exposee a l'eau, la pyrite se dilate et peut soulever, fracturer ou destabiliser les dalles de sol. Un test de pyrite d'un ingenieur qualifie est essentiel pour les proprietes affectees.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        <h3>Combien de temps un acheteur a-t-il pour poursuivre un vendeur pour un vice cache?</h3><div class="faq-icon">+</div>
+      </button>
+      <div class="faq-a"><p>En vertu du Code civil du Quebec, un acheteur doit aviser le vendeur par ecrit dans un delai raisonnable apres la decouverte du defaut, generalement interprete par les tribunaux comme quelques mois apres la decouverte. Un recours judiciaire doit etre initie dans les trois ans suivant la decouverte du vice. Les delais exacts dependent des faits specifiques - consultez un avocat immobilier des que vous decouvrez un probleme potentiel.</p></div>
+    </div>
+  </div>
+  <!-- 12 -->
+  <div class="faq-category active" id="c12">
+    <div class="cat-header">
+      <div class="cat-num">12</div>
+      <h2 class="cat-title">Tendances de l'Immobilier <em>de Luxe</em> a Montreal</h2>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        <h3>Quelles caracteristiques definissent une propriete comme immobilier de luxe a Montreal?</h3><div class="faq-icon">+</div>
+      </button>
+      <div class="faq-a"><p>Le segment de luxe est caracterise par un positionnement geographique premium (Westmount, Outremont, Square Mille-Or, front de mer de l'Ouest-de-l'Ile), une provenance architecturale, des boiseries et finitions personnalisees, une domotique, des espaces de vie excessivement spacieux et des equipements d'hotel (piscine, vin, gym). Les seuils de prix commencent generalement a environ 1,5 M $ a 2 M $ selon le secteur specifique.">The luxury segment is characterized by premium geographic positioning (Westmount, Outremont, Golden Square Mile, waterfront West Island), architectural provenance, custom millwork and finishes, smart-home automation systems, private wine cellars, heated garages, indoor pools, and expansive square footage. Price thresholds typically begin above $1.5M for single-family homes, though market conditions shift this benchmark. The <a href="/#neighbourhoods</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        <h3>Comment les maisons de luxe sont-elles commercialisees differemment des proprietes residentielles standard?</h3><div class="faq-icon">+</div>
+      </button>
+      <div class="faq-a"><p>Les proprietes premium necessitent du materiel marketing sur mesure : productions video cinematographiques, photographie architecturale par drone, syndication dans les reseaux immobiliers internationaux, et calendriers de visites prives con?us pour attirer des acheteurs qualifies plutot que des curieux. Le recit de la marque, la mise en scene et le positionnement en tant que mode de vie plutot que simple transaction sont essentiels.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        <h3>La confidentialite est-elle un facteur majeur dans les transactions immobilieres de luxe a Montreal?</h3><div class="faq-icon">+</div>
+      </button>
+      <div class="faq-a"><p>Oui, la confidentialite est une consideration critique pour les particuliers fortuners, les cadres et les personnalites publiques. De nombreuses transactions de luxe a Westmount et Outremont sont gerees comme des inscriptions exclusives ou de poche pour minimiser l'exposition publique. Les structures d'entiercement, les arrangements de signature par procuration et une communication discrete font partie de la pratique standard dans ce segment.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        <h3>Quels quartiers de Montreal affichent les prix au pied carre les plus eleves?</h3><div class="faq-icon">+</div>
+      </button>
+      <div class="faq-a"><p>Les prix moyens au pied carre les plus eleves sont constamment enregistres a Westmount, dans les secteurs historiques d'Outremont, dans le Square Mille-Or au centre-ville de Ville-Marie, dans les poches de front de mer premium de l'Ouest-de-l'Ile et dans les condo-boutiques de luxe de Griffintown. Le Plateau-Mont-Royal et le Mile End commandent des primes pour les plex de patrimoine bien conserves dans des rues recherchees.</p></div>
+    </div>
+  </div>
+  <!-- 13 -->
+  <div class="faq-category active" id="c13">
+    <div class="cat-header">
+      <div class="cat-num">13</div>
+      <h2 class="cat-title">Demenager en <em>Banlieue</em></h2>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        <h3>Pourquoi les acheteurs familiaux migrent-ils de l'Ile de Montreal vers la Rive-Sud?</h3><div class="faq-icon">+</div>
+      </button>
+      <div class="faq-a"><p>La Rive-Sud (Brossard, Longueuil, Saint-Lambert, Boucherville) offre de plus grands terrains, des constructions plus recentes, de solides reseaux scolaires et des prix qui offrent significativement plus d'espace par dollar par rapport a des secteurs comparables sur l'Ile. L'acces au REM a transforme l'attrait de la banlieue en permettant des temps de trajet vers le centre-ville de 20-30 minutes depuis certains secteurs de la Rive-Sud.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        <h3>Comment le reseau du REM a-t-il modifie les valeurs immobilieres en banlieue de Montreal?</h3><div class="faq-icon">+</div>
+      </button>
+      <div class="faq-a"><p>Le Reseau express metropolitain a considerablement stimule la demande et accelere l'appreciation des prix dans les secteurs a distance de marche des stations REM, particulierement sur la Rive-Sud et dans l'Ouest-de-l'Ile. Les proprietes dans un rayon de 800 metres a 1 km des stations REM actives montrent une prime de valeur notable par rapport aux quartiers comparables sans acces rapide.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        <h3>Quelles sont les principales differences entre acheter de l'immobilier a Laval et a Montreal?</h3><div class="faq-icon">+</div>
+      </button>
+      <div class="faq-a"><p>Laval propose une configuration plus suburbaine avec une infrastructure commerciale etendue, de nouveaux developpements de maisons unifamiliales et une connectivite autoroutiere importante via les autoroutes 15, 25 et 440. Les taux de taxe de bienvenue a Laval sont distincts de ceux de Montreal. Les prix fonciers sont generalement plus bas, la densite plus faible et les produits disponibles penchent davantage vers les maisons unifamiliales et les condos de banlieue.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        <h3>Quelles options de navettage existent pour les residents de la Rive-Nord?</h3><div class="faq-icon">+</div>
+      </button>
+      <div class="faq-a"><p>Les residents de la Rive-Nord (Laval, Terrebonne, Blainville, Mirabel) utilisent le reseau de train de banlieue Exo, les autobus expres sur corridors A25 et A440, les voies reservees sur les autoroutes principales et les connexions vers le metro de Montreal via les terminus d'autobus. Les temps de trajet varient considerablement selon le secteur specifique et les conditions de circulation aux heures de pointe.</p></div>
+    </div>
+  </div>
+  <!-- 14 -->
+  <div class="faq-category active" id="c14">
+    <div class="cat-header">
+      <div class="cat-num">14</div>
+      <h2 class="cat-title">Services de Relocalisation et <em>Demenagement a Montreal</em></h2>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        <h3>Que doivent savoir les acheteurs des autres provinces avant de demenager a Montreal?</h3><div class="faq-icon">+</div>
+      </button>
+      <div class="faq-a"><p>Les acheteurs qui demenagent a Montreal doivent comprendre que le Quebec fonctionne sous un regime de droit civil distinct plutot que le systeme de common law utilise dans le reste du Canada. Les transactions immobilieres utilisent des notaires plutot que des avocats ou des compagnies de titre, tous les documents sont prepares en francais (avec traduction disponible), et la Charte de la langue francaise s'applique dans les communications d'affaires et les services publics.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        <h3>Un non-resident du Canada peut-il acheter une maison a Montreal aujourd'hui?</h3><div class="faq-icon">+</div>
+      </button>
+      <div class="faq-a"><p>Les non-residents doivent naviguer dans les restrictions federales sur les acheteurs etrangers. L'interdiction d'achat par des etrangers, introduite en 2023, interdit a la plupart des non-Canadiens d'acheter des proprietes residentielles au Canada, avec des exceptions specifiques pour les residants permanents, les etudiants etrangers dans certaines circonstances et les refugies. Des penalties fiscales federales sur les proprietes vacantes detenues par des non-residents s'appliquent egalement. Consultez un notaire specialise avant de proceder.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        <h3>Quels sont les meilleurs quartiers familiaux pour les expatries a Montreal?</h3><div class="faq-icon">+</div>
+      </button>
+      <div class="faq-a"><p>Les communautes populaires pour les familles qui demenagent incluent Notre-Dame-de-Grace (NDG), Westmount et les municipalites de l'Ouest-de-l'Ile (Beaconsfield, Kirkland, Dollard-des-Ormeaux, Pointe-Claire). Ces secteurs offrent de bonnes ecoles anglophones, des infrastructures communautaires etablies, un acces facile aux autoroutes et des avantages de mode de vie suburbain tout en maintenant la connectivite vers le centre-ville.">Popular communities for relocating families include Notre-Dame-de-Grace (NDG), Westmount, and the West Island municipalities (Beaconsfield, Kirkland, Dollard-des-Ormeaux, Pointe-Claire). These areas offer strong English-language school options, established expat communities, safe streets, and accessible transit connections to downtown. Outremont and Cote-Saint-Luc are preferred by French-speaking or bilingual families seeking a prestigious urban environment. <a href="/#neighbourhoods</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        <h3>Comment puis-je organiser un achat immobilier interprovincial?</h3><div class="faq-icon">+</div>
+      </button>
+      <div class="faq-a"><p>Les acquisitions a distance sont entierement supportees par des visites de proprietes virtuelles interactives, la signature electronique de documents (promesse d'achat electronique), les transferts electroniques securises d'acomptes, et des sessions notariales a distance dans certaines circonstances. Votre courtier peut coordonner des inspections physiques au nom de l'acheteur avec des partenaires d'inspection de confiance, et vous fournir des rapports detailles.">Remote acquisitions are fully supported through virtual interactive property tours, digital document signing (electronic promesse d'achat), secure electronic deposit transfers, and remote notary sessions via video conference. The process requires strong coordination between your broker, mortgage broker, home inspector, and notary. <a href="https://calendly.com/delaram-farzin/free-consultation" target="_blank</p></div>
+    </div>
+  </div>
+  <!-- 15 -->
+  <div class="faq-category active" id="c15">
+    <div class="cat-header">
+      <div class="cat-num">15</div>
+      <h2 class="cat-title">Preconstruction et <em>Projets Neufs</em></h2>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        <h3>Quelles protections pour les consommateurs existent pour les maisons neuves au Quebec?</h3><div class="faq-icon">+</div>
+      </button>
+      <div class="faq-a"><p>Les nouvelles constructions residentielles au Quebec sont protegees par le programme de garantie GCR (Garantie de construction residentielle) obligatoire. Cela fournit une couverture pour la protection des acomptes en cas de faillite du promoteur, les vices de finition dans les 1 an suivant la reception, les vices caches dans les 3 ans, et les vices de structure majeurs dans les 5 ans. Verifiez toujours que votre constructeur est inscrit a GCR avant de signer.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        <h3>Quels sont les avantages d'acheter de l'immobilier en preconstruction?</h3><div class="faq-icon">+</div>
+      </button>
+      <div class="faq-a"><p>La preconstruction vous permet de bloquer une propriete au prix actuel du marche tout en echelonnant votre mise de fonds tout au long du calendrier de construction, generalement en versements progressifs. Vous beneficiez d'amenagements neufs avec les garanties du constructeur, d'options de personnalisation (paliers, armoires, appareils) et d'une appreciation potentielle entre la signature et la livraison dans un marche en hausse.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        <h3>Un promoteur peut-il augmenter le prix d'un condo en preconstruction apres la signature?</h3><div class="faq-icon">+</div>
+      </button>
+      <div class="faq-a"><p>La capacite d'un promoteur a modifier les prix apres la signature du contrat preliminaire depend strictement des clauses specifiques de ce contrat. Certains promoteurs quebecois incluent des clauses d'escalade de prix liees a l'indice des couts de construction. Lisez chaque clause attentivement et faites examiner le contrat preliminaire par un notaire independant avant de signer.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        <h3>Qu'est-ce qu'un contrat preliminaire dans l'immobilier neuf au Quebec?</h3><div class="faq-icon">+</div>
+      </button>
+      <div class="faq-a"><p>Un contrat preliminaire est le document juridique utilise exclusivement pour l'achat de nouvelles constructions residentielles aupres d'un promoteur avant l'achevement. En vertu de la Loi sur la protection du consommateur du Quebec, les acheteurs ont un droit de rescision de 10 jours apres la signature. Ce contrat decrit les specifications de la propriete, le calendrier de livraison, les etapes de paiement et les conditions de garantie.</p></div>
+    </div>
+  </div>
+  <!-- 16 -->
+  <div class="faq-category active" id="c16">
+    <div class="cat-header">
+      <div class="cat-num">16</div>
+      <h2 class="cat-title">Reduction de Logement et <em>Transitions en Residence Senior</em></h2>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        <h3>Quels facteurs les retraites doivent-ils considerer lors du passage a un condo plus petit?</h3><div class="faq-icon">+</div>
+      </button>
+      <div class="faq-a"><p>Les considerations cles incluent les fonctionnalites d'accessibilite du batiment et la fiabilite de l'ascenseur, la proximite des services medicaux et communautaires essentiels, les frais de copropriete mensuels et ce qu'ils couvrent, le fonds de reserve de l'immeuble, les regles de la copropriete concernant les animaux de compagnie et les renovations, et le bruit ou les perturbations potentiels des voisins dans les espaces de vie partages.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        <h3>Comment puis-je faciliter la transition emotionnelle lors de la vente d'une maison familiale de longue date?</h3><div class="faq-icon">+</div>
+      </button>
+      <div class="faq-a"><p>Faciliter cette transition implique d'engager des services de tri et desencombrement professionnels tot pour reduire le poids emotionnel du processus, de preserver les souvenirs par archivage numerique avant que les articles ne soient redistribues, de partager des artefacts significatifs avec les membres de la famille, et de voir la vente comme une opportunite de financer la prochaine etape de la vie plutot qu'une perte.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        <h3>Quelles sont les implications fiscales de la vente d'un important actif familial pour la retraite?</h3><div class="faq-icon">+</div>
+      </button>
+      <div class="faq-a"><p>Si la maison a constamment servi de residence principale tout au long de votre propriete, le benefice complet de la vente est entierement exempte de l'impot sur les gains en capital en vertu de l'exemption pour residence principale. Si une partie de la periode de propriete impliquait une utilisation a des fins de location ou d'affaires, une exemption partielle peut s'appliquer et une consultation fiscale est fortement recommandee.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        <h3>Comment fonctionne un arrangement de bail viager dans les developpements de logements pour aines?</h3><div class="faq-icon">+</div>
+      </button>
+      <div class="faq-a"><p>Un bail viager accorde a un individu le droit d'occuper une unite residentielle dans un developpement specialise pour aines pendant toute sa vie en echange d'un paiement forfaitaire initial. L'occupant ne devient pas proprietaire de l'unite. Les arrangements varient quant aux droits de transfert, aux remboursements a la succession et aux exigences de frais mensuels. Faites examiner tout arrangement de bail viager par un notaire specialise avant de vous engager.</p></div>
+    </div>
+  </div>
+  <!-- 17 -->
+  <div class="faq-category active" id="c17">
+    <div class="cat-header">
+      <div class="cat-num">17</div>
+      <h2 class="cat-title">Maisons <em>Multigenerationnelles</em> et Logements Secondaires</h2>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        <h3>Qu'est-ce qui definit une maison intergenerationnelle dans le zonage municipal au Quebec?</h3><div class="faq-icon">+</div>
+      </button>
+      <div class="faq-a"><p>Une maison intergenerationnelle ou multigenerationnelle est une propriete unifamiliale concue avec une suite de vie secondaire independante qui comprend sa propre cuisine, salle de bain et espace de couchage, tout en partageant la structure principale et les services. Les reglements de zonage specifiques varient selon la municipalite - certains permettent des entrees exterieures separees, d'autres pas.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        <h3>Quels sont les defis de zonage municipaux lors de l'ajout d'une suite secondaire?</h3><div class="faq-icon">+</div>
+      </button>
+      <div class="faq-a"><p>Les municipalites appliquent des reglements stricts sur les entrees exterieures independantes, les exigences de stationnement secondaires, la superficie maximale autorisee pour les unites accessoires, la separation des services et la conformite au code d'incendie. La non-conformite peut entrainer des ordres de travaux correctifs couteuses ou des problemes lors de la revente. Obtenez toujours les permis municipaux et les approbations de zonage avant de commencer les travaux.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        <h3>Existe-t-il des credits d'impot pour creer une suite intergenerationnelle au Quebec?</h3><div class="faq-icon">+</div>
+      </button>
+      <div class="faq-a"><p>Les gouvernements federal et provincial offrent des incitatifs financiers specifiques pour les projets intergenerationnels admissibles. Le Credit d'impot federal pour la renovation de logement multigenerationnel offre un credit de 15% sur les depenses admissibles jusqu'a 50 000 $. Le gouvernement du Quebec offre egalement des programmes d'aide a la renovation pour certains projets intergenerationnels admissibles.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        <h3>Comment les proprietes multigenerationnelles performent-elles en termes de valeur de revente?</h3><div class="faq-icon">+</div>
+      </button>
+      <div class="faq-a"><p>La demande pour les proprietes intergenerationnelles bien concues est en forte croissance en raison de l'evolution demographique, de la hausse des couts de garde d'enfants, des pressions sur l'accessibilite au logement et de l'efficacite financiere du partage des couts. Les proprietes avec des suites intergenerationnelles conformes au zonage, proprement construites et bien situees commandent generalement une prime par rapport aux maisons unifamiliales comparables.</p></div>
+    </div>
+  </div>
+  <!-- 18 -->
+  <div class="faq-category active" id="c18">
+    <div class="cat-header">
+      <div class="cat-num">18</div>
+      <h2 class="cat-title">Immobilier <em>Ecologique</em> et Durable</h2>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        <h3>Que signifie une certification LEED pour une propriete residentielle a Montreal?</h3><div class="faq-icon">+</div>
+      </button>
+      <div class="faq-a"><p>Une certification LEED (Leadership in Energy and Environmental Design) confirme qu'un batiment a ete concu et construit pour atteindre des normes verifiees en efficacite energetique, conservation de l'eau, qualite de l'air interieur, integration du site et utilisation de materiaux durables. Les batiments certifies LEED ont des couts d'exploitation inferieurs, un meilleur confort des occupants et une valeur de revente croissante.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        <h3>Comment un proprietaire peut-il ameliorer la cote d'efficacite energetique de sa propriete?</h3><div class="faq-icon">+</div>
+      </button>
+      <div class="faq-a"><p>Les ameliorations cles comprennent la mise a niveau de l'isolation des combles et des murs aux normes actuelles, l'installation de fenetres a triple vitrage haute performance, l'etancheite des fuites de l'enveloppe thermique, le remplacement des systemes de chauffage au gaz ou au mazout par des thermopompes, et l'installation de chauffe-eau a thermopompe ou solaires.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        <h3>Existe-t-il des subventions provinciales pour les renovations ecologiques au Quebec?</h3><div class="faq-icon">+</div>
+      </button>
+      <div class="faq-a"><p>Le gouvernement du Quebec exploite le programme Renoclimat, qui offre des evaluations energetiques residentielles et des incitatifs financiers pour une gamme d'ameliorations incluant l'isolation, les fenetres, les systemes de chauffage et les travaux d'etancheite a l'air. Hydro-Quebec offre egalement des programmes de rabais specifiques pour la conversion aux thermopompes et les ameliorations d'efficacite approuvees.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        <h3>Les maisons energetiquement efficaces se vendent-elles avec une prime a Montreal?</h3><div class="faq-icon">+</div>
+      </button>
+      <div class="faq-a"><p>Oui. Les acheteurs modernes integrent de plus en plus les couts d'exploitation dans leurs decisions d'achat aux cotes du prix d'achat. Les maisons avec des couts de services publics inferieurs, une isolation superieure, des systemes de CVC modernes et une documentation sur les resultats energetiques reels obtiennent des prix de vente plus eleves et se vendent plus rapidement que des proprietes comparables sans ces caracteristiques.</p></div>
+    </div>
+  </div>
+  <!-- 19 -->
+  <div class="faq-category active" id="c19">
+    <div class="cat-header">
+      <div class="cat-num">19</div>
+      <h2 class="cat-title">Immobilier Commercial pour <em>Petites Entreprises</em></h2>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        <h3>Quelle est la difference entre un bail brut et un bail net (NNN)?</h3><div class="faq-icon">+</div>
+      </button>
+      <div class="faq-a"><p>Un bail brut exige que le locataire paie un loyer de base fixe mensuel pendant que le proprietaire couvre toutes les taxes foncieres, l'assurance du batiment et les couts d'entretien. Un bail net triple (NNN) exige que le locataire paie le loyer de base plus sa part proportionnelle des taxes foncieres, de l'assurance du batiment et des frais d'entretien communs. Les NNN sont la norme pour les locaux de detail et commerciaux au Canada.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        <h3>Comment les reglements de zonage des proprietes commerciales affectent-ils les operations d'entreprise?</h3><div class="faq-icon">+</div>
+      </button>
+      <div class="faq-a"><p>Les reglements de zonage municipaux dictent les utilisations commerciales specifiques permises dans un batiment ou une zone. Ils detaillent les contraintes sur les operations de restauration (exigences de ventilation, permis de terrasse), les heures de vente au detail, les operations de fabrication, les exigences d'entreposage, les heures de livraison et les classifications de bruit. La non-conformite peut entrainer des amendes, des fermetures forcees ou des problemes lors du renouvellement du permis.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        <h3>Quels facteurs influencent l'evaluation de l'immobilier commercial a Montreal?</h3><div class="faq-icon">+</div>
+      </button>
+      <div class="faq-a"><p>Les parametres d'evaluation sont determines par la localisation geographique et l'achalandage, la qualite du profil de credit des locataires, la duree des termes de bail restants, la performance historique du revenu net d'exploitation, l'etat physique du batiment, les taux de capitalisation du marche local et la qualite de la documentation de bail. Les proprietes commerciales productrices de revenus sont generalement evaluees selon l'approche par le revenu (RNE divise par le taux de cap).</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        <h3>Pourquoi un proprietaire de petite entreprise devrait-il considerer l'achat plutot que la location de locaux commerciaux?</h3><div class="faq-icon">+</div>
+      </button>
+      <div class="faq-a"><p>L'achat de locaux commerciaux offre une stabilite operationnelle a long terme, elimine l'exposition aux escalades de loyer lors des renouvellements, accumule des actifs de capital au fil du temps et peut generer de la richesse independamment de l'entreprise elle-meme. Les interets hypothecaires sur un achat commercial sont generalement une depense d'affaires deductible. Les compromis principaux sont la flexibilite operationnelle reduite et la necessite d'un acompte substantiel.</p></div>
+    </div>
+  </div>
+  <!-- 20 -->
+  <div class="faq-category active" id="c20">
+    <div class="cat-header">
+      <div class="cat-num">20</div>
+      <h2 class="cat-title">Cycles du Marche Immobilier et <em>Corrections</em></h2>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        <h3>Quels indicateurs cles signalent une transition d'un marche de vendeurs a un marche d'acheteurs?</h3><div class="faq-icon">+</div>
+      </button>
+      <div class="faq-a"><p>Un marche en transition est signale par une hausse des mois d'inventaire (au-dessus de quatre a six mois indique l'equilibre), des proprietes restant inscrites significativement plus longtemps que la moyenne, une baisse de la velocite des ventes, une diminution de la frequence des situations d'offres multiples, le retour des offres conditionnelles et des conditions d'inspection dans les contrats, et des vendeurs acceptant des reductions de prix.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        <h3>Comment les fluctuations des taux d'interet affectent-elles les valeurs immobilieres locales?</h3><div class="faq-icon">+</div>
+      </button>
+      <div class="faq-a"><p>Des taux d'interet plus eleves reduisent la capacite d'emprunt des acheteurs, ce qui reduit le bassin d'acheteurs qualifies a tout niveau de prix donne, refroidissant la demande et exercant une pression a la baisse sur les prix. Des taux plus bas ont l'effet inverse, expandant le pouvoir d'achat et stimulant la demande. La relation n'est pas parfaitement lineaire car d'autres facteurs (contraintes d'offre, emploi, immigration) tamponnent ou amplifient les effets des taux.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        <h3>Pourquoi le marche immobilier de Montreal est-il traditionnellement plus stable que Toronto ou Vancouver?</h3><div class="faq-icon">+</div>
+      </button>
+      <div class="faq-a"><p>Montreal beneficie d'une diversification economique equilibree dans la technologie, l'aerospatiale, les sciences de la vie, la finance et l'education. Les ratios historiques prix-revenu ont ete plus conservateurs qu'a Toronto ou Vancouver, limitant les exces speculatifs. Un ecosysteme robuste de marche locatif offre une alternative pour ceux qui ne peuvent pas acheter, reduisant la pression d'achat panique.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        <h3>Quelle est la meilleure strategie pour acheter de l'immobilier lors d'un ralentissement du marche?</h3><div class="faq-icon">+</div>
+      </button>
+      <div class="faq-a"><p>Un ralentissement offre un excellent environnement pour negocier des conditions favorables, reintroduire des conditions d'inspection, prendre le temps d'une diligence raisonnable approfondie, et securiser des actifs bien situes a des prix inferieurs au sommet recent. Concentrez-vous sur la qualite de l'emplacement et la solidite structurale plutot que sur les aspects esthetiques. <a href="https://calendly.com/delaram-farzin/free-consultation" target="_blank">Planifiez une consultation</a> pour discuter des conditions actuelles du marche.">A slowdown offers an excellent environment to negotiate favorable terms, reintroduce inspection conditions, take time for thorough due diligence, and secure well-located assets at prices below the recent peak. Focus on location quality and structural soundness rather than cosmetics. Model purchase scenarios at a range of future values to ensure the acquisition is defensible in multiple market outcomes. <a href="https://calendly.com/delaram-farzin/free-consultation" target="_blank">Schedule a consultation</a> to discuss current market conditions and strategy.</p></div>
+    </div>
+  </div>
+
+</div>
+
+<!-- CTA -->
+<div class="faq-cta">
+  <h2 data-en="Still Have Questions?" data-fr="Vous avez encore des questions?">Still Have Questions?</h2>
+  <p data-en="Book a free 30-minute call. We will cover your specific situation, your target neighbourhood, and exactly what to expect in the current market." data-fr="Reservez un appel gratuit de 30 minutes. Nous couvrirons votre situation specifique, votre quartier cible et exactement ce a quoi vous attendre dans le marche actuel.</p></div>
+    </div>
+  </div>
+</div>
+
+<!-- CTA -->
+<section class="faq-cta">
+  <h2>Votre Question n'est pas ici?</h2>
+  <p>Chaque situation immobiliere est unique. Contactez-moi directement pour une reponse personnalisee et des conseils adaptes a votre projet.</p>
+  <a href="https://calendly.com/delaram-farzin/free-consultation" target="_blank" class="btn-dark">Reserver un appel gratuit</a>
+  <a href="/fr/acheteurs/" class="btn-ghost">Guide de l'acheteur</a>
+</section>
+
+<footer>
+  <div class="f-logo">Delaram Farzin</div>
+  <div class="f-info">
+    Courtiere Immobiliere &middot; Sutton Group Centre-Ouest<br>
+    <a href="tel:+15148033472">514-803-3472</a> &middot; <a href="mailto:info@farzin.realtor">info@farzin.realtor</a>
+  </div>
+  <ul class="f-links-row">
+    <li><a href="/fr/">Accueil</a></li>
+    <li><a href="/fr/acheteurs/">Acheteurs</a></li>
+    <li><a href="/fr/vendeurs/">Vendeurs</a></li>
+    <li><a href="/blog.html">Blogue</a></li>
+    <li><a href="/fr/#contact">Contact</a></li>
+  </ul>
+</footer>
+
+<script>
+function toggleFaq(btn) {
+  var item = btn.parentElement;
+  var isOpen = item.classList.contains('open');
+  item.classList.toggle('open', !isOpen);
+  item.querySelector('.faq-icon').textContent = isOpen ? '+' : '-';
+}
+
+function showCat(id, btn) {
+  document.querySelectorAll('.cat-btn').forEach(function(b) { b.classList.remove('active'); });
+  btn.classList.add('active');
+  if (id === 'all') {
+    document.querySelectorAll('.faq-category').forEach(function(c) { c.classList.add('active'); });
+  } else {
+    document.querySelectorAll('.faq-category').forEach(function(c) { c.classList.remove('active'); });
+    var target = document.getElementById(id);
+    if (target) { target.classList.add('active'); target.scrollIntoView({behavior:'smooth',block:'start'}); }
+  }
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('.faq-category').forEach(function(c) { c.classList.add('active'); });
+});
+</script>
+</body>
+</html>
