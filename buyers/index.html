@@ -314,21 +314,5 @@
     <a href="/" class="f-back" data-en="← Back to Home" data-fr="← Retour à l'accueil">← Back to Home</a>
   </footer>
 
-  <script>
-    let currentLang = (function(){ try { return localStorage.getItem('sitelang') || 'en'; } catch(e){ return 'en'; } })();
-    function setLang(lang) {
-      currentLang = lang;
-      try { localStorage.setItem('sitelang', lang); } catch(e) {}
-      document.querySelectorAll('[data-en]').forEach(el => {
-        const val = el.getAttribute('data-' + lang);
-        if (val) el.innerHTML = val;
-      });
-      document.getElementById('btn-en').classList.toggle('active', lang === 'en');
-      document.getElementById('btn-fr').classList.toggle('active', lang === 'fr');
-      document.documentElement.lang = lang;
-      document.title = document.querySelector('title').getAttribute('data-' + lang) || document.title;
-    }
-    document.addEventListener('DOMContentLoaded', function(){ setLang(currentLang); });
-  </script>
 </body>
 </html>

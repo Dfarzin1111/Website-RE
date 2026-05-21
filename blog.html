@@ -6963,22 +6963,7 @@ const articles = [
 ];
 
 let currentFilter = 'all';
-let currentLang = (function(){ try { return localStorage.getItem('sitelang') || 'en'; } catch(e){ return 'en'; } })();
-
-// ── LANGUAGE TOGGLE ──────────────────────────────────────────────────────
-function setLang(l) {
-  currentLang = l;
-  try { localStorage.setItem('sitelang', l); } catch(e) {}
-  document.querySelectorAll(');
-  document.querySelectorAll('[data-en]').forEach(el => {
-    const txt = el.getAttribute('data-' + l);
-    if (!txt) return;
-    if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') el.placeholder = txt;
-    else el.innerHTML = txt;
-  });
-  renderGrid(currentFilter);
-}
-document.addEventListener('DOMContentLoaded', function(){ setLang(currentLang); });
+let currentLang = 'en';
 
 // ── HELPERS ──────────────────────────────────────────────────────────────
 function t(art, field) {
