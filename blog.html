@@ -6968,11 +6968,12 @@ const articles = [
 ];
 
 let currentFilter = 'all';
-let currentLang = 'en';
+let currentLang = (function(){ try { return localStorage.getItem('sitelang') || 'en'; } catch(e){ return 'en'; } })();
 
 // ── LANGUAGE TOGGLE ──────────────────────────────────────────────────────
 function setLang(l) {
   currentLang = l;
+  try { localStorage.setItem('sitelang', l); } catch(e) {}
   document.querySelectorAll('.lang-btn').forEach(b => {
     b.classList.toggle('active', b.textContent.trim() === l.toUpperCase());
   });
@@ -6984,6 +6985,7 @@ function setLang(l) {
   });
   renderGrid(currentFilter);
 }
+document.addEventListener('DOMContentLoaded', function(){ setLang(currentLang); });
 
 // ── HELPERS ──────────────────────────────────────────────────────────────
 function t(art, field) {

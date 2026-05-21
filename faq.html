@@ -872,14 +872,11 @@ function setLang(l) {
   });
 }
 
-// Open all FAQ items on load
 document.addEventListener('DOMContentLoaded', function() {
-  document.querySelectorAll('.faq-item').forEach(function(item) {
-    item.classList.add('open');
-    var icon = item.querySelector('.faq-icon');
-    if (icon) icon.textContent = '-';
-  });
-  if (currentLang !== 'en') setLang(currentLang);
+  // Show all categories by default (All Topics is the default filter)
+  document.querySelectorAll('.faq-category').forEach(function(c) { c.classList.add('active'); });
+  // Always apply saved language
+  setLang(currentLang);
 });
 
 function toggleFaq(btn) {
