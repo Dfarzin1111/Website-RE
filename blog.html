@@ -945,7 +945,7 @@ footer{background:var(--surface);border-top:1px solid var(--border);padding:3rem
     <li><a href="/blog.html" class="active" data-en="Blog" data-fr="Blogue">Blog</a></li>
     <li><a href="/#contact" data-en="Contact" data-fr="Contact">Contact</a></li>
   </ul>
-  <a href="/fr/" class="lang-link">FR</a>
+  <button id="lang-btn" class="lang-link" onclick="toggleBlogLang()" style="background:none;cursor:pointer;">FR</button>
 </nav>
 
 <!-- BLOG LIST VIEW -->
@@ -6964,6 +6964,32 @@ const articles = [
 
 let currentFilter = 'all';
 let currentLang = 'en';
+
+// ── LANGUAGE TOGGLE ──────────────────────────────────────────────────────
+function toggleBlogLang() {
+  currentLang = currentLang === 'en' ? 'fr' : 'en';
+  document.getElementById('lang-btn').textContent = currentLang === 'en' ? 'FR' : 'EN';
+  document.documentElement.lang = currentLang;
+  // Update static nav text elements with data-en/data-fr attrs
+  document.querySelectorAll('[data-en]').forEach(function(el) {
+    var val = el.getAttribute('data-' + currentLang);
+    if (val) el.innerHTML = val;
+  });
+  // Update hero/filter text
+  var heroTitle = document.querySelector('.blog-hero h1');
+  var heroSub = document.querySelector('.blog-hero p:not(.hero-tag)');
+  var heroTag = document.querySelector('.hero-tag');
+  if (currentLang === 'fr') {
+    if (heroTag) heroTag.textContent = 'Immobilier Montréal';
+    if (heroTitle) heroTitle.textContent = 'Analyses & Veille du Marché';
+    if (heroSub) heroSub.textContent = 'Analyses fondées sur les données du marché immobilier montréalais, tendances par quartier et conseils stratégiques pour acheteurs et vendeurs.';
+  } else {
+    if (heroTag) heroTag.textContent = 'Montreal Real Estate';
+    if (heroTitle) heroTitle.textContent = 'Insights & Market Analysis';
+    if (heroSub) heroSub.textContent = 'Data-driven perspectives on the Montreal housing market, neighbourhood trends, and strategic advice for buyers and sellers navigating one of Canada\'s most dynamic cities.';
+  }
+  renderGrid(currentFilter);
+}
 
 // ── HELPERS ──────────────────────────────────────────────────────────────
 function t(art, field) {
