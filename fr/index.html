@@ -192,9 +192,8 @@
     .nav-links a{color:var(--text-muted);font-size:11px;font-weight:400;letter-spacing:1.8px;text-transform:uppercase;transition:color .25s;}
     .nav-links a:hover{color:var(--primary);}
     .nav-right{display:flex;align-items:center;gap:20px;}
-    .lang-toggle{display:flex;border:1px solid var(--border-lt);border-radius:2px;overflow:hidden;}
-    .lang-btn{padding:6px 14px;font-size:11px;font-weight:500;letter-spacing:1px;cursor:pointer;border:none;background:transparent;color:var(--text-muted);font-family:'Jost',sans-serif;transition:all .2s;}
-    .lang-btn.active{background:var(--primary);color:var(--bg);}
+    .lang-link{padding:6px 14px;font-size:11px;font-weight:500;letter-spacing:1.5px;text-transform:uppercase;border:1px solid var(--border-lt);color:var(--text-muted);font-family:'Jost',sans-serif;transition:all .2s;display:inline-block;margin-left:16px;}
+    .lang-link:hover{border-color:var(--primary);color:var(--primary);}
 
     /* ── HERO ── */
     .hero{position:relative;min-height:100vh;display:flex;align-items:flex-end;overflow:hidden;background:var(--bg);}
@@ -641,7 +640,7 @@
 <li><a class="nav-book" href="https://calendly.com/delaram-farzin/free-consultation" target="_blank">Prendre RDV</a></li>
 </ul>
 <div class="nav-right">
-<div class="lang-toggle"><a class="lang-btn" href="/">EN</a><span class="lang-btn active">FR</span></div>
+<a href="/" class="lang-link">EN</a>
 <button aria-label="Open menu" class="nav-hamburger" onclick="toggleMobileNav()">
 <span></span><span></span><span></span>
 </button>
@@ -665,7 +664,7 @@
 <li><a href="#contact" onclick="toggleMobileNav()">Contact</a></li>
 </ul>
 <a class="mobile-nav-cta" href="https://calendly.com/delaram-farzin/free-consultation" target="_blank">Réserver un appel gratuit</a>
-<div class="mobile-nav-lang"><a class="lang-btn" href="/">EN</a><span class="lang-btn active">FR</span></div>
+<a href="/" class="lang-link" style="margin-left:0;margin-top:8px;">EN</a>
 <a class="mobile-nav-phone" href="tel:5148033472">514-803-3472</a>
 </div>
 <div class="mobile-nav-overlay" id="mobileNavOverlay" onclick="toggleMobileNav()"></div>

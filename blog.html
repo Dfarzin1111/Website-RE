@@ -51,8 +51,6 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:0 5%;background:rgba
 
 
     .lang-toggle{display:flex;gap:6px;margin-left:auto;}
-    .lang-btn{background:none;border:1px solid var(--border);color:var(--text-muted);padding:4px 10px;font-family:'Jost',sans-serif;font-size:11px;letter-spacing:0.1em;cursor:pointer;transition:all .2s;}
-    .lang-btn.active,.lang-btn:hover{border-color:var(--gold);color:var(--gold);}
     /* GRID */
 .blog-grid-section{padding:4rem 5%}
 .blog-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:2px;max-width:1400px;margin:0 auto}
@@ -947,10 +945,7 @@ footer{background:var(--surface);border-top:1px solid var(--border);padding:3rem
     <li><a href="/blog.html" class="active" data-en="Blog" data-fr="Blogue">Blog</a></li>
     <li><a href="/#contact" data-en="Contact" data-fr="Contact">Contact</a></li>
   </ul>
-  <div class="lang-toggle">
-    <span class="lang-btn active">EN</span>
-    <a href="/fr/" class="lang-btn">FR</a>
-  </div>
+  <a href="/fr/" class="lang-link">FR</a>
 </nav>
 
 <!-- BLOG LIST VIEW -->
@@ -6974,9 +6969,7 @@ let currentLang = (function(){ try { return localStorage.getItem('sitelang') || 
 function setLang(l) {
   currentLang = l;
   try { localStorage.setItem('sitelang', l); } catch(e) {}
-  document.querySelectorAll('.lang-btn').forEach(b => {
-    b.classList.toggle('active', b.textContent.trim() === l.toUpperCase());
-  });
+  document.querySelectorAll(');
   document.querySelectorAll('[data-en]').forEach(el => {
     const txt = el.getAttribute('data-' + l);
     if (!txt) return;

@@ -88,9 +88,8 @@
     .nav-links{display:flex;align-items:center;gap:28px;list-style:none;}
     .nav-links a{color:var(--text-muted);font-size:11px;font-weight:400;letter-spacing:1.8px;text-transform:uppercase;transition:color .25s;}
     .nav-links a:hover,.nav-links a.active{color:var(--primary);}
-    .lang-toggle{display:flex;border:1px solid var(--border-lt);border-radius:2px;overflow:hidden;margin-left:24px;}
-    .lang-btn{padding:5px 12px;font-size:11px;font-weight:500;letter-spacing:1px;cursor:pointer;border:none;background:transparent;color:var(--text-muted);font-family:'Jost',sans-serif;transition:all .2s;}
-    .lang-btn.active{background:var(--primary);color:var(--bg);}
+    .lang-link{padding:6px 14px;font-size:11px;font-weight:500;letter-spacing:1.5px;text-transform:uppercase;border:1px solid var(--border-lt);color:var(--text-muted);font-family:'Jost',sans-serif;transition:all .2s;display:inline-block;margin-left:16px;}
+    .lang-link:hover{border-color:var(--primary);color:var(--primary);}
 
     .hero{padding:140px 80px 80px;background:var(--bg-mid);border-bottom:1px solid var(--border);}
     .eyebrow{display:flex;align-items:center;gap:12px;margin-bottom:16px;}
@@ -181,10 +180,7 @@
       <li><a href="/faq.html" data-en="FAQ" data-fr="FAQ">FAQ</a></li>
       <li><a href="/#contact" data-en="Contact" data-fr="Contact">Contact</a></li>
     </ul>
-    <div class="lang-toggle">
-      <span class="lang-btn active">EN</span>
-      <a href="/fr/vendeurs/" class="lang-btn">FR</a>
-    </div>
+    <a href="/fr/vendeurs/" class="lang-link">FR</a>
   </nav>
 
   <!-- HERO -->
