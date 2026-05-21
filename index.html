@@ -628,6 +628,8 @@
       .mobile-nav   { width:100%; right:-100%; }
     }
   </style>
+  <!-- HubSpot Tracking Code -->
+  <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/342958991.js"></script>
 </head>
 <body>
 
@@ -646,7 +648,7 @@
         <li><a href="/#how" data-en="Process" data-fr="Processus">Process</a></li>
         <li><a href="/#kit" data-en="Homebuyer Guide" data-fr="Guide acheteur">Homebuyer Guide</a></li>
         <li><a href="/#calculator" data-en="Mortgage Calculator" data-fr="Calculateur hypothécaire">Mortgage Calculator</a></li>
-        <li><a href="https://calendly.com/delaram-farzin/free-consultation" target="_blank" data-en="Sellers Valuation" data-fr="Évaluation vendeurs">Sellers Valuation</a></li>
+        <li><a href="/#contact" data-en="Home Valuation" data-fr="Évaluation gratuite">Home Valuation</a></li>
       </ul>
     </li>
     <li class="has-dropdown">
@@ -660,7 +662,7 @@
       <a href="/sellers/" data-en="Sellers" data-fr="Vendeurs">Sellers</a>
       <ul class="dropdown">
         <li><a href="/sellers/" data-en="Sellers Page" data-fr="Page vendeurs">Sellers Page</a></li>
-        <li><a href="https://calendly.com/delaram-farzin/free-consultation" target="_blank" data-en="Free Home Valuation" data-fr="Évaluation gratuite">Free Home Valuation</a></li>
+        <li><a href="/#contact" data-en="Free Home Valuation" data-fr="Évaluation gratuite">Free Home Valuation</a></li>
       </ul>
     </li>
     <li><a href="/blog.html" data-en="Blog" data-fr="Blogue">Blog</a></li>
@@ -1461,7 +1463,7 @@
   <div class="nl-inner">
     <div class="section-eyebrow" style="justify-content:center;"><div class="section-line"></div><div class="section-tag" data-en="Market Intelligence" data-fr="Intelligence de Marche">Market Intelligence</div></div>
     <h2 data-en="Stay Ahead of the Market" data-fr="Gardez une longueur d'avance">Stay Ahead of the Market</h2>
-    <p data-en="Bi-weekly market updates covering Montreal neighbourhoods, price trends, and off-market opportunities. Concise, data-driven, and worth reading." data-fr="Mises à jour bi-hebdomadaires couvrant les quartiers montréalais, les tendances de prix et les opportunités hors marché. Concises, basées sur les données et utiles.">Bi-weekly market updates covering Montreal neighbourhoods, price trends, and off-market opportunities. Concise, data-driven, and worth reading.</p>
+    <p data-en="Weekly market updates covering Montreal neighbourhoods, price trends, and off-market opportunities. Concise, data-driven, and worth reading." data-fr="Mises à jour hebdomadaires couvrant les quartiers montréalais, les tendances de prix et les opportunités hors marché. Concises, basées sur les données et utiles.">Weekly market updates covering Montreal neighbourhoods, price trends, and off-market opportunities. Concise, data-driven, and worth reading.</p>
     <form class="nl-form" onsubmit="handleNL(event,'section')">
       <input class="nl-input" type="email" placeholder="Your email address" data-en="Your email address" data-fr="Votre adresse courriel" required>
       <button type="submit" class="nl-btn" data-en="Subscribe" data-fr="S'abonner">Subscribe</button>
@@ -1988,11 +1990,20 @@ function handleContact(e) {
 
 function handleNL(e, src) {
   e.preventDefault();
-  var f = e.target, data = { Source: 'Newsletter Signup - ' + src };
-  f.querySelectorAll('input,select').forEach(function(i) {
-    if (i.value && i.value !== '') data[i.placeholder || i.type] = i.value;
-  });
+  var f = e.target;
+  var emailEl = f.querySelector('input[type="email"]');
+  var email = emailEl ? emailEl.value.trim() : '';
+  var data = { Source: 'Newsletter Signup - ' + src, email: email };
   sendLead(data);
+  // Push to HubSpot: identify contact + mark as newsletter subscriber
+  if (email) {
+    var _hsq = window._hsq = window._hsq || [];
+    _hsq.push(['identify', {
+      email: email,
+      newsletter_subscriber: true
+    }]);
+    _hsq.push(['trackPageView']);
+  }
   if (src === 'popup') {
     f.innerHTML = '<p style="color:var(--primary);text-align:center;font-family:Cormorant Garamond,serif;font-size:1.2rem;padding:1rem 0;">You are on the list - thank you.</p>';
     setTimeout(closePopup, 2400);
